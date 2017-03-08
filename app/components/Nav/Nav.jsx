@@ -1,12 +1,15 @@
-// import styles from './_Footer.scss';
-import React from 'react';
 
-export default class Nav extends React.Component {
+import React from 'react'
+import { AppBar, Tabs, Tab } from 'material-ui'
+
+class Nav extends React.Component {
   render() {
     return (
-        <div>
-          HERE BE HEADER
-        </div>
-    );
+      <AppBar title="My App">
+        maybe tabs
+      </AppBar>
+    )
   }
 }
+
+export { Nav }

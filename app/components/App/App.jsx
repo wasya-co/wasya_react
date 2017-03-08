@@ -5,7 +5,7 @@ import AppActions from '../../actions/AppActions';
 import ItemsStore from '../../stores/ItemsStore';
 import Body from '../Body/Body';
 import Footer from '../Footer/Footer';
-import Nav from '../Nav/Nav';
+import MainNavigation from '../MainNavigation/MainNavigation';
 
 function getAppState() {
   return {
@@ -33,7 +33,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className={styles.app}>
-        <Nav />
+        <MainNavigation />
         <Body items={this.state.items} />
         <Footer />
       </div>
