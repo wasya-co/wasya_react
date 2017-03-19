@@ -51,8 +51,8 @@ class OurProcess extends React.Component {
           </li>
           <li className={styles.inverted}>
             <div className={styles.panel}>
-              <div class="timeline-heading">
-                <h4 class="timeline-title">Step 4</h4>
+              <div className="timeline-heading">
+                <h4 className="timeline-title">Step 4</h4>
               </div>
               <div className={styles.body}>
                 <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.

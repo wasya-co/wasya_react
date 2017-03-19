@@ -8,7 +8,6 @@ let { PropTypes } = React;
 
 import clouds from "./images/clouds.png"
 
-
 import { Button, Grid, Row, Col, Nav, NavItem, Tabs, Tab } from 'react-bootstrap'
 
 export default class Body extends React.Component {
@@ -95,27 +94,21 @@ export default class Body extends React.Component {
                 <NavItem eventKey="5" href="/services/ui-ux-wireframes-design">UI/UX Wireframing & Design</NavItem>
               </Nav>
 
-              <Tabs defaultActiveKey={0} >
-                <Tab eventKey={0} title="Application Development">
-                  <h2>Ruby on Rails</h2>
-                  <h2>Node.js & Socket.io</h2>
-                  <p>Need a hybrid stack? We got you.</p>
-                  <h2>React.js and Angular.js</h2>
-                </Tab>
-                <Tab eventKey={1} title="Web Design">Web design-y content!</Tab>
-                <Tab eventKey={2} title="Devops">Web design-y content!</Tab>
-                <Tab eventKey={3} title="SPAs">Web design-y content!</Tab>
-                <Tab eventKey={4} title="Project Management">
-                  <p>We'll setup a remote team for you who'll do your basic component work.</p>
-                </Tab>
-                <Tab eventKey={5} title="UI/UX design">
-                  <Row>
-                    <Col xs={8} xsOffset={2}>
-                      <p>Need a good-looking, usable UI? Our team can answer this need with an iterative approach to design and development. We provide multiple drafts for you to approve, and are fleixble in our revision process. Our goal is to deliver to you a UI that not only answers your specification, but can be adapted to the continuous changes in said specification, as well as to the continuous changes in the market needs. We practice the lean approach to development.</p>
-                    </Col>
-                  </Row>
-                </Tab>
-              </Tabs>
+              Application Development
+              - RoR
+              - node.js
+              - need a hybrid stack? we got you
+              - react.js or angular.js
+              
+              What we do
+              - web design 
+              - devops
+              - SPAs
+              - project management
+              - UI/UX design
+              
+              <p>Need a good-looking, usable UI? Our team can answer this need with an iterative approach to design and development. We provide multiple drafts for you to approve, and are fleixble in our revision process. Our goal is to deliver to you a UI that not only answers your specification, but can be adapted to the continuous changes in said specification, as well as to the continuous changes in the market needs. We practice the lean approach to development.</p>
+              
             </Col>
           </Row>
           <Row>
