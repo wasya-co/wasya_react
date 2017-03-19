@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
         <Grid >
           <Row className="show-grid" >
             <Col xs={6}>&nbsp;</Col>
-            <Col xs={6}>&copy; Your Company&nbsp;{year}</Col>
+            <Col xs={6}>&copy; Wasya co&nbsp;{year}</Col>
           </Row>
         </Grid>
       </footer>

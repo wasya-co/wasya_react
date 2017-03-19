@@ -1,10 +1,13 @@
 import styles from './_Body.scss';
 import React from 'react';
+
 import Menu from '../Menu/Menu';
+import OurProcess from './lib/OurProcess'
 
 let { PropTypes } = React;
 
-import clouds from "../../images/400x400/clouds.png"
+import clouds from "./images/clouds.png"
+
 
 import { Button, Grid, Row, Col, Nav, NavItem, Tabs, Tab } from 'react-bootstrap'
 
@@ -32,15 +35,15 @@ export default class Body extends React.Component {
               <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <img src={clouds} alt="" />
               </div>
-              <h1 className={styles.header}>About</h1>
             </Col>
           </Row>
           <Row>
             <Col xs={8} xsOffset={2}>
-              <p>We are a software consulting firm that specializes in full-cycle web application development. We service startups and small local businesses that are focused on technology. We utilize modern best development practices and provide our clients with the most effective tooling possible.</p>
+              <p className={styles.bigDescr}>We are a software consulting firm that specializes in full-cycle web application development. We service startups and small local businesses that are focused on technology. We utilize modern best development practices and provide our clients with the most effective tooling possible.</p>
               <br />
             </Col>
           </Row>
+          <h1 className={styles.header}>About</h1>
           <Row>
             <Col xs={3} >
               <p>We whiteboard, design, prototype, develop, QA, deploy, monitor, scale and maintain web-based SaaS applications and tools that enable & supercharge your business.
@@ -113,6 +116,11 @@ export default class Body extends React.Component {
                   </Row>
                 </Tab>
               </Tabs>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              <OurProcess></OurProcess>
             </Col>
           </Row>
         </Grid>
