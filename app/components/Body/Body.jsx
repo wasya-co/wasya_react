@@ -2,7 +2,6 @@ import styles from './_Body.scss';
 import React from 'react';
 
 import Menu from '../Menu/Menu';
-import OurProcess from './lib/OurProcess'
 
 let { PropTypes } = React;
 
@@ -109,11 +108,6 @@ export default class Body extends React.Component {
               
               <p>Need a good-looking, usable UI? Our team can answer this need with an iterative approach to design and development. We provide multiple drafts for you to approve, and are fleixble in our revision process. Our goal is to deliver to you a UI that not only answers your specification, but can be adapted to the continuous changes in said specification, as well as to the continuous changes in the market needs. We practice the lean approach to development.</p>
               
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12}>
-              <OurProcess></OurProcess>
             </Col>
           </Row>
         </Grid>

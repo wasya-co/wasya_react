@@ -1,6 +1,8 @@
 import styles from './_Footer.scss';
 import React from 'react';
 
+import Moment from 'moment';
+
 import { Grid, Row, Col, 
          Panel, Button, 
          FormGroup, FieldGroup, FormControl } from 'react-bootstrap';
@@ -12,7 +14,39 @@ import instagram from "./images/instagram.png"
 import linkedin from "./images/linkedin.png"
 import youtube from "./images/youtube.png"
 
-export default class Footer extends React.Component {
+import bg from './images/bg1.png'
+import bgTriangular from './images/triangular.png'
+import f0_bg from './images/weather.png'
+
+class Footer0 extends React.Component {
+  render () {
+    return (
+      <footer style={{ backgroundImage: `url(${f0_bg})` }} >
+      &nbsp;
+      </footer>
+    )
+  }
+}
+
+class Footer1 extends React.Component {
+
+  constructor () {
+    super();
+    this.state = {
+      data: [],
+      name: 'this name'
+    };
+  }
+
+  componentDidMount () {
+    fetch("http://crossorigin.me/http://blog.wasya.co/?feed=json").then( (response) => {
+      return response.json()
+    }).then( (json) => {
+      json = json.slice(0,5)
+      window.data = json;
+      this.setState({data: json});
+    });
+  };
 
   static FieldGroup = function FieldGroup({ id, label, help, ...props }) {
     return (
@@ -25,12 +59,36 @@ export default class Footer extends React.Component {
   }
 
   render() {
-    var year = (new Date()).getFullYear();
+    var blogTitles = [];
+    
+    this.state.data.forEach(function(blogItem) {
+      blogTitles.push(
+        <div key={blogItem.title}>
+          <hr />
+          <h4 ><a href="#" dangerouslySetInnerHTML={{__html: blogItem.title}} ></a></h4>
+          <i>{Moment(blogItem.date).format('YYYY-MM-DD')}</i><p dangerouslySetInnerHTML={{__html:blogItem.excerpt}} ></p>
+        </div>);
+    });
     return (
-      <footer className={styles.footer}>
+      <footer className={styles.footer} style={{ backgroundImage: `url(${bg})` }}>
         <Grid >
           <Row className="show-grid" >
             <Col xs={6}>
+              <Panel>
+                <h2>From our Blog</h2>
+                {blogTitles}
+              </Panel>
+            </Col>
+            <Col xs={6}>
+              <ul className={styles.socialMediaIcons}>
+                <li key={1}><img src={instagram} /></li>
+                <li key={2}><img src={facebook} /></li>
+                <li key={3}><img src={github} /></li>
+                <li key={4}><img src={google_plus} /></li>
+                <li key={5}><img src={linkedin} /></li>
+                <li key={6}><img src={youtube} /></li>
+              </ul>
+              <br /><br />
               <Panel>
                 <h2>Keep in Touch!</h2>
                 <p>Subscribe to our occasional newsletter.</p>
@@ -40,21 +98,29 @@ export default class Footer extends React.Component {
                 </form>
               </Panel>
             </Col>
-            <Col xs={6}>
-      &copy; Wasya co&nbsp;{year}
-      <ul className={styles.socialMediaIcons}>
-        <li><img src={instagram} /></li>
-        <li><img src={facebook} /></li>
-        <li><img src={github} /></li>
-        <li><img src={google_plus} /></li>
-        <li><img src={linkedin} /></li>
-        <li><img src={youtube} /></li>
-      </ul>
-      
-            </Col>
           </Row>
         </Grid>
       </footer>
     );
   }
 }
+
+class Footer2 extends React.Component {
+  render () {
+    var year = (new Date()).getFullYear();
+
+    return (
+      <footer className={styles.footer2} style={{backgroundImage: `url(${bgTriangular})` }}>
+        <Grid>
+          <Row>
+            <Col xs={6} xsOffset={6}>
+              &copy; Wasya co&nbsp;{year}
+            </Col>
+          </Row>
+        </Grid>
+      </footer>
+    )
+  }
+}
+
+export { Footer0, Footer1, Footer2 }

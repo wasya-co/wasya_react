@@ -1,11 +1,17 @@
 import styles from './_App.scss';
 
-import React from 'react';
-import AppActions from '../../actions/AppActions';
-import ItemsStore from '../../stores/ItemsStore';
-import Body from '../Body/Body';
-import Footer from '../Footer/Footer';
-import MainNavigation from '../MainNavigation/MainNavigation';
+// import bg from './images/bg2.png'
+import bg from './images/noisy_grid.png'
+
+import React from 'react'
+
+import AppActions from '../../actions/AppActions'
+import ItemsStore from '../../stores/ItemsStore'
+import Body from '../Body/Body'
+import ContactUs from '../ContactUs/ContactUs'
+import OurProcess from '../OurProcess/OurProcess'
+import { Footer0, Footer1, Footer2 } from '../Footer/Footer'
+import MainNavigation from '../MainNavigation/MainNavigation'
 
 function getAppState() {
   return {
@@ -32,10 +38,16 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className={styles.app}>
-        <MainNavigation />
-        <Body items={this.state.items} />
-        <Footer />
+      <div>
+        <div className={styles.app} style={{ backgroundImage: `url(${bg})` }} >
+          <MainNavigation />
+          <Body items={this.state.items} />
+        </div>
+        <OurProcess />
+        <ContactUs />
+        <Footer0 />
+        <Footer1 />
+        <Footer2 />
       </div>
     );
   }
