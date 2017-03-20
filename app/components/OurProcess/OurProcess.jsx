@@ -8,6 +8,7 @@ import bg from './images/noisy_grid.png'
 class OurProcess extends React.Component {
   render () {
     return (
+      
       <div style={{ backgroundImage: `url(${bg})` }} >
         <Grid>
           <div className="page-header">
