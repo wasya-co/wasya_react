@@ -10,6 +10,8 @@ import ItemsStore from '../../stores/ItemsStore'
 import Body from '../Body/Body'
 import ContactUs from '../ContactUs/ContactUs'
 import OurProcess from '../OurProcess/OurProcess'
+import Services from './Services'
+import About from './About'
 import { Footer0, Footer1, Footer2 } from '../Footer/Footer'
 import MainNavigation from '../MainNavigation/MainNavigation'
 
@@ -43,6 +45,8 @@ export default class App extends React.Component {
           <MainNavigation />
           <Body items={this.state.items} />
         </div>
+        <About />
+        <Services />
         <OurProcess />
         <ContactUs />
         <Footer0 />
