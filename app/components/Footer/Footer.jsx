@@ -117,6 +117,11 @@ class Footer2 extends React.Component {
               &copy; Wasya co&nbsp;{year}
             </Col>
           </Row>
+          <Row>
+            <Col xs={12}>
+              New York City &nbsp; | &nbsp; Chicago &nbsp; | &nbsp; San Francisco Bay Area
+            </Col>
+          </Row>
         </Grid>
       </footer>
     )
