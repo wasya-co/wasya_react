@@ -42,7 +42,7 @@ class Footer1 extends React.Component {
     fetch("http://crossorigin.me/http://blog.wasya.co/?feed=json").then( (response) => {
       return response.json()
     }).then( (json) => {
-      json = json.slice(0,5)
+      json = json.slice(0,3)
       window.data = json;
       this.setState({data: json});
     });
@@ -114,12 +114,14 @@ class Footer2 extends React.Component {
         <Grid>
           <Row>
             <Col xs={6} xsOffset={6}>
-              &copy; Wasya co&nbsp;{year}
+              <span>Wasya co &copy; {year}</span>
+              <br />
+              <br />
             </Col>
           </Row>
           <Row>
             <Col xs={12}>
-              New York City &nbsp; | &nbsp; Chicago &nbsp; | &nbsp; San Francisco Bay Area
+              <div style={{ textAlign: 'center' }} >New York City &nbsp; | &nbsp; Chicago &nbsp; | &nbsp; San Francisco</div>
             </Col>
           </Row>
         </Grid>

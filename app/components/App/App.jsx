@@ -40,10 +40,9 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className={styles.app} style={{ backgroundImage: `url(${bg})` }} >
+      <div style={{ backgroundImage: `url(${bg})` }} >
+        <div className={styles.app}  >
           <MainNavigation />
-          <Body items={this.state.items} />
         </div>
         <About />
         <Services />

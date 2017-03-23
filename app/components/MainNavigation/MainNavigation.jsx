@@ -56,7 +56,7 @@ class Nav2 extends React.Component {
         <Nav bsStyle="pills" pullRight>
           <NavItem eventKey={0} href="#" >About</NavItem>
           <NavItem eventKey={1} href="#" >Services</NavItem>
-          <NavItem eventKey={2} href="#" >People</NavItem>
+          { /* <NavItem eventKey={2} href="#" >People</NavItem> */ }
           <NavItem eventKey={3} href="#" >Process</NavItem>
           <NavItem eventKey={4} href="#" >Blog</NavItem>
           <NavItem eventKey={5} href="#" >Wiki</NavItem>

@@ -7,7 +7,9 @@ class Service extends React.Component {
       <div>
         <img src={this.props.image} alt={this.props.title} style={{ maxWidth: '300px' }} />
         <h3>{this.props.title}</h3>
-        <p>{this.props.descr}</p>
+        {this.props.descr.map(function(d, idx) {
+           return <p>{d}</p>
+         })}
       </div>
     )
   }
