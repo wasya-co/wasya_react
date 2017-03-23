@@ -12,11 +12,15 @@ function handleTouchTap() {
     alert('onTouchTap triggered on the title component');
 }
 
+import Scroll from 'react-scroll'
+
 const styles = {
     title: {
         cursor: 'pointer',
     },
 };
+
+import scrollToElement from 'scroll-to-element'
 
 class MainNavigation extends React.Component {
     getChildContext() {
@@ -45,6 +49,20 @@ MainNavigation.childContextTypes = {
 
 // can I have completely custom nav, no mui, no material-ui?
 class Nav2 extends React.Component {
+
+  handleSelect (selectedKey) {
+    switch (selectedKey) {
+      // case 'blog':
+      //  window.location = 'http://blog.wasya.co';
+      //  break;
+      case 'wiki':
+        window.location = 'http://wiki.wasya.co' ;
+        break;
+      default:
+        scrollToElement('#'+selectedKey);
+    }
+  }
+
   render () {
     return (
       <Navbar fixedTop>
@@ -52,16 +70,22 @@ class Nav2 extends React.Component {
           <Navbar.Brand>
             <a href="#">Wasya co</a>
           </Navbar.Brand>
+          <Navbar.Toggle />
         </Navbar.Header>
-        <Nav bsStyle="pills" pullRight>
-          <NavItem eventKey={0} href="#" >About</NavItem>
-          <NavItem eventKey={1} href="#" >Services</NavItem>
-          { /* <NavItem eventKey={2} href="#" >People</NavItem> */ }
-          <NavItem eventKey={3} href="#" >Process</NavItem>
-          <NavItem eventKey={4} href="#" >Blog</NavItem>
-          <NavItem eventKey={5} href="#" >Wiki</NavItem>
-          <NavItem eventKey={6} href="#" >Contact</NavItem>
-        </Nav>
+        <Navbar.Collapse>
+          <Nav bsStyle="pills" pullRight onSelect={this.handleSelect} >
+            <NavItem eventKey={'about'} href="javascript:void(0);" >
+              About
+              { /* <Scroll.Link to="about">About</Scroll.Link> */ }
+            </NavItem>
+            <NavItem eventKey={'services'} href="javascript:void(0);" >Services</NavItem>
+            { /* <NavItem eventKey={2} href="#" >People</NavItem> */ }
+            <NavItem eventKey={'process'} href="#" >Process</NavItem>
+            <NavItem eventKey={'blog'} href="javascript:void(0);" >Blog</NavItem>
+            { /* <NavItem eventKey={'wiki'} href="#" >Wiki</NavItem> */ }
+            <NavItem eventKey={'contact'} href="#" >Contact</NavItem>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     )
   }

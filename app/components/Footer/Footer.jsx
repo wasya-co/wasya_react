@@ -70,13 +70,15 @@ class Footer1 extends React.Component {
         </div>);
     });
     return (
-      <footer className={styles.footer} style={{ backgroundImage: `url(${bg})` }}>
+      <footer className={styles.footer} style={{ backgroundImage: `url(${bg})`, paddingTop: '3em' }} id="blog" >
         <Grid >
           <Row className="show-grid" >
             <Col xs={6}>
               <Panel>
                 <h2>From our Blog</h2>
                 {blogTitles}
+                <hr />
+                <div className={styles.center} ><a href="http://blog.wasya.co">Read More</a></div>
               </Panel>
             </Col>
             <Col xs={6}>
@@ -114,7 +116,7 @@ class Footer2 extends React.Component {
         <Grid>
           <Row>
             <Col xs={6} xsOffset={6}>
-              <span>Wasya co &copy; {year}</span>
+              <span className="pull-right" >Wasya co &copy; {year}</span>
               <br />
               <br />
             </Col>

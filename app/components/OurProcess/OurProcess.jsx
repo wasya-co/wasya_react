@@ -9,11 +9,9 @@ class OurProcess extends React.Component {
   render () {
     return (
       
-      <div style={{ backgroundImage: `url(${bg})` }} >
+      <div style={{ backgroundImage: `url(${bg})` }} className={styles.process} id="process" >
+        <h1 style={{ textAlign: 'center' }} >Our Process</h1>
         <Grid>
-          <div className="page-header">
-            <h1 style={{ textAlign: 'center' }} >Our Process</h1>
-          </div>
           <ul className={styles.timeline}>
             <li className={styles.normal}>
               <div className={styles.badge}><i className="glyphicon glyphicon-blackboard"></i></div>

@@ -1,3 +1,4 @@
+import styles from './_App.scss';
 
 import React from 'react'
 
@@ -73,33 +74,34 @@ class Services extends React.Component {
              title: 'Devops'
   };
     
-
+  componentDidMount () {
+  }
 
   render () {
     return (
-      <Grid >
-        <Row>
-          <Col xs={12}>
+      <div className={styles.services} id="services" ><Grid >
+        <Row >
+          <Col xs={10} xsOffset={1} >
             <h1 style={{ textAlign: 'center' }} >Services</h1>
             <p>We do web application development, integration with external services, deployments, automation, wireframing and prototyping, as well as monitoring and scaling of existing applications. We will also go refactoring/rewriting of an existing application and migrating it from old codebase to nice and shiny new paradigm.</p>
           </Col>
         </Row>
         <Row >
-          <Col xs={4}><Service image={this.ror.image} title={this.ror.title} descr={this.ror.descr} /></Col>
-          <Col xs={4}><Service image={this.node.image} title={this.node.title} descr={this.node.descr} /></Col>
-          <Col xs={4}><Service image={this.react.image} title={this.react.title} descr={this.react.descr} /></Col>
+          <Col xs={12} md={4} ><Service image={this.ror.image}   title={this.ror.title}   descr={this.ror.descr}  /></Col>
+          <Col xs={12} md={4} ><Service image={this.node.image}  title={this.node.title}  descr={this.node.descr}  /></Col>
+          <Col xs={12} md={4} ><Service image={this.react.image} title={this.react.title} descr={this.react.descr} /></Col>
         </Row>
         <Row>
-          <Col xs={4}><Service image={this.php.image} title={this.php.title} descr={this.php.descr} /></Col>
-          <Col xs={4}><Service image={this.wordpress.image} title={this.wordpress.title} descr={this.wordpress.descr} /></Col>
-          <Col xs={4}><Service image={this.angular.image} title={this.angular.title} descr={this.angular.descr} /></Col>
+          <Col xs={12} md={4} ><Service image={this.php.image} title={this.php.title} descr={this.php.descr} /></Col>
+          <Col xs={12} md={4} ><Service image={this.wordpress.image} title={this.wordpress.title} descr={this.wordpress.descr} /></Col>
+          <Col xs={12} md={4} ><Service image={this.angular.image} title={this.angular.title} descr={this.angular.descr} /></Col>
         </Row>
         <Row >
-          <Col xs={4}><Service image={this.uiux.image} title={this.uiux.title} descr={this.uiux.descr} /></Col>
-          <Col xs={4}><Service image={this.mvp.image} title={this.mvp.title} descr={this.mvp.descr} /></Col>
-          <Col xs={4}><Service image={this.devops.image} title={this.devops.title} descr={this.devops.descr} /></Col>
+          <Col xs={12} md={4} ><Service image={this.uiux.image} title={this.uiux.title} descr={this.uiux.descr} /></Col>
+          <Col xs={12} md={4} ><Service image={this.mvp.image} title={this.mvp.title} descr={this.mvp.descr} /></Col>
+          <Col xs={12} md={4} ><Service image={this.devops.image} title={this.devops.title} descr={this.devops.descr} /></Col>
         </Row>
-      </Grid>
+      </Grid></div>
     )
   }
 }
