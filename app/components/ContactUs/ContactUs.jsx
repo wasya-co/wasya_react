@@ -34,7 +34,10 @@ class ContactUs extends React.Component {
       this.setState({ ['alertVisible']: false });
       let payload = {
         name: this.state.name,
-        verification: this.state.captcha
+        email: this.state.email,
+        phone: this.state.phone,
+        verification: this.state.captcha,
+        descr: this.state.description
       };
       
       fetch( url, { method: 'POST', 
@@ -42,17 +45,18 @@ class ContactUs extends React.Component {
                       'Accept': 'application/json, text/plain, */*',
                       'Content-Type': 'applicaton/json'
                     },
-                    body: JSON.stringify(payload) }).then(res => res.json()).then(res => {
-                      if (res === 'ok') {
-                        this.setState({ ['success']: 'Message successfully sent',
-                                        ['successVisible']: true,
-                                        ['alertVisible']: false });
-                      } else {
-                        this.setState({ ['alert']: 'Page says: ' + res, 
-                                        ['successVisible']: false, 
-                                        ['alertVisible']: true });
-                      }
-                    });
+                    body: JSON.stringify(payload) 
+      }).then(res => res.json()).then(res => {
+        if (res === 'ok') {
+          this.setState({ ['success']: 'Message successfully sent',
+                          ['successVisible']: true,
+                          ['alertVisible']: false });
+        } else {
+          this.setState({ ['alert']: 'Page says: ' + res, 
+                          ['successVisible']: false, 
+                          ['alertVisible']: true });
+        }
+      });
     } else {
       this.setState({ ['alert']: 'Check captcha please', ['alertVisible']: true });
     }
