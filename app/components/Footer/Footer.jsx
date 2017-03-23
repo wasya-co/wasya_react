@@ -73,7 +73,7 @@ class Footer1 extends React.Component {
       <footer className={styles.footer} style={{ backgroundImage: `url(${bg})`, paddingTop: '3em' }} id="blog" >
         <Grid >
           <Row className="show-grid" >
-            <Col xs={6}>
+            <Col xs={12} sm={6} >
               <Panel>
                 <h2>From our Blog</h2>
                 {blogTitles}
@@ -81,7 +81,7 @@ class Footer1 extends React.Component {
                 <div className={styles.center} ><a href="http://blog.wasya.co">Read More</a></div>
               </Panel>
             </Col>
-            <Col xs={6}>
+            <Col xs={12} sm={6} >
               <ul className={styles.socialMediaIcons}>
                 <li key={1}><img src={instagram} /></li>
                 <li key={2}><img src={facebook} /></li>
