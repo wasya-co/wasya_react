@@ -28,6 +28,18 @@ class Team extends React.Component {
             <p>New York City</p>
             <p>See http://bsdpower.net</p>
           </Col>
+          <Col>
+            <img src={oleg} />
+            <p>Hi, I'm this other guy from Chicago</p>
+            <p>Chicago</p>
+            <p>See http://bsdpower.net</p>
+          </Col>
+          <Col>
+            <img src={oleg} />
+            <p>Hi, I'm this other guy from New York City</p>
+            <p>New York City</p>
+            <p>See http://bsdpower.net</p>
+          </Col>
         </Row>
       </Grid>
     )
