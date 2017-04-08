@@ -1,25 +1,25 @@
 {
   "parser": "babel-eslint",
-  "env": {
-    "es6": true,
-    "browser": true,
-    "jasmine": true,
-    "node": true
-  },
-  "plugins": [
-    "react"
-  ],
+
+    "env": {
+        "browser": true,
+        "node": true
+    },
+
+    "globals": {
+        "React": true
+    },
+
   "parserOptions": {
     "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
+        "jsx": true,
+        "modules": true
     },
-    "sourceType": "module",
+    "ecmaVersion": 7,
+    "sourceType": "module"
   },
-  "rules": {
-    "linebreak-style": [
-      2,
-      "unix"
-    ],
-  }
+
+    "plugins": [
+        "react"
+    ]
 }
