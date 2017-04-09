@@ -123,7 +123,7 @@ class Footer2 extends React.Component {
           </Row>
           <Row>
             <Col xs={12}>
-              <div style={{ textAlign: 'center' }} >New York City &nbsp; | &nbsp; Chicago &nbsp; | &nbsp; San Francisco</div>
+              <div style={{ textAlign: 'center' }} >New York City &nbsp; | &nbsp; Chicago &nbsp; | &nbsp; Los Angeles &nbsp; | &nbsp; San Francisco</div>
             </Col>
           </Row>
         </Grid>

@@ -23,7 +23,7 @@ function getAppState() {
 
 export default class App extends React.Component {
 
-  state = getAppState() 
+  // let state = getAppState() 
 
   componentDidMount() {
     ItemsStore.addChangeListener(this.onChange);
@@ -31,10 +31,10 @@ export default class App extends React.Component {
   }
 
   componentWillUnmount() {
-    ItemsStore.removeChangeListener(this.onChange);
+    ItemsStore.removeChangeListener(this.onChange)
   }
 
-  onChange = () => { 
+  onChange () { 
     this.setState(getAppState());
   }
 

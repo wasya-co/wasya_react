@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 import { expect } from 'chai';
 
 import Menu from '../Menu.jsx';
@@ -6,7 +6,7 @@ import MenuItem from '../MenuItem.jsx';
 
 describe('Menu', () => {
 
-  let { TestUtils } = React.addons;
+  // let { TestUtils } = React.addons;
 
   let menuItems = [
     { id: 1, label: 'Option 1' },

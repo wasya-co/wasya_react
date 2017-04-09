@@ -1,0 +1,3 @@
+
+0.0.2 - the app works but tests dont run
+0.0.3 - trying to make the tests run... ugh, scss in jsx is causing issues
