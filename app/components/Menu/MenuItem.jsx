@@ -1,8 +1,8 @@
-import React from 'react';
 
-let { Component, PropTypes } = React;
+import React from 'react'
+import PropTypes from 'prop-types'
 
-export default class MenuItem extends Component {
+export default class MenuItem extends React.Component {
 
   static propTypes = {
     item: PropTypes.object.isRequired

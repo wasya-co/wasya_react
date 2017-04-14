@@ -1,8 +1,12 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
+
 import { expect } from 'chai';
 
 import Menu from '../Menu.jsx';
 import MenuItem from '../MenuItem.jsx';
+
+import ReactTestUtils from 'react-dom/test-utils'
 
 describe('Menu', () => {
 
@@ -27,10 +31,10 @@ describe('Menu', () => {
     // Here we set the mocked MenuItem component.
     Menu.__Rewire__('MenuItem', MockedMenuItem);
 
-    let menu = TestUtils.renderIntoDocument(
+    let menu = ReactTestUtils.renderIntoDocument(
       <Menu items={menuItems} />
     );
-    let menuElem = React.findDOMNode(menu);
+    let menuElem = ReactDOM.findDOMNode(menu);
     let items = menuElem.querySelectorAll('li');
 
     it('Should render the menu items', () => {
@@ -63,15 +67,15 @@ describe('Menu', () => {
 
       Menu.__Rewire__('MenuItem', MockedMenuItemWithClickHandler);
 
-      let menu = TestUtils.renderIntoDocument(
+      let menu = ReactTestUtils.renderIntoDocument(
         <Menu items={menuItems} />
       );
-      let menuElem = React.findDOMNode(menu);
+      let menuElem = ReactDOM.findDOMNode(menu);
       let items = menuElem.querySelectorAll('li');
       let node = items[0].querySelector('a');
 
-      TestUtils.Simulate.click(node);
-      TestUtils.Simulate.click(node);
+      ReactTestUtils.Simulate.click(node);
+      ReactTestUtils.Simulate.click(node);
 
       expect(clicked).to.equal(2);
     });

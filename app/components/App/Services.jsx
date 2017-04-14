@@ -1,19 +1,21 @@
-import styles from './_App.scss';
+
+import styles from './_App.scss'
 
 import React from 'react'
+import ReactDOM from 'react-dom'
 
 import { Grid, Row, Col } from 'react-bootstrap'
 
-import img_ror from '../../images/400x200/ror.jpg'
-import img_node from '../../images/400x200/nodejs.jpg'
+import img_ror   from '../../images/400x200/ror.jpg'
+import img_node  from '../../images/400x200/nodejs.jpg'
 import img_react from '../../images/400x200/react.jpg'
 
-import img_angular from '../../images/400x200/angular.jpg'
+import img_angular   from '../../images/400x200/angular.jpg'
 import img_wordpress from '../../images/400x200/wordpress.jpg'
-import img_php from '../../images/400x200/php.jpg'
+import img_php       from '../../images/400x200/php.jpg'
 
-import img_uiux from '../../images/400x200/uiux.jpg'
-import img_mvp from '../../images/400x200/mvp_prototyping.jpg'
+import img_uiux   from '../../images/400x200/uiux.jpg'
+import img_mvp    from '../../images/400x200/mvp_prototyping.jpg'
 import img_devops from '../../images/400x200/devops.jpg'
 
 import Service from './Service'

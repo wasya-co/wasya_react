@@ -1,3 +1,4 @@
+/* eslint no-script-url: 0 */
 
 // import styles from './_Footer.scss';
 import React from 'react';
@@ -9,7 +10,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { Nav, NavItem, Navbar } from 'react-bootstrap';
 
 function handleTouchTap() {
-    alert('onTouchTap triggered on the title component');
+  alert('onTouchTap triggered on the title component');
 }
 
 import Scroll from 'react-scroll'
@@ -24,27 +25,26 @@ import scrollToElement from 'scroll-to-element'
 
 class MainNavigation extends React.Component {
     getChildContext() {
-        return { muiTheme: getMuiTheme(baseTheme) };
+      return { muiTheme: getMuiTheme(baseTheme) };
     }
 
     render() {
-        return (
-            <AppBar 
-                title="Wasya co" 
-                onTitleTouchTap={handleTouchTap}
-                iconElementRight={<FlatButton label="About" />}
-            >
-              <div>
-                Wasya co [About] [Knowledge Base] [Services] [Our Process] [Our Technology] [Clients] [Contact]
-        </div>
-        
-      </AppBar>
-    );
-  }
+      return (
+        <AppBar 
+            title="Wasya co" 
+            onTitleTouchTap={handleTouchTap}
+            iconElementRight={<FlatButton label="About" />}
+        >
+          <div>
+            Wasya co [About] [Knowledge Base] [Services] [Our Process] [Our Technology] [Clients] [Contact]
+          </div>
+        </AppBar>
+      );
+    }
 }
 
 MainNavigation.childContextTypes = {
-    muiTheme: React.PropTypes.object.isRequired,
+  muiTheme: React.PropTypes.object.isRequired,
 };
 
 // can I have completely custom nav, no mui, no material-ui?
@@ -56,7 +56,7 @@ class Nav2 extends React.Component {
       //  window.location = 'http://blog.wasya.co';
       //  break;
       case 'wiki':
-        window.location = 'http://wiki.wasya.co' ;
+        window.location = 'http://wiki.wasya.co';
         break;
       default:
         scrollToElement('#'+selectedKey);

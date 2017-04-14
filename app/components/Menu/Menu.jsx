@@ -1,10 +1,11 @@
-import styles from './_Menu.scss';
-import React from 'react';
-import MenuItem from './MenuItem';
 
-let { Component, PropTypes } = React;
+import styles from './_Menu.scss'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import MenuItem from './MenuItem'
+import PropTypes from 'prop-types'
 
-export default class Menu extends Component {
+export default class Menu extends React.Component {
 
   static defaultProps = {
     items: []
