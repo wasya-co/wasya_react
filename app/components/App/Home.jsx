@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import { Grid, Row, Col } from 'react-bootstrap'
 
-import styles from './_App.scss';
+import styles from './_App.scss'
 
 class Home extends React.Component {
   render () {

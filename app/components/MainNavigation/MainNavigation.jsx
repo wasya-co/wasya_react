@@ -1,13 +1,15 @@
 /* eslint no-script-url: 0 */
 
 // import styles from './_Footer.scss';
-import React from 'react';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 import { AppBar, Tabs, Tab, IconButton, NavigationClose, FlatButton } from 'material-ui';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import { Nav, NavItem, Navbar } from 'react-bootstrap';
+import { Nav, NavItem, Navbar } from 'react-bootstrap'
+import { Link } from 'react-router'
 
 function handleTouchTap() {
   alert('onTouchTap triggered on the title component');
@@ -16,9 +18,9 @@ function handleTouchTap() {
 import Scroll from 'react-scroll'
 
 const styles = {
-    title: {
-        cursor: 'pointer',
-    },
+  title: {
+    cursor: 'pointer',
+  },
 };
 
 import scrollToElement from 'scroll-to-element'
@@ -33,8 +35,7 @@ class MainNavigation extends React.Component {
         <AppBar 
             title="Wasya co" 
             onTitleTouchTap={handleTouchTap}
-            iconElementRight={<FlatButton label="About" />}
-        >
+            iconElementRight={<FlatButton label="About" />} >
           <div>
             Wasya co [About] [Knowledge Base] [Services] [Our Process] [Our Technology] [Clients] [Contact]
           </div>
@@ -81,6 +82,7 @@ class Nav2 extends React.Component {
             <NavItem eventKey={'services'} href="javascript:void(0);" >Services</NavItem>
             { /* <NavItem eventKey={2} href="#" >People</NavItem> */ }
             <NavItem eventKey={'process'} href="#" >Process</NavItem>
+            <NavItem eventKey={'team'} href="#" >Team</NavItem>
             <NavItem eventKey={'blog'} href="javascript:void(0);" >Blog</NavItem>
             { /* <NavItem eventKey={'wiki'} href="#" >Wiki</NavItem> */ }
             <NavItem eventKey={'contact'} href="#" >Contact</NavItem>

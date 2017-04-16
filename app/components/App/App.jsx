@@ -49,14 +49,9 @@ class App extends React.Component {
           <MainNavigation />
         </div>
         <About />
-
-        <Router history={hashHistory}>
-          <Route path='/' component={Home} />
-          <Route path='/team' component={Team} />
-        </Router>
-
         <Services />
         <OurProcess />
+        <Team />
         <ContactUs />
         <Footer0 />
         <Footer1 />
