@@ -1,5 +1,5 @@
-
 import React from 'react'
+import ReactDOM from 'react-dom'
 
 import { Grid, Row, Col } from 'react-bootstrap'
 

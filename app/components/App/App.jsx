@@ -1,5 +1,7 @@
 import React    from 'react'
 import ReactDOM from 'react-dom'
+import { Router, Route, hashHistory } from 'react-router'
+import PropTypes from 'prop-types'
 
 import 'whatwg-fetch'
 
@@ -8,6 +10,8 @@ import bg         from './images/noisy_grid.png'
 import AppActions from '../../actions/AppActions'
 import ItemsStore from '../../stores/ItemsStore'
 import Body       from '../Body/Body'
+import Team       from './Team'
+import Home       from './Home'
 import { Footer0, Footer1, Footer2, Footer3 } from '../Footer/Footer'
 import ContactUs  from '../ContactUs/ContactUs'
 import OurProcess from '../OurProcess/OurProcess'
@@ -15,15 +19,13 @@ import Services   from './Services'
 import About      from './About'
 import MainNavigation from '../MainNavigation/MainNavigation'
 
-import { Router, Route, hashHistory } from 'react-router'
-
 function getAppState() {
   return {
     items: ItemsStore.getAll()
   };
 }
 
-export default class App extends React.Component {
+class App extends React.Component {
 
   state = getAppState()
 
@@ -41,20 +43,18 @@ export default class App extends React.Component {
   }
 
   render() {
-    /* return (
-      <div className={styles.app}>
-        <Body items={this.state.items} />
-        <Footer0 />
-        <Footer1 />
-        <Footer2 />
-      </div>
-    ); */
     return (
       <div style={{ backgroundImage: `url(${bg})` }} >
         <div className={styles.app}  >
           <MainNavigation />
         </div>
         <About />
+
+        <Router history={hashHistory}>
+          <Route path='/' component={Home} />
+          <Route path='/team' component={Team} />
+        </Router>
+
         <Services />
         <OurProcess />
         <ContactUs />
@@ -65,3 +65,9 @@ export default class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  children: PropTypes.node.isRequired
+}
+
+export default App

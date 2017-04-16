@@ -1,5 +1,7 @@
-
 import React from 'react'
+import ReactDOM from 'react-dom'
+
+import { Grid, Row, Col } from 'react-bootstrap'
 
 import victor from './images/victor.jpg'
 import oleg from './images/oleg.jpg'
@@ -45,3 +47,6 @@ class Team extends React.Component {
     )
   }
 }
+
+export default Team
+
