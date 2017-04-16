@@ -9,15 +9,8 @@ import styles     from './_App.scss'
 import bg         from './images/noisy_grid.png'
 import AppActions from '../../actions/AppActions'
 import ItemsStore from '../../stores/ItemsStore'
-import Body       from '../Body/Body'
-import Team       from './Team'
 import Home       from './Home'
-import { Footer0, Footer1, Footer2, Footer3 } from '../Footer/Footer'
-import ContactUs  from '../ContactUs/ContactUs'
-import OurProcess from '../OurProcess/OurProcess'
-import Services   from './Services'
-import About      from './About'
-import MainNavigation from '../MainNavigation/MainNavigation'
+import Products   from './Products'
 
 function getAppState() {
   return {
@@ -44,19 +37,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div style={{ backgroundImage: `url(${bg})` }} >
-        <div className={styles.app}  >
-          <MainNavigation />
-        </div>
-        <About />
-        <Services />
-        <OurProcess />
-        <Team />
-        <ContactUs />
-        <Footer0 />
-        <Footer1 />
-        <Footer2 />
-      </div>
+      <Router history={hashHistory}>
+        <Route path="/" component={Home} />
+        <Route path="/products" component={Products} />
+      </Router>
     );
   }
 }

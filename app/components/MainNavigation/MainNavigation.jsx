@@ -79,7 +79,8 @@ class Nav2 extends React.Component {
               About
               { /* <Scroll.Link to="about">About</Scroll.Link> */ }
             </NavItem>
-            <NavItem eventKey={'services'} href="javascript:void(0);" >Services</NavItem>
+            <NavItem eventKey={'services'} href="javascript:void(0);">Services</NavItem>
+            <NavItem eventKey={'services'} href="javascript:void(0);">Products</NavItem>
             { /* <NavItem eventKey={2} href="#" >People</NavItem> */ }
             <NavItem eventKey={'process'} href="#" >Process</NavItem>
             <NavItem eventKey={'team'} href="#" >Team</NavItem>
