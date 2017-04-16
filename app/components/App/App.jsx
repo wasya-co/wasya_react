@@ -1,6 +1,7 @@
-
-import React from 'react'
+import React    from 'react'
 import ReactDOM from 'react-dom'
+
+import 'whatwg-fetch'
 
 import styles     from './_App.scss'
 import bg         from './images/noisy_grid.png'
@@ -8,11 +9,13 @@ import AppActions from '../../actions/AppActions'
 import ItemsStore from '../../stores/ItemsStore'
 import Body       from '../Body/Body'
 import { Footer0, Footer1, Footer2, Footer3 } from '../Footer/Footer'
-import ContactUs from '../ContactUs/ContactUs'
+import ContactUs  from '../ContactUs/ContactUs'
 import OurProcess from '../OurProcess/OurProcess'
-import Services from './Services'
-import About from './About'
+import Services   from './Services'
+import About      from './About'
 import MainNavigation from '../MainNavigation/MainNavigation'
+
+import { Router, Route, hashHistory } from 'react-router'
 
 function getAppState() {
   return {

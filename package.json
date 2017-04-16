@@ -35,9 +35,11 @@
     "react": "^15.5.0",
     "react-bootstrap": "^0.30.8",
     "react-dom": "^15.5.3",
+    "react-router": "^4.1.1",
     "react-scroll": "^1.4.8",
     "react-tap-event-plugin": "^2.0.1",
-    "scroll-to-element": "^2.0.0"
+    "scroll-to-element": "^2.0.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
