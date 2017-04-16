@@ -1,8 +1,8 @@
 /* eslint no-script-url: 0 */
 
-// import styles from './_Footer.scss';
 import React from 'react'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 
 import { AppBar, Tabs, Tab, IconButton, NavigationClose, FlatButton } from 'material-ui';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
@@ -45,7 +45,7 @@ class MainNavigation extends React.Component {
 }
 
 MainNavigation.childContextTypes = {
-  muiTheme: React.PropTypes.object.isRequired,
+  muiTheme: PropTypes.object.isRequired,
 };
 
 // can I have completely custom nav, no mui, no material-ui?
@@ -75,14 +75,7 @@ class Nav2 extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav bsStyle="pills" pullRight onSelect={this.handleSelect}>
-            <NavItem eventKey={'about'} href="javascript:void(0);" >About</NavItem>
-            <NavItem eventKey={'services'} href="/#/">Services</NavItem>
-            <li role="presentation"><Link to="/products">Products</Link></li>
-            <NavItem eventKey={'process'} href="#" >Process</NavItem>
-            <NavItem eventKey={'team'} href="#" >Team</NavItem>
-            <NavItem eventKey={'blog'} href="javascript:void(0);" >Blog</NavItem>
-            { /* <NavItem eventKey={'wiki'} href="#" >Wiki</NavItem> */ }
-            <NavItem eventKey={'contact'} href="#" >Contact</NavItem>
+            <li role="presentation"><Link to="/">Home</Link></li>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

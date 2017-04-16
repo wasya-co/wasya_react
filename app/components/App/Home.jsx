@@ -13,6 +13,8 @@ import Team       from './Team'
 import ContactUs  from '../ContactUs/ContactUs'
 import { Footer0, Footer1, Footer2, Footer3 } from '../Footer/Footer'
 
+import bg         from './images/noisy_grid.png'
+
 class Home extends React.Component {
   render () {
     return (
