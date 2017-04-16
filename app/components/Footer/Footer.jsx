@@ -142,4 +142,16 @@ class Footer3 extends React.Component {
   }
 }
 
-export { Footer0, Footer1, Footer2, Footer3 }
+class Footer extends React.Component {
+  render () {
+    return (
+      <div>
+        <Footer0 />
+        <Footer1 />
+        <Footer2 />
+      </div>
+    )
+  }
+}
+
+export { Footer, Footer0, Footer1, Footer2 }
