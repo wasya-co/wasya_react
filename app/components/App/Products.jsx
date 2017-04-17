@@ -22,14 +22,18 @@ class Products extends React.Component {
         <Grid>
           <Row>
             <Col xs={6}>
-              Microstes3 - a modern content management system (CMS). It's modular and componentized. Written in ruby on rails.
+              <h1>Microstes3 Cluster</h1>
+              A modern content management system (CMS). It's modular and componentized. Written in ruby on rails.
+              <p><a href="http://wiki.wasya.co/index.php/Microsites_Cluster">http://wiki.wasya.co/index.php/Microsites_Cluster</a></p>
             </Col>
             <Col xs={6}>
-              Bootstrap codebases - free to use!
+              <h1>Bootstraps</h1>
+              Free to use!
               <ul>
                 <li>React bootstrap</li>
                 <li>Ruby on Rails bootstrap</li>
               </ul>
+              <p><a href="http://wiki.wasya.co/index.php/Bootstraps">http://wiki.wasya.co/index.php/Bootstraps</a></p>
             </Col>
           </Row>
         </Grid>

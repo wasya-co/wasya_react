@@ -147,7 +147,6 @@ class Footer extends React.Component {
     return (
       <div>
         <Footer0 />
-        <Footer1 />
         <Footer2 />
       </div>
     )
