@@ -7,6 +7,7 @@ import styles from './_App.scss'
 
 import MainNavigation from '../MainNavigation/MainNavigation'
 import About      from './About'
+import Leaderboard from './Leaderboard'
 import Services   from './Services'
 import OurProcess from '../OurProcess/OurProcess'
 import Team       from './Team'
@@ -23,6 +24,7 @@ class Home extends React.Component {
           <MainNavigation />
         </div>
         <About />
+        <Leaderboard />
         <Services />
         <OurProcess />
         <Team />

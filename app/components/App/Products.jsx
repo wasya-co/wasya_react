@@ -28,12 +28,30 @@ class Products extends React.Component {
             </Col>
             <Col xs={6}>
               <h1>Bootstraps</h1>
-              Free to use!
+              <p>Free to use! When starting a project, you can use a boostrap or seed, such as angular seed. We publish the ones we use for starting projects in-house. They are similar, but not the same, as some bootstraps available publicly for the same frameworks.</p>
               <ul>
-                <li>React bootstrap</li>
-                <li>Ruby on Rails bootstrap</li>
+                <li><a href="https://github.com/piousbox/wasya_co_react/tree/0.0.6">React bootstrap</a></li>
+                <li><a href="https://github.com/piousbox/wired-rails-project">Ruby on Rails bootstrap</a></li>
               </ul>
-              <p><a href="http://wiki.wasya.co/index.php/Bootstraps">http://wiki.wasya.co/index.php/Bootstraps</a></p>
+            </Col>
+          
+          
+            <Col xs={6}>
+              <h1>Haikubox</h1>
+              <p>A simple password manager that keeps track of n-tubles of three: location, username, password. The 3-line stanza is like a haiku.</p>
+              <p><a href="https://github.com/Computational-arts-corp/Haikubox">https://github.com/Computational-arts-corp/Haikubox</a></p>
+            </Col>
+            <Col xs={6}>
+              <h1>Ushare</h1>
+              <p>Music server written in php. Upload your mp3 collection as a folder, and access it via wifi.</p>
+              <p>But careful! Streaming high-quality mp3s in the house will congest the network and your roommates might complain ;-)</p>
+              <p><a href="https://github.com/piousbox/music.piousbox.com">https://github.com/piousbox/music.piousbox.com</a></p>
+            </Col>
+
+            <Col xs={6}>
+              <h1>O0F2</h1>
+              <p>Java image processing filters (like Instagram before Instagram was cool)/</p>
+              <p><a href='https://github.com/piousbox/O0F2'>https://github.com/piousbox/O0F2</a></p>
             </Col>
           </Row>
         </Grid>
