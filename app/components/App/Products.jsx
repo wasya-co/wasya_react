@@ -5,7 +5,7 @@ import { Grid, Row, Col } from 'react-bootstrap'
 
 import styles from './_App.scss'
 
-import ProductsNavigation from './ProductsNavigation'
+import BackNavigation from '../MainNavigation/BackNavigation'
 import { Footer } from '../Footer'
 
 import bg from './images/noisy_grid.png'
@@ -14,9 +14,7 @@ class Products extends React.Component {
   render () {
     return (
       <div style={{ backgroundImage: `url(${bg})` }}>
-        <div className={styles.app}>
-          <ProductsNavigation />
-        </div>
+        <BackNavigation />
         <br /><br /><br />
         <h1 style={{ textAlign: 'center' }}>Our Products</h1>
         <Grid>
@@ -34,7 +32,6 @@ class Products extends React.Component {
                 <li><a href="https://github.com/piousbox/wired-rails-project">Ruby on Rails bootstrap</a></li>
               </ul>
             </Col>
-          
           
             <Col xs={6}>
               <h1>Haikubox</h1>

@@ -19,9 +19,7 @@ class Home extends React.Component {
   render () {
     return (
       <div style={{ backgroundImage: `url(${bg})` }}>
-        <div className={styles.app}>
-          <MainNavigation />
-        </div>
+        <MainNavigation />
         <About />
         <Services />
         <OurProcess />

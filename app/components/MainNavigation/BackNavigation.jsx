@@ -25,29 +25,6 @@ const styles = {
 
 import scrollToElement from 'scroll-to-element'
 
-class MainNavigation extends React.Component {
-    getChildContext() {
-      return { muiTheme: getMuiTheme(baseTheme) };
-    }
-
-    render() {
-      return (
-        <AppBar 
-            title="Wasya co" 
-            onTitleTouchTap={handleTouchTap}
-            iconElementRight={<FlatButton label="About" />} >
-          <div>
-            Wasya co [About] [Knowledge Base] [Services] [Our Process] [Our Technology] [Clients] [Contact]
-          </div>
-        </AppBar>
-      );
-    }
-}
-
-MainNavigation.childContextTypes = {
-  muiTheme: PropTypes.object.isRequired,
-};
-
 // can I have completely custom nav, no mui, no material-ui?
 class Nav2 extends React.Component {
 
@@ -75,7 +52,7 @@ class Nav2 extends React.Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav bsStyle="pills" pullRight onSelect={this.handleSelect}>
-            <li role="presentation"><Link to="/">Home</Link></li>
+            <li><Link to="/">Home</Link></li>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

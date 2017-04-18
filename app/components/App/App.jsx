@@ -10,6 +10,7 @@ import bg         from './images/noisy_grid.png'
 import AppActions from '../../actions/AppActions'
 import ItemsStore from '../../stores/ItemsStore'
 import Home       from './Home'
+import { ProcessWrapped } from '../OurProcess'
 import Products   from './Products'
 
 function getAppState() {
@@ -39,6 +40,7 @@ class App extends React.Component {
     return (
       <Router history={hashHistory}>
         <Route path="/" component={Home} />
+        <Route path="/process" component={ProcessWrapped} />
         <Route path="/products" component={Products} />
       </Router>
     );
