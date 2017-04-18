@@ -23,3 +23,60 @@
 .services {
   padding-top: 3em;
 }
+
+.cloudWrapper {
+  justify-content: center;
+  display: flex;
+}
+.cloud {
+}
+
+/*
+ * transitions
+ */
+/*
+.exampleEnter {
+  opacity: 0.01;
+  border: 1px solid red;
+}
+
+.exampleEnter.exampleEnterActive {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.exampleLeave {
+  opacity: 1;
+}
+
+.exampleLeave.exampleLeaveActive {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+*/
+
+/* next! */
+.enter {
+  opacity: 0.01;
+  transition: opacity 1s ease-in;
+  border: 1px solid green;
+}
+.enter.enterActive {
+  opacity: 1;
+  border: 1px solid blue;
+}
+.leave {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+.leave.leaveActive {
+  opacity: 0.01;
+}
+.appear {
+  opacity: 0.01;
+  border: 1px solid red;
+}
+.appear.appearActive {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
