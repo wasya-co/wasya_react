@@ -34,28 +34,6 @@
 /*
  * transitions
  */
-/*
-.exampleEnter {
-  opacity: 0.01;
-  border: 1px solid red;
-}
-
-.exampleEnter.exampleEnterActive {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.exampleLeave {
-  opacity: 1;
-}
-
-.exampleLeave.exampleLeaveActive {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}
-*/
-
-/* next! */
 .enter {
   opacity: 0.01;
   transition: opacity 1s ease-in;
@@ -74,7 +52,6 @@
 }
 .appear {
   opacity: 0.01;
-  border: 1px solid red;
 }
 .appear.appearActive {
   opacity: 1;

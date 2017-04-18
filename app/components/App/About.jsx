@@ -41,9 +41,15 @@ class About extends React.Component {
         <Row >
           <Col xs={12}>
             <div id="about"></div>
-            <div className={styles.cloudWrapper} >
-              <img src={clouds} alt="" className={styles.cloud} />
-            </div>
+            <CSSTransitionGroup
+                transitionName={styles}
+                transitionAppear={true}
+                transitionAppearTimeout={1000}
+            >
+              <div className={styles.cloudWrapper} >
+                <img src={clouds} alt="" className={styles.cloud} />
+              </div>
+            </CSSTransitionGroup>
           </Col>
         </Row>
         <Row>
@@ -56,7 +62,7 @@ class About extends React.Component {
         </Row>
         <Row>
           <Col xs={12}>
-            <button onClick={this.handleAdd}>Add Item</button>
+            { /* <button onClick={this.handleAdd}>Add Item</button> */ }
             <CSSTransitionGroup
                 transitionName={styles}
                 transitionAppear={true}
@@ -66,7 +72,7 @@ class About extends React.Component {
                 transitionLeave={false}
                 transitionLeaveTimeout={1000} 
             >
-              {items}
+              { /* items */ }
             </CSSTransitionGroup>
           </Col>
         </Row>
