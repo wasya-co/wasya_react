@@ -37,8 +37,10 @@
     "react-dom": "^15.5.3",
     "react-router": "^3.0.2",
     "react-scroll": "^1.4.8",
+    "react-scroll-effects": "^1.0.12",
     "react-tap-event-plugin": "^2.0.1",
     "react-transition-group": "^1.1.2",
+    "react-waypoint": "^6.0.0",
     "scroll-to-element": "^2.0.0",
     "whatwg-fetch": "^2.0.3"
   },

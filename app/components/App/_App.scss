@@ -1,4 +1,5 @@
 @import "toolkit";
+@import "animate";
 
 .app {
   font-size: inherit;
@@ -29,6 +30,11 @@
   display: flex;
 }
 .cloud {
+}
+
+.redBorder {
+  border: 1px solid red;
+  padding: 1em;
 }
 
 /*

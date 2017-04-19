@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom'
 
 import { Grid, Row, Col } from 'react-bootstrap'
 
-import styles from './_App.scss';
+import styles from './_App.scss'
 
 import clouds from "./images/clouds.png"
 
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
+
+import ScrollEffect from 'react-scroll-effects'
 
 class About extends React.Component {
   constructor(props) {
@@ -60,6 +62,7 @@ class About extends React.Component {
             <br />
           </Col>
         </Row>
+        
         <Row>
           <Col xs={12}>
             { /* <button onClick={this.handleAdd}>Add Item</button> */ }
@@ -76,6 +79,7 @@ class About extends React.Component {
             </CSSTransitionGroup>
           </Col>
         </Row>
+
       </Grid>
     )
   }
