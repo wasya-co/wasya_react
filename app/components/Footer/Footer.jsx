@@ -118,7 +118,7 @@ class Footer2 extends React.Component {
         <Grid>
           <Row>
             <Col xs={6} xsOffset={6}>
-              <span className="pull-right" >Wasya co &copy; {year}<br />v0.0.6 - spec driven</span>
+              <span className="pull-right" >Wasya co &copy; {year}<br />v0.0.8</span>
               <br />
               <br />
             </Col>

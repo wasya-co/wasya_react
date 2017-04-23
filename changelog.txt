@@ -7,4 +7,4 @@
 0.0.7 - let's do router
         let's have process as a routeable page
 0.0.8 - let's do some transitions
-
+        got list of clients with pics

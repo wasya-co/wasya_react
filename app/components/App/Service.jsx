@@ -16,7 +16,7 @@ class Service extends React.Component {
   }
 
   handleEnter() {
-    console.log('handle enter')
+    // console.log('handle enter')
     this.setState({ item:
                          <CSSTransitionGroup
                              transitionName={styles}

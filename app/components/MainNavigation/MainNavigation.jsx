@@ -54,12 +54,14 @@ class Nav2 extends React.Component {
           <Nav bsStyle="pills" pullRight onSelect={this.handleSelect}>
             <NavItem eventKey={'about'} href="javascript:void(0);" >About</NavItem>
             <NavItem eventKey={'services'} href="/#/">Services</NavItem>
-            <li role="presentation"><Link to="/products">Products</Link></li>
+            { /* this is fine, but I don't have that much space, and the products are ugly from design point of view */ }
+            { /* <li role="presentation"><Link to="/products">Products</Link></li> */ }
             <NavItem eventKey={'process'} href="#" >Process</NavItem>
             <NavItem eventKey={'team'} href="#" >Team</NavItem>
             <NavItem eventKey={'blog'} href="javascript:void(0);" >Blog</NavItem>
             { /* <NavItem eventKey={'wiki'} href="#" >Wiki</NavItem> */ }
-            <li><a href="http://wiki.wasya.co/index.php/List_of_Clients">Clients</a></li>
+            { /* <li><a href="http://wiki.wasya.co/index.php/List_of_Clients">Clients</a></li> */ }
+            <li><Link to="/clients">Clients</Link></li>
             <NavItem eventKey={'contact'} href="#" >Contact</NavItem>
           </Nav>
         </Navbar.Collapse>

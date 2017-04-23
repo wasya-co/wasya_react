@@ -12,6 +12,7 @@ import ItemsStore from '../../stores/ItemsStore'
 import Home       from './Home'
 import { ProcessWrapped } from '../OurProcess'
 import Products   from './Products'
+import Clients    from './Clients'
 
 function getAppState() {
   return {
@@ -42,6 +43,7 @@ class App extends React.Component {
         <Route path="/" component={Home} />
         <Route path="/process" component={ProcessWrapped} />
         <Route path="/products" component={Products} />
+        <Route path="/clients" component={Clients} />
       </Router>
     );
   }
