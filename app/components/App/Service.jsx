@@ -39,8 +39,7 @@ class Service extends React.Component {
   render() {
     return (
       <span>
-        <Waypoint onEnter={this.handleEnter} onLeave={this.handleLeave} >
-        </Waypoint>
+        <Waypoint onEnter={this.handleEnter} onLeave={this.handleLeave} />
         { this.state.item }
       </span>
     )

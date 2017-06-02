@@ -25,7 +25,7 @@ class Team extends React.Component {
             <p>San Francisco Bay Area</p>
             <p>A full-stack engineer focusing on Ruby on Rails, Javascript, devops, and web application development for startups and agile teams.</p>
             <p>Resume: <a href="http://piousbox.github.io">http://piousbox.github.io</a></p>
-            <p>Blog: <a href="http://piousbox.com">http://piousbox.com</a></p>
+            <p>Blog: <a href="http://blog.piousbox.com">http://blog.piousbox.com</a></p>
           </Col>
           <Col xs={6}>
             <img src={oleg} style={{ textAlign: 'center' }} />
