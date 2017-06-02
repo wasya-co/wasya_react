@@ -10,7 +10,7 @@ npm run clean &&
 npm run build &&
 git add . &&
 git commit -m 'auto-build on `date +%Y%m%d`' ;
-git push &&
+git push origin master &&
 git checkout "$tagNumber" &&
 
 echo "wasya_react build ok"
