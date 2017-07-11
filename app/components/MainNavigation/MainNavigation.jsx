@@ -25,7 +25,6 @@ const styles = {
 
 import scrollToElement from 'scroll-to-element'
 
-// can I have completely custom nav, no mui, no material-ui?
 class Nav2 extends React.Component {
 
   handleSelect (selectedKey) {

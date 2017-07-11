@@ -81,7 +81,7 @@ class Footer1 extends React.Component {
       <footer className={styles.footer} style={{ backgroundImage: `url(${bg})`, paddingTop: '3em' }} id="blog" >
         <Grid >
           <Row className="show-grid" >
-            <Col xs={12} sm={6} >
+            <Col xs={12} sm={6} id="fromOurBlog" >
               <Panel>
                 <h2>From our Blog</h2>
                 {blogTitles}
@@ -94,12 +94,12 @@ class Footer1 extends React.Component {
                 <li key={1}><img src={instagram} /></li>
                 <li key={2}><img src={facebook} /></li>
                 <li key={3}><img src={github} /></li>
-                <li key={4}><img src={google_plus} /></li>
+                { /* <li key={4}><img src={google_plus} /></li> */ }
                 <li key={5}><img src={linkedin} /></li>
                 <li key={6}><img src={youtube} /></li>
               </ul>
               <br /><br />
-              <Panel>
+              <Panel id="keepInTouch" >
                 <h2>Keep in Touch!</h2>
                 <p>Subscribe to our occasional newsletter.</p>
                 <form>

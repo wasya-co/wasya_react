@@ -20,7 +20,6 @@ class OurProcess extends React.Component {
                   <div className={styles.panel +' panel'}>
                     <div className="timeline-heading">
                       <h4 className="title">Step 1 - Whiteboard</h4>
-                      { /* <p><small className="text-muted"><i className="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p> */ }
                     </div>
                     <div className={styles.body}>
                       <p>We sit down with product managers and stake holders and strategize on the approach to take. The results of this step are:</p>
