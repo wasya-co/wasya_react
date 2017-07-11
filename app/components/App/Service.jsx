@@ -6,6 +6,8 @@ import styles   from './_App.scss'
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
 import Waypoint from 'react-waypoint'
 
+import { Panel } from 'react-bootstrap'
+
 class Service extends React.Component {
 
   constructor(props) {
@@ -24,7 +26,7 @@ class Service extends React.Component {
                              transitionAppearTimeout={1000}
                          >
                            <div className={ styles.wrap } >
-                             <img src={this.props.image} alt={this.props.title} style={{ maxWidth: '300px' }} />
+                             <img src={this.props.image} alt={this.props.title} style={{ maxWidth: '100%' }} />
                              <h3>{this.props.title}</h3>
                              {this.props.descr.map(function(d, idx) {
                                 return <p key={idx} >{d}</p>
@@ -38,10 +40,10 @@ class Service extends React.Component {
 
   render() {
     return (
-      <span>
+      <Panel>
         <Waypoint onEnter={this.handleEnter} onLeave={this.handleLeave} />
         { this.state.item }
-      </span>
+      </Panel>
     )
   }
 }
