@@ -10,4 +10,6 @@
         got list of clients with pics
 0.0.9 - lets wire redux reasonably (show cities)
         let's have this part test-driven
+0.0.10 - fancy Stack page
+
 

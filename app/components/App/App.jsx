@@ -13,6 +13,7 @@ import Home       from './Home'
 import { ProcessWrapped } from '../OurProcess'
 import Products   from './Products'
 import Clients    from './Clients'
+import Stack      from '../Stack/Stack'
 
 function getAppState() {
   return {
@@ -21,7 +22,6 @@ function getAppState() {
 }
 
 class App extends React.Component {
-
   state = getAppState()
 
   componentDidMount() {
@@ -40,10 +40,11 @@ class App extends React.Component {
   render() {
     return (
       <Router history={hashHistory}>
-        <Route path="/" component={Home} />
-        <Route path="/process" component={ProcessWrapped} />
+        <Route path="/"         component={Home} />
+        <Route path="/process"  component={ProcessWrapped} />
         <Route path="/products" component={Products} />
-        <Route path="/clients" component={Clients} />
+        <Route path="/clients"  component={Clients} />
+        <Route path="/stack"    component={Stack} />
       </Router>
     );
   }

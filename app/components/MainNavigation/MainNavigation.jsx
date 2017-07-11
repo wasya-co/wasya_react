@@ -31,13 +31,13 @@ class Nav2 extends React.Component {
   handleSelect (selectedKey) {
     switch (selectedKey) {
       // case 'blog':
-      //  window.location = 'http://blog.wasya.co';
-      //  break;
+      //  window.location = 'http://blog.wasya.co'
+      //  break
       case 'wiki':
-        window.location = 'http://wiki.wasya.co';
-        break;
+        window.location = 'http://wiki.wasya.co'
+        break
       default:
-        scrollToElement('#'+selectedKey);
+        scrollToElement('#'+selectedKey)
     }
   }
 
@@ -57,6 +57,7 @@ class Nav2 extends React.Component {
             { /* this is fine, but I don't have that much space, and the products are ugly from design point of view */ }
             { /* <li role="presentation"><Link to="/products">Products</Link></li> */ }
             <NavItem eventKey={'process'} href="#" >Process</NavItem>
+            <li><Link to="/stack">Stack</Link></li>
             <NavItem eventKey={'team'} href="#" >Team</NavItem>
             <NavItem eventKey={'blog'} href="javascript:void(0);" >Blog</NavItem>
             { /* <NavItem eventKey={'wiki'} href="#" >Wiki</NavItem> */ }

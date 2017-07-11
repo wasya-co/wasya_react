@@ -18,6 +18,12 @@ import youtube      from "./images/youtube.png"
 import bg           from './images/bg1.png'
 import bgTriangular from './images/triangular.png'
 import f0_bg        from './images/weather.png'
+import Center       from '../Center'
+
+import us from './images/us.png'
+import co from './images/co.png'
+import ru from './images/ru.png'
+import br from './images/br.png'
 
 class Footer0 extends React.Component {
   render () {
@@ -126,6 +132,17 @@ class Footer2 extends React.Component {
           <Row>
             <Col xs={12}>
               <div style={{ textAlign: 'center' }} >New York City &nbsp; | &nbsp; Chicago &nbsp; | &nbsp; Los Angeles &nbsp; | &nbsp; San Francisco</div>
+            </Col>
+            <Col xs={12}>
+              <Center>
+                <img src={us} alt='usa' />
+      &nbsp;
+      <img src={co} alt='colombia' />
+      &nbsp;
+      <img src={ru} alt='russia' />
+      &nbsp;
+      <img src={br} alt='brasil brazil' />
+              </Center>
             </Col>
           </Row>
         </Grid>

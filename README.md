@@ -13,61 +13,6 @@ A boilerplate for building React apps with ES6 and webpack.
 * React router ([feature/react-router](https://github.com/badsyntax/react-seed/tree/feature/react-router))
 * Material UI ([feature/material-ui](https://github.com/badsyntax/react-seed/tree/feature/material-ui))
 
-## Getting started
-
-## Install
-
-node ip 10.0.1.157
-
-### Installing with git
-
-```bash
-git clone --depth=1 https://github.com/badsyntax/react-seed.git my-project
-```
-
-## npm scripts
-
-* `npm start` - Build and start the app in dev mode at http://localhost:8000
-* `npm test` - Run the tests
-* `npm run build` - Run a production build
-
-## Examples
-
-### Writing components:
-
-```js
-// Filename: Menu.jsx
-
-'use strict';
-
-import styles from './_Menu.scss';
-import React from 'react';
-import MenuItem from './MenuItem';
-
-let { Component, PropTypes } = React;
-
-export default class Menu extends Component {
-
-  static defaultProps = {
-    items: []
-  };
-
-  static propTypes = {
-    items: PropTypes.array.isRequired
-  };
-
-  render() {
-    return (
-      <ul className={styles.menu}>
-        {this.props.items.map((item) => {
-          return (<MenuItem item={item} />);
-        }, this)}
-      </ul>
-    );
-  }
-}
-```
-
 ###Writing tests:
 
 ```js
@@ -143,36 +88,9 @@ you should always import your CSS/Sass before importing any other JavaScript fil
 * If not using local CSS, use an approach like [BEM](http://cssguidelin.es/#bem-like-naming) to avoid specificity
 issues that might exist due to unpredicatable order of CSS rules.
 
-## HTML files
-
-All required `.html` files are compiled with lodash.template and synced into the `./build` directory:
-
-```js
-// Filename: app.jsx
-import './index.html';
-```
-
-* You can adjust the lodash template data in the `webpack/loaders.js` file.
-
-## Conventions
-
-* Use fat arrows for anonymous functions
-* Don't use `var`. Use `let` and `const`.
-
-
 ## Releasing
 
 1. `npm version patch`
 2. `git push --follow-tags`
 3. `npm login` (Optional)
 4. `npm publish`
-
-## Credits
-
-This project was initially forked from https://github.com/tcoopman/react-es6-browserify
-
-## License
-
-Copyright (c) 2015 Richard Willis
-
-MIT (http://opensource.org/licenses/MIT)
