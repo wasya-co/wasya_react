@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="248" height="60" viewBox="0 0 248 60">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 50px;
+      }
+
+      .cls-2 {
+        font-family: "Phosphate-Inline";
+      }
+    </style>
+  </defs>
+  <text x="13" y="47" class="cls-1"><tspan class="cls-2">Wasya co</tspan></text>
+</svg>
