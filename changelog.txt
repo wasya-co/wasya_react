@@ -1,0 +1,7 @@
+
+0.0.0 - primary branch
+0.1.0 - primary branch 
+master - gets deployed (hm...)
+
+0.0.11 - current development, super goodlooking with square bg
+0.1.1 - development of Industry theme
