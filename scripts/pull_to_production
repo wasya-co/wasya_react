@@ -3,6 +3,7 @@
 set -ex
 
 cd /home/ubuntu/projects/wasya_react
+git fetch
 git reset origin/master --hard
-git pull
+# git pull
 sudo service apache2 reload
