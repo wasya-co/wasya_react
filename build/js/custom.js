@@ -62,7 +62,7 @@ function magnific_popup()
 
 function scroll_top(){
 	'use strict';
-	var scrollTop = jQuery("button.scroltop");
+	var scrollTop = jQuery(".scroltop");
 	/* page scroll top on click function */	
     scrollTop.on('click',function() {
 		jQuery("html, body").animate({

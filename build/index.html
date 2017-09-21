@@ -30,6 +30,7 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
 <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/custom.css">
 <link class="skin"  rel="stylesheet" type="text/css" href="css/skin/skin-4.css">
 <link  rel="stylesheet" type="text/css" href="css/templete.css">
 <link rel="stylesheet" type="text/css" href="css/switcher.css"/>
@@ -52,14 +53,23 @@
           <!-- main nav -->
           <div class="header-nav navbar-collapse collapse">
             <ul class=" nav navbar-nav">
-              <li class="active"> <a href="/">Home<i class="fa fa-chevron-down"></i></a></li>
-              <li><a href="javascript:;">About<i class="fa fa-chevron-down"></i></a></li>
-              <li><a href="javascript:;">Services<i class="fa fa-chevron-down"></i></a></li>
-              <li><a href="javascript:;">Clients<i class="fa fa-chevron-down"></i></a></li>
-              <li><a href="javascript:;">Process<i class="fa fa-chevron-down"></i></a></li>
-              <li><a href="javascript:;">Stack<i class="fa fa-chevron-down"></i></a></li>
-              <li><a href="javascript:;">Team<i class="fa fa-chevron-down"></i></a></li>
-              <li><a href="javascript:;">Contact<i class="fa fa-chevron-down"></i></a></li>
+              <li class="active"> <a href="javascript:;" class="scroltop" >Home</a></li>
+              <li><a href="javascript:;">About<i class="fa fa-chevron-down"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="javascript:;">Services</a></li>
+                  <li><a href="javascript:;">Process</a></li>
+                  <li><a href="javascript:;">Stack</a></li>
+                  <li><a href="javascript:;">Team</a></li>
+                </ul>                    
+              </li>
+              <li><a href="javascript:;">Portfolio<i class="fa fa-chevron-down"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="javascript:;">Case Studies</a></li>
+                  <li><a href="javascript:;">Clients</a></li>
+                  <li><a href="javascript:;">Articles</a></li>
+                </ul>
+              </li>
+              <li><a href="javascript:;">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -76,7 +86,7 @@
       <div class="container">
         <div class="dez-bnr-inr-entry">
           <h1 class="text-white">Software Development & Consulting in South Bay Area</h1>
-          <h5 class="text-white">We strive to implement performant, efficient processes & tools.</h5>
+          <h5 class="text-white">Implementing performant, efficient processes & tools</h5>
         </div>
       </div>
     </div>
@@ -88,13 +98,13 @@
         <div class="dez-separator-outer ">
           <div class="dez-separator style-icon"><i class="fa fa-leaf"></i></div>
         </div>
-        <p>We are a software consulting firm that specializes in full-cycle web application development. We service startups and small local businesses that are focused on technology. We utilize modern best development practices and provide our clients with the most effective tooling possible.</p>
+        <p class="justify">We are a software consulting firm that specializes in full-cycle web application development. We service startups and small local businesses that are focused on technology. We utilize modern best development practices and provide our clients with the most effective tooling possible.</p>
       </div>
       <div class="section-content"></div>
     </div>
 
     <!-- inner page banner -->
-    <div class="dez-bnr-inr overlay-black-middle" style="background-image:url(images/about-us.jpg);">
+    <div class="dez-bnr-inr overlay-black-middle bg-img-fix" style="background-image:url(images/about-us.jpg);">
       <div class="container">
         <div class="dez-bnr-inr-entry">
           <h1 class="text-white">&nbsp;</h1>
@@ -112,8 +122,8 @@
 							<h3 class="h3">Services</h3>
 							<div class="dez-separator bg-primary"></div>
 							<div class="clear"></div>
-							<p class="m-b0">We offer two parallel services to our clients. Firstly, we provide technical solutions to high-tech startups and mid-sized companies. We offer complete software solutions, support of existing solutions, data migrations, feature implementation, iterative development, and training.</p>
-              <p>Secondly, we provide high-impact business consulting to startups and companies in emerging markets. In this parallel, we perform business analysis, find critical issues & discovery across all areas of business (core value proposition, operations, sales, marketing, and finance) to propose quick wins and elimination of bottlenecks - how a manageable amount of effort can make the most impact on the business's bottom line. Additionally, we provide recommendations on sorporate culture, processes, and tools.</p>
+							<p class="m-b0 justify">We offer two parallel services to our clients. Firstly, we provide technical solutions to high-tech startups and mid-sized companies. We offer complete software solutions, support of existing solutions, data migrations, feature implementation, iterative development, and training.</p>
+              <p class="justify">Secondly, we provide high-impact business consulting to startups and companies in emerging markets. In this parallel, we perform business analysis, find critical issues & discovery across all areas of business (core value proposition, operations, sales, marketing, and finance) to propose quick wins and elimination of bottlenecks - how a manageable amount of effort can make the most impact on the business's bottom line. Additionally, we provide recommendations on sorporate culture, processes, and tools.</p>
 						</div>
 						<div>
 							<div class="col-md-6 col-sm-6">
@@ -121,7 +131,8 @@
 									<div class="icon-bx-sm radius bg-primary"> <a href="#" class="icon-cell"><i class="fa fa-leaf"></i></a> </div>
 									<div class="icon-content p-l40">
 										<h4 class="dez-tilte">Ruby on Rails</h4>
-										<p>Our preferred framework for rapid prototyping and non-real-time applications is Ruby on Rails. We use it for constructing APIs, providing backend for websites, generating static websites, and many other purposes.</p>
+                    <div class="center"><img src="images/ruby_small.jpg" alt="react materialize logo" style="width: 200px;" /></div>
+										<p class="justify">Our preferred framework for rapid prototyping and non-real-time applications is Ruby on Rails. We use it for constructing APIs, providing backend for websites, generating static websites, and many other purposes.</p>
 									</div>
 								</div>
 							</div>
@@ -130,7 +141,8 @@
 									<div class="icon-bx-sm radius bg-primary"> <a href="#" class="icon-cell"><i class="fa fa-thermometer-0"></i></a> </div>
 									<div class="icon-content p-l40">
 										<h4 class="dez-tilte ">Node.js</h4>
-										<p>Node.js and Socket.js are our tools of choice for implementing real-time applications, event-driven applications, and some microservices. Node is generally our go-to technology for implementing websockets.</p>
+                    <div class="center"><img src="images/nodejs.png" alt="react materialize logo" style="width: 200px;" /></div>
+										<p class="justify">Node.js and Socket.js are our tools of choice for implementing real-time applications, event-driven applications, and some microservices. Node is generally our go-to technology for implementing websockets.</p>
 									</div>
 								</div>
 							</div>
@@ -139,8 +151,9 @@
 							<div class="icon-bx-wraper bx-style-2 m-l40 m-b30 p-a30 left">
 								<div class="icon-bx-sm radius bg-primary"> <a href="#" class="icon-cell"><i class="fa fa-linode"></i></a> </div>
 								<div class="icon-content p-l40">
-									<h4 class="dez-tilte ">React.js & React Native</h4>
-									<p>React.js is our preferred frontend technology. While we have extensive experience in Angular.js and Backbone.js, in 2017 we feel that the winner for starting new frontend projects is react.js. We still support existing codebases written in Angular.js and Backbone.js, however.</p>
+									<h4 class="dez-tilte ">React.js, Materialize</h4>
+                  <div class="center"><img src="images/react-materialize-logo.svg" alt="react materialize logo" style="width: 200px;" /></div>
+									<p class="justify">React.js is our preferred frontend technology. While we have extensive experience in Angular.js and Backbone.js, in 2017 we feel that the winner for starting new frontend projects is react.js. We still support existing codebases written in Angular.js and Backbone.js, however.</p>
 								</div>
 							</div>
 						</div>
@@ -159,7 +172,7 @@
 							<div class="icon-bx-wraper bx-style-2 m-l40 m-b30 p-a30 left">
 								<div class="icon-bx-sm radius bg-primary"> <a href="#" class="icon-cell"><i class="fa fa-free-code-camp"></i></a> </div>
 								<div class="icon-content p-l40">
-									<h4 class="dez-tilte ">NVP Prototyping</h4>
+									<h4 class="dez-tilte ">MVP Prototyping</h4>
 									<p>We specialize in MVP prototyping. We will iteratively develop an application for you that will prove (or disprove) your business concept in minimal time and budget. Once you have that, you can decide to pivot or continue iterating on that idea. We do this initial critical step for you.</p>
 								</div>
 							</div>
@@ -169,8 +182,8 @@
 								<div class="icon-bx-sm radius bg-primary"> <a href="#" class="icon-cell"><i class="fa fa-bolt"></i></a> </div>
 								<div class="icon-content p-l40">
 									<h4 class="dez-tilte">Devops & Automation</h4>
-									<p>We provide maintainable deployment/automation schemes that make it easy for you to keep the codebase live.<p>
-                  <p>Additionally, we solve specific questions regarding performance, resilience, and scaling of applications.</p>
+                  <div class="center"><img src="images/automation.svg" alt="react materialize logo" style="width: 200px; padding-bottom: 2em;" /></div>
+									<p class="justify">We provide maintainable deployment/automation schemes that make it easy for you to keep the codebase live. Additionally, we solve specific questions regarding performance, resilience, and scaling of applications.</p>
 								</div>
 							</div>
 						</div>
