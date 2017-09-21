@@ -441,7 +441,7 @@ jQuery(window).resize(function() {
 /* Loading End */
 
 // WOW - animated content
-	var wow = new WOW(
+/*	var wow = new WOW(
 	{
 	  boxClass:     'wow',      // animated element css class (default is wow)
 	  animateClass: 'animated', // animation css class (default is animated)
@@ -449,4 +449,35 @@ jQuery(window).resize(function() {
 	  mobile:       false       // trigger animations on mobile devices (true is default)
 	});
 	wow.init();	
-	
+*/
+
+/**
+ * _vp_: contact us
+ */
+
+jQuery("form.dzForm button[name='submit']").click(function (e) {
+  // e.preventDefault();
+
+  var payload = {
+    name: jQuery("form.dzForm input[name='name']").val(),
+    email: jQuery("form.dzForm input[name='email']").val(),
+    phone: jQuery("form.dzForm input[name='phone']").val(),
+    verification: jQuery("form.dzForm input[name='verification']").val(),
+    descr: jQuery("form.dzForm textarea[name='descr']").val()
+  }
+  console.log('+++ +++ payload:', payload);
+
+  $.ajax({ url: "/contact_us.php",
+           method: "POST",
+           headers: {
+             'Accept': 'application/json, text/plain, */*',
+             'Content-Type': 'applicaton/json'
+           },
+           body: JSON.stringify(payload)
+  }).done(function(data) {
+    console.log("+++ +++ done:", data)
+  });
+  
+  return false;
+}); 
+
