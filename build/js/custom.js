@@ -455,7 +455,7 @@ jQuery(window).resize(function() {
  * _vp_: contact us
  */
 
-jQuery("form.dzForm button[name='submit']").click(function (e) {
+jQuery("trash form.dzForm button[name='submit']").click(function (e) {
   // e.preventDefault();
 
   var payload = {
