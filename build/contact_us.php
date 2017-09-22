@@ -24,6 +24,8 @@ if (strlen($json_params) > 0 && isValidJSON($json_params)) {
   $verification = $_POST['verification'];
 }
 
+echo "verification?";
+
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: content-type, cache-control, x-http-method-override');
