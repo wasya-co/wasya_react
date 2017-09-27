@@ -54,9 +54,9 @@
           <div class="header-nav navbar-collapse collapse">
             <ul class=" nav navbar-nav">
               <li class="active"> <a href="javascript:;" class="scroltop" >Home</a></li>
-              <li><a href="javascript:;">About<i class="fa fa-chevron-down"></i></a>
+              <li><a id="aboutLink" href="javascript:;">About<i class="fa fa-chevron-down"></i></a>
                 <ul class="sub-menu">
-                  <li><a href="javascript:;">Services</a></li>
+                  <li><a href="javascript:;" id="servicesLink" >Services</a></li>
                   <li><a href="javascript:;">Process</a></li>
                   <li><a href="javascript:;">Stack</a></li>
                   <li><a href="javascript:;">Team</a></li>
@@ -92,7 +92,7 @@
     </div>
     <!-- Banner End -->
 
-    <div class="p-a30 bg-white m-b40">
+    <div id="aboutContent" class="p-a30 bg-white m-b40">
       <div class="section-head text-center">
         <h2 class="text-uppercase"><!-- Wasya co --><img src="images/logo-3.png" alt='wasya co' /></h2>
         <div class="dez-separator-outer ">
@@ -113,7 +113,7 @@
     </div>
     <!-- inner page banner END -->
 
-    <div class="content">
+    <div class="content" id="servicesContent">
       <!-- Our Awesome Services -->
       <div class="section-full bg-white content-inner">
 				<div class="container">
@@ -454,121 +454,41 @@
         <!-- contact area  END -->
     </div>
 
-    <!-- Footer -->
-    <footer class="site-footer" >
-        <div class="footer-top text-white footer-image overlay-black-middle bg-img-fix" style="background-image:url(images/background/bg9.jpg);   background-attachment: fixed;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 footer-col-4">
-                      ~__^
-                    </div>
-                    <div class="col-md-3 col-sm-6 footer-col-4">
-                      <div class="widget widget_services">
-                        <h4 class="m-b15 ">Navigation</h4>
-                        <div class="dez-separator-outer">
-                          <div class="dez-separator bg-white style-liner"></div>
-                        </div>
-                        <ul>
-                          <li><a href="services-2.html">About</a>
-                            <ul>
-                              <li><a href="services-2.html">Services</a></li>
-                              <li><a href="services-2.html">Process</a></li>
-                              <li><a href="services-2.html">Stack</a></li>
-                              <li><a href="services-2.html">Team</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="services-2.html">Portfolio</a>
-                            <ul>
-                              <li><a href="#">Case Studies</a></li>
-                              <li><a href="#">Clients</a></li>
-                              <li><a href="#">Articles</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="services-2.html">Contact</a></li>
-                          <li><a href="services-2.html">Careers</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 footer-col-4">
-                      <a href="#"><img src='images/lock.png' alt='lock' /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 footer-col-4">
-                        <div class="widget ">
-                            <h4 class="m-b15">Contact Us</h4>
-                            <div class="dez-separator-outer">
-                                <div class="dez-separator bg-white style-liner"></div>
-                            </div>
-                            <ul class="widget_getintuch">
-                                <!-- <li><i class="fa fa-map-marker"></i>1250 Oakmead Pkwy #210, Sunnyvale, CA 94085</li> -->
-                                <li><i class="fa fa-phone"></i>+1 877 216 3525</li>
-                                <li><i class="fa fa-envelope"></i>victor@wasya.co</li>
-                                <li><i class="fa fa-map-marker"></i>P O Box 2119<br />San Jose, CA 95109</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-info-box clearfix p-tb30 p-lr15">
-                  <div class="col-md-6 col-sm-6">
-                    <form role="search" method="post" class="newsletter">
-                      <strong class="text-white font-18 font-weight-600 btn-block">Sign up for our Newsletter</strong>
-                      <div class="input-group m-t10">
-                        <input name="text" class="form-control" placeholder="Your Email" type="text">
-                        <span class="input-group-btn">
-                          <button type="submit" class="site-button font-weight-600" >Subscribe</button>
-                      </span> </div>
-                    </form>
-                  </div>
-                  <div class="col-md-6 col-sm-6">
-                    <div class="text-right">
-                      <ul class="dez-social-icon border">
-                        <li><a class="fa fa-facebook text-primary" href="javascript:void(0);"></a></li>
-                        <li><a class="fa fa-linkedin text-primary" href="javascript:void(0);"></a></li>
-                        <li><a class="fa fa-youtube text-primary" href="javascript:void(0);"></a></li>
-                      </ul>
-                      <p class="text-right m-t10 m-b0">Copyright © Wasya co 2017</p>
-                    </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer END-->
-
+    <div id="mainFooter"></div>
 
     <!-- scroll top button -->
     <button class="scroltop fa fa-chevron-up" ></button>
 </div>
 <!-- JavaScript  files ========================================= -->
-<script type="text/javascript"  src="js/jquery.min.js"></script>
-<!-- jquery.min js -->
-<script type="text/javascript"  src="js/bootstrap.min.js"></script>
-<!-- bootstrap.min js -->
-<script type="text/javascript"  src="js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
 <!-- Form js -->
-<script type="text/javascript"  src="js/jquery.bootstrap-touchspin.js"></script>
+<script type="text/javascript" src="js/jquery.bootstrap-touchspin.js"></script>
 <!-- Form js -->
-<script type="text/javascript"  src="js/magnific-popup.js"></script>
-<!-- magnific-popup js -->
-<script type="text/javascript"  src="js/waypoints-min.js"></script>
-<!-- waypoints js -->
-<script type="text/javascript"  src="js/counterup.min.js"></script>
-<!-- counterup js -->
+<script type="text/javascript" src="js/magnific-popup.js"></script>
+<script type="text/javascript" src="js/waypoints-min.js"></script>
+<script type="text/javascript" src="js/counterup.min.js"></script>
 <script type="text/javascript" src="js/imagesloaded.js"></script>
-<!-- masonry  -->
 <script type="text/javascript" src="js/masonry-3.1.4.js"></script>
-<!-- masonry  -->
 <script type="text/javascript" src="js/masonry.filter.js"></script>
-<!-- masonry  -->
-<script type="text/javascript"  src="js/owl.carousel.js"></script>
-<!-- OWL  Slider  -->
+<script type="text/javascript" src="js/owl.carousel.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_YEzHx_YCQvqQSB_xuSC18BT81BlKVvI&sensor=false"></script>
-<!-- google map  -->
 <script type="text/javascript"  src="js/custom.js"></script>
-<!-- custom fuctions  -->
 <script type="text/javascript"  src="js/dz.carousel.js"></script>
 <!-- sortcode fuctions  -->
 <!-- switcher fuctions -->
 <!-- <script type="text/javascript"  src="js/switcher.min.js"></script> -->
+<script type="text/javascript" src="js/jsrender.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+<!-- templates -->
+<script>
+  $.get("templates/footer.html").then(function (e) {
+    var html = $.templates(e).render({});
+    $("#mainFooter").html(html);
+  });
+</script>
+
 <div id="loading-area"></div>
 </body>
 </html>

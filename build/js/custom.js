@@ -481,3 +481,24 @@ jQuery("trash form.dzForm button[name='submit']").click(function (e) {
   return false;
 }); 
 
+/**
+ * scrolling about
+ */
+var scrollContainer = $("body")
+var scrollTo        = null;
+$("#aboutLink").click(function (e) {
+  scrollTo = jQuery("#aboutContent").offset().top - 60 // + header
+
+  console.log("scrollTo:", scrollTo)
+
+  jQuery("html, body").animate({
+    scrollTop: scrollTo
+  }, 1000)
+});
+$("#servicesLink").click(function (e) {
+  scrollTo = jQuery("#servicesContent").offset().top - 60
+  jQuery("html, body").animate({
+    scrollTop: scrollTo
+  }, 1000)
+});
+  
