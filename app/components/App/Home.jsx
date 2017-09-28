@@ -11,12 +11,12 @@ import logo3 from './images/logo-3.png'
 import FA from 'react-fontawesome'
 
 import MainNavigation from './MainNavigation'
-import Navigation2 from './Navigation2'
-// import About      from './About'
-import Services   from './Services'
-import OurProcess from './OurProcess'
-import Team       from './Team'
-import ContactUs  from '../ContactUs/ContactUs'
+import Navigation2    from './Navigation2'
+import Services       from './Services'
+import OurProcess     from './OurProcess'
+import Team           from './Team'
+import ContactUs      from './ContactUs'
+import ContactUs2     from './ContactUs2'
 import { Footer0, Footer1, Footer2, Footer3 } from '../Footer/Footer'
 
 class MainBanner extends React.Component {
@@ -65,7 +65,8 @@ class Home extends React.Component {
         <Services />
         <OurProcess />
         <Team />
-        <ContactUs />
+        { /* <ContactUs /> */ }
+        <ContactUs2 />
         <Footer0 />
         <Footer1 />
         <Footer2 />

@@ -16,6 +16,7 @@ class Navigation extends React.Component {
       <div>
         <IndustrialHeader location={this.props.location} />
         { this.props.children }
+        <button className="scroltop fa fa-chevron-up" style={{ display: 'block' }}></button>
       </div>
     )
   }
@@ -23,7 +24,7 @@ class Navigation extends React.Component {
 
 Navigation.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.object.isRequred,
+  // location: PropTypes.object.isRequred,
 }
 
 export default Navigation

@@ -84,25 +84,22 @@ class IndustrialHeader extends React.Component {
               <div className={`header-nav navbar-collapse ${this.state.navCollapse}`} >
                 <ul className=" nav navbar-nav">
                   <li className="active"> <a href="javascript:;" className="scroltop" >Home</a></li>
-                  <li><Link onClick={ () => { this.goto('about') } } >About<i className="fa fa-chevron-down"></i></Link>
+                  <li><Link href="javascript:;" onClick={ () => { this.goto('about') } } >About<i className="fa fa-chevron-down"></i></Link>
                     <ul className="sub-menu">
-                      <li><Link href="javascript:;" onClick={ () => this.goto('services') } >Services</Link></li>
-                      <li><a href="javascript:;">Process</a></li>
-                      <li><a href="javascript:;">Stack</a></li>
-                      <li><a href="javascript:;">Team</a></li>
+                      <li><Link href="javascript:;" onClick={() => this.goto('ourStack') }>Stack</Link></li>
+                      <li><Link href="javascript:;" onClick={() => this.goto('team') }>Team</Link></li>
                     </ul>                    
                   </li>
                   <li><Link href="javascript:;" onClick={ () => this.goto('services') } >Services</Link></li>
-                  <li><a href="javascript:;">Process</a></li>
+                  <li><Link href="javascript:;" onClick={() => this.goto('ourProcess') }>Our Process</Link></li>
                   <li><a href="javascript:;">Clients</a></li>
                   <li><a href="javascript:;">Knowledge Base<i className="fa fa-chevron-down"></i></a>
                     <ul className="sub-menu">
                       <li><a href="javascript:;">Case Studies</a></li>
                       <li><a href="javascript:;">Articles</a></li>
-                      { /* <li><a href="javascript:;">Wiki</a></li> */ }
                     </ul>
                   </li>
-                  <li><a href="#contactUs">Contact</a></li>
+                  <li><Link href="javascript:;" onClick={() => { this.goto('contactUs') }}>Contact Us</Link></li>
                 </ul>
               </div>
             </div>

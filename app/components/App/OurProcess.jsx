@@ -9,7 +9,7 @@ class OurProcess extends React.Component {
 
   render () {
     return (
-      <div style={{ backgroundImage: `url(${bg})` }} className={styles.process} id="process" >
+      <div style={{ backgroundImage: `url(${bg})` }} className={styles.process} id="ourProcessContent" >
         <h1 style={{ textAlign: 'center' }} >Our Process</h1>
         <Grid>
           <Row>

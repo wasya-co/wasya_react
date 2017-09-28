@@ -12,7 +12,7 @@ import team_bg from './images/bg/seamless-damask.jpg'
 class Team extends React.Component {
   render () {
     return (
-      <div id='team'>
+      <div id='teamContent' >
         <br /><br /><br />
         <Grid>
           <Row>
