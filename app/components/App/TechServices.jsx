@@ -4,7 +4,7 @@ class TechServices extends React.Component {
   render () {
     return (
       <div>
-        tech services<br />
+        <h1>tech services</h1>
         tech services<br />
         tech services<br />
         tech services<br />

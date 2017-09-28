@@ -1,23 +1,29 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Navbar, Nav,
 } from 'react-bootstrap'
-import { Link } from 'react-router'
+import { Link, browserHistory } from 'react-router'
 import scrollToElement from 'scroll-to-element'
 
 import logo3 from './images/logo-3.png'
+
+import WRouter from './WasyaRouter'
 
 class IndustrialHeader extends React.Component {
   constructor(props) {
     super(props)
     
-    this.state = { headerFixed: '', navCollapse: 'collapse' }
+    console.log('+++ props are:', props)
+
+    this.state = { headerFixed: props.fixed ? 'is-fixed' : '', navCollapse: 'collapse' }
 
     this.componentDidMOunt    = this.componentDidMount.bind(this)
     this.componentWillUnmount = this.componentWillUnmount.bind(this)
     this.handleScroll         = this.handleScroll.bind(this)
     this.toggleNav            = this.toggleNav.bind(this)
     this.goto                 = this.goto.bind(this)
+
   }
 
   handleScroll (e) {
@@ -29,11 +35,18 @@ class IndustrialHeader extends React.Component {
   }
 
   componentDidMount () {
-    window.addEventListener('scroll', this.handleScroll)
+    if (!this.props.fixed) {
+      window.addEventListener('scroll', this.handleScroll)
+    }
+    if (this.props.location && this.props.location.query && this.props.location.query.scrollTo) {
+      this.goto(this.props.location.query.scrollTo)
+    }
   }
 
   componentWillUnmount () {
-    window.removeEventListener('scroll', this.handleScroll)
+    if (!this.props.fixed) {
+      window.removeEventListener('scroll', this.handleScroll)
+    }
   }
 
   toggleNav () {
@@ -45,8 +58,14 @@ class IndustrialHeader extends React.Component {
   }
 
   goto (where) {
-    this.setState({ navCollapse: 'collapse' })
-    scrollToElement(`#${where}Content`, { offset: -60 })
+    if (this.state.navCollapse === '') {
+      this.setState({ navCollapse: 'collapse' })
+    }
+    if (this.props.fixed) {
+      browserHistory.push(`${WRouter.rootPath}?scrollTo=${where}`)
+    } else {
+      scrollToElement(`#${where}Content`, { offset: -60 })
+    }
   }
 
   render () {
@@ -92,6 +111,10 @@ class IndustrialHeader extends React.Component {
       </header>
     )
   }
+}
+
+IndustrialHeader.propTypes = {
+  location: PropTypes.object,
 }
 
 export default IndustrialHeader

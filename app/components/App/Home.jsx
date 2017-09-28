@@ -56,6 +56,8 @@ class About extends React.Component {
 
 class Home extends React.Component {
   render () {
+    console.log('+++ render home:', this.props)
+
     return (
       <div>
         <MainBanner />

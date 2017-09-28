@@ -21,8 +21,7 @@ import img_mvp    from '../../images/400x200/mvp_prototyping.jpg'
 import img_devops from '../../images/400x200/devops.jpg'
 
 import Service from './Service'
-import Center from '../Center'
-
+import Center  from '../Center'
 import WRouter from './WasyaRouter'
 
 

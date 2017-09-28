@@ -2,7 +2,7 @@ import React     from 'react'
 import {
   Router, Route, hashHistory, browserHistory,
 } from 'react-router'
-import { Provider, connect } from 'react-redux'
+import { connect } from 'react-redux'
 
 import Home       from './Home'
 import FixedNav   from './FixedNav'
@@ -14,7 +14,6 @@ import OurStack   from '../Stack/Stack'
 import TechServices from './TechServices'
 import WRouter from './WasyaRouter'
 
-import store      from '../../stores'
 const routes = [
   { path: '/',
     component: Navigation,
@@ -26,7 +25,7 @@ const routes = [
       { path: '/our-stack',    component: OurStack },
     ],
   },
-  { path: '/f',
+  { path: '/services',
     component: FixedNav,
     indexRoute: { component: Home },
     childRoutes: [
@@ -43,9 +42,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Provider store={store} >
-        <Router history={browserHistory} routes={routes} />
-      </Provider>
+      <Router history={browserHistory} routes={routes} onUpdate={() => window.scrollTo(0, 0) } />
     );
   }
 }

@@ -12,10 +12,14 @@ class FixedNav extends React.Component {
   }
 
   render () {
+    console.log('+++ fixedNav:', this.props)
+
     return (
       <div>
-        <IndustrialHeader />
-        { this.props.children }
+        <IndustrialHeader fixed={true} />
+        <div style={{ marginTop: '80px' }}>
+          { this.props.children }
+        </div>
       </div>
     )
   }

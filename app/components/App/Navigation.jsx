@@ -10,9 +10,11 @@ class Navigation extends React.Component {
   }
 
   render () {
+    console.log('+++ Navigation:', this.props)
+
     return (
       <div>
-        <IndustrialHeader />
+        <IndustrialHeader location={this.props.location} />
         { this.props.children }
       </div>
     )
@@ -20,7 +22,8 @@ class Navigation extends React.Component {
 }
 
 Navigation.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequred,
 }
 
 export default Navigation
