@@ -39,7 +39,7 @@ class About extends React.Component {
     ))
 
     return (
-      <Grid >
+      <Grid id="aboutContent" >
         <Row >
           <Col xs={12}>
             <div id="about"></div>

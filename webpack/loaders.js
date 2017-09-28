@@ -92,7 +92,14 @@ var loaders = [
   },
   {
     test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-    loader: 'file-loader'
+    use: [{
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'fonts',
+        publicPath: 'fonts'
+      }
+    }]
   }
 ];
 

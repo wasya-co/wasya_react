@@ -17,7 +17,6 @@ class Navigation2 extends React.Component {
   }
 
   handleScroll (e) {
-    console.log("handle scrolling...")
     if (window.scrollY > 60) {
       this.setState({ headerFixed: 'is-fixed' })
     } else {

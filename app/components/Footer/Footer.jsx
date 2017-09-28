@@ -45,13 +45,13 @@ class Footer1 extends React.Component {
   }
 
   componentDidMount () {
-    fetch("http://crossorigin.me/http://blog.wasya.co/?feed=json").then( (response) => {
+    /* fetch("http://crossorigin.me/http://blog.wasya.co/?feed=json").then( (response) => {
       return response.json()
     }).then( (json) => {
       json = json.slice(0, 3)
       window.data = json;
       this.setState({data: json});
-    });
+    }); */
   }
 
   /* static FieldGroup = function FieldGroup({ id, label, help, ...props }) {
