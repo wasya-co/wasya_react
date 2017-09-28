@@ -49,10 +49,7 @@ class IndustrialHeader extends React.Component {
   }
 
   goto (where) {
-    console.log('going to:', where)
-    if (where === 'about') {
-      scrollToElement(`#${aboutContent}`)
-    }
+    scrollToElement(`#${where}Content`, { offset: -60 })
   }
 
   render () {
@@ -71,9 +68,9 @@ class IndustrialHeader extends React.Component {
               <div className={`header-nav navbar-collapse ${this.state.navCollapse}`} >
                 <ul className=" nav navbar-nav">
                   <li className="active"> <a href="javascript:;" className="scroltop" >Home</a></li>
-                  <li><Link to="/about">About<i className="fa fa-chevron-down"></i></Link>
+                  <li><Link onClick={ () => { this.goto('about') } } >About<i className="fa fa-chevron-down"></i></Link>
                     <ul className="sub-menu">
-                      <li><a href="javascript:;" id="servicesLink" >Services</a></li>
+                      <li><Link href="javascript:;" onClick={ () => this.goto('services') } >Services</Link></li>
                       <li><a href="javascript:;">Process</a></li>
                       <li><a href="javascript:;">Stack</a></li>
                       <li><a href="javascript:;">Team</a></li>

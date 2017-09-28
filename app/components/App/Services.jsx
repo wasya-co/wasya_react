@@ -100,7 +100,7 @@ class Services extends React.Component {
 
   render () {
     return (
-      <div className={styles.services} id="services" ><Grid >
+      <div className={styles.services} id="servicesContent" ><Grid >
         <Row >
           <Col xs={10} xsOffset={1} >
             <h1 style={{ textAlign: 'center' }} >Services</h1>
