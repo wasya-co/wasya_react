@@ -1,9 +1,11 @@
-import React from 'react'
+import React     from 'react'
 import PropTypes from 'prop-types'
+
+import logo3 from './images/logo-3.png'
 
 import IndustrialHeader from './IndustrialHeader'
 
-class Navigation extends React.Component {
+class FixedNav extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
@@ -23,4 +25,4 @@ Navigation.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default Navigation
+export default FixedNav

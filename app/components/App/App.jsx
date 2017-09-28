@@ -1,19 +1,18 @@
 import React     from 'react'
-import PropTypes from 'prop-types'
-import ReactDOM  from 'react-dom'
 import {
-  Router, Route, hashHistory, browserHistory 
+  Router, Route, hashHistory, browserHistory,
 } from 'react-router'
 import { connect } from 'react-redux'
 
-// import 'whatwg-fetch'
-
 import Home       from './Home'
+import FixedNav   from './FixedNav'
 import Navigation from './Navigation'
 import OurProcess from './OurProcess'
 import Products   from './Products'
 import Clients    from './Clients'
 import OurStack   from '../Stack/Stack'
+import TechServices from './TechServices'
+import WRouter from './WasyaRouter'
 
 const routes = [
   { path: '/',
@@ -24,21 +23,21 @@ const routes = [
       { path: '/products',     component: Products },
       { path: '/clients',      component: Clients },
       { path: '/our-stack',    component: OurStack },
-    ]
-  }
+    ],
+  },
+  { path: '/f',
+    component: FixedNav,
+    indexRoute: { component: Home },
+    childRoutes: [
+      { path: WRouter.techServicesPath, component: TechServices },
+    ],
+  },
 ]
 
 class App extends React.Component {
-
   constructor(props) {
     super(props)
     this.state = {}
-  }
-
-  componentDidMount() {
-  }
-
-  componentWillUnmount() {
   }
 
   render() {
@@ -48,13 +47,8 @@ class App extends React.Component {
   }
 }
 
-// App.propTypes = {
-//  children: PropTypes.node.isRequired
-//}
-
-function mapStateToProps(state, ownProps) {
-  return {
-  }
+const mapStateToProps = (state, ownProps) => {
+  return {}
 }
 
 export default connect(mapStateToProps)(App)

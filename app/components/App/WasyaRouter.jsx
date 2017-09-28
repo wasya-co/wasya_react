@@ -1,9 +1,9 @@
 
 let WasyaRouter = {
 
-  businessServicesPath: '/business-services',
+  bizServicesPath: '/f/business-services',
 
-  technologyServicesPath: '/technology-services',
+  techServicesPath: '/f/technology-services',
 
   // videosShowPath: '/en/videos/show/:youtube_id',
   // videosShowLink: (g) => { return `/en/videos/show/${g}` },

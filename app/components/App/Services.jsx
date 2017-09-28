@@ -1,14 +1,12 @@
-
-import styles from './_App.scss'
-
-import React from 'react'
+import React    from 'react'
 import ReactDOM from 'react-dom'
-
 import { Link } from 'react-router'
-
 import { Grid, Row, Col,
          Button,
 } from 'react-bootstrap'
+import scrollToElement from 'scroll-to-element'
+
+import styles from './_App.scss'
 
 import img_ror   from '../../images/400x200/ror.jpg'
 import img_node  from '../../images/400x200/nodejs.jpg'
@@ -25,9 +23,8 @@ import img_devops from '../../images/400x200/devops.jpg'
 import Service from './Service'
 import Center from '../Center'
 
-import WasyaRouter from './WasyaRouter'
+import WRouter from './WasyaRouter'
 
-import scrollToElement from 'scroll-to-element'
 
 /*
  * RoR
@@ -44,6 +41,13 @@ import scrollToElement from 'scroll-to-element'
 */
 
 class Services extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+
+    this.goto = this.goto.bind(this)
+  }
+
   ror = { descr: [ "Our preferred framework for rapid prototyping and non-real-time applications is Ruby on Rails. " +
                    "We use it for constructing APIs, providing backend for websites, generating static websites, and many other purposes." ],
           image: img_ror,
@@ -104,9 +108,9 @@ class Services extends React.Component {
         <Row >
           <Col xs={10} xsOffset={1} >
             <h1 style={{ textAlign: 'center' }} >Services</h1>
-            <p>We offer two parallel services to our clients. Firstly, we provide technical solutions to high-tech startups and mid-sized companies. We offer complete software solutions, support of existing solutions, data migrations, feature implementation, iterative development, and training. <Button onClick={() => { scrollToElement('#technologyServices') }}>Read more.</Button></p>
+            <p>We offer two parallel services to our clients. We provide technical solutions to high-tech startups and mid-sized companies. We offer complete software solutions, support of existing solutions, data migrations, feature implementation, iterative development, and training. <Button><Link to={WRouter.techServicesPath}>Read more.</Link></Button></p>
 
-            <p>Secondly, we provide high-impact business consulting to startups and companies in emerging markets. In this parallel, we perform business analysis, find critical issues & discovery across all areas of business (core value proposition, operations, sales, marketing, and finance) to propose quick wins and elimination of bottlenecks - how a manageable amount of effort can make the most impact on the business's bottom line. Additionally, we provide recommendations on sorporate culture, processes, and tools. <Button href={WasyaRouter.businessServicesPath}>Read more.</Button></p>
+            <p>Additionally, we provide high-impact business consulting to startups and companies in emerging markets. In this parallel, we perform business analysis, find critical issues & discovery across all areas of business (core value proposition, operations, sales, marketing, and finance) to propose quick wins and elimination of bottlenecks - how a manageable amount of effort can make the most impact on the business's bottom line. Additionally, we provide recommendations on sorporate culture, processes, and tools. <Button><Link to={WRouter.bizServicesPath}>Read more.</Link></Button></p>
 
           </Col>
         </Row>
