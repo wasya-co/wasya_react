@@ -2,7 +2,7 @@ import React     from 'react'
 import {
   Router, Route, hashHistory, browserHistory,
 } from 'react-router'
-import { connect } from 'react-redux'
+import { Provider, connect } from 'react-redux'
 
 import Home       from './Home'
 import FixedNav   from './FixedNav'
@@ -14,6 +14,7 @@ import OurStack   from '../Stack/Stack'
 import TechServices from './TechServices'
 import WRouter from './WasyaRouter'
 
+import store      from '../../stores'
 const routes = [
   { path: '/',
     component: Navigation,
@@ -42,9 +43,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router history={browserHistory} routes={routes} />
+      <Provider store={store} >
+        <Router history={browserHistory} routes={routes} />
+      </Provider>
     );
   }
+}
+
+App.propTypes = {
 }
 
 const mapStateToProps = (state, ownProps) => {

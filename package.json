@@ -99,6 +99,7 @@
       "react"
     ],
     "rules": {
+      "no-script-url": 0,
       "semi": 0,
       "camelcase": 0,
       "no-trailing-spaces": 0,
@@ -160,7 +161,7 @@
     "prestart": "npm install",
     "pretest": "npm install && npm run lint",
     "pretest-travis": "npm install && npm run lint",
-    "start": "NODE_ENV=development node dev-server ./webpack/config --history-api-fallback --inline --content-base . ",
+    "start": "NODE_ENV=development node dev-server ./webpack/config",
     "test": "NODE_ENV=test karma start",
     "test-travis": "NODE_ENV=test karma start --single-run",
     "webpack": "webpack --colors --progress --config ./webpack/config"

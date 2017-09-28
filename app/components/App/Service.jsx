@@ -24,6 +24,8 @@ class Service extends React.Component {
                              transitionName={styles}
                              transitionAppear={true}
                              transitionAppearTimeout={1000}
+                             transitionEnterTimeout={0}
+                             transitionLeaveTimeout={0}
                          >
                            <div className={ styles.wrap } >
                              <img src={this.props.image} alt={this.props.title} style={{ maxWidth: '100%' }} />

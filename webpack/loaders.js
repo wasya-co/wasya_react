@@ -15,7 +15,7 @@ var htmlLoader = [
     'raw=true',
     'engine=lodash',
     'version=' + pkg.version,
-    'title=' + pkg.config.title,,
+    'title=' + pkg.config.title,
     'static_domain=' + pkg.config.static_domain[process.env.NODE_ENV],
     'debug=' + DEBUG
   ].join('&')

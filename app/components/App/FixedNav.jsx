@@ -21,7 +21,7 @@ class FixedNav extends React.Component {
   }
 }
 
-Navigation.propTypes = {
+FixedNav.propTypes = {
   children: PropTypes.node.isRequired
 }
 

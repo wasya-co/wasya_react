@@ -47,6 +47,8 @@ class About extends React.Component {
                 transitionName={styles}
                 transitionAppear={true}
                 transitionAppearTimeout={1000}
+                transitionEnterTimeout={0}
+                transitionLeaveTimeout={0}
             >
               <div className={styles.cloudWrapper} >
                 <img src={clouds} alt="" className={styles.cloud} />
