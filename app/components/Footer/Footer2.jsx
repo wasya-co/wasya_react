@@ -1,5 +1,14 @@
 import React from 'react'
 
+import { Grid, Row, Col } from 'react-bootstrap'
+
+import styles from './_Footer.scss'
+
+import bg1 from './images/triangular.png'
+import co  from './images/co.png'
+import ru  from './images/ru.png';
+import br  from './images/br.png'
+
 /**
  * world stuff: cities, flags
  */
@@ -7,7 +16,7 @@ class Footer2 extends React.Component {
   render () {
     var year = (new Date()).getFullYear();
     return (
-      <footer className={styles.footer2} style={{ backgroundImage: `url(${bgTriangular})` }}>
+      <footer className={styles.footer2} style={{ backgroundImage: `url(${bg1})` }}>
         <Grid>
           <Row>
             <Col xs={6} xsOffset={6}>

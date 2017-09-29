@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-
+import React           from 'react'
+import PropTypes       from 'prop-types'
 import scrollToElement from 'scroll-to-element'
 
 import IndustrialHeader from './IndustrialHeader'
+import Footer           from '../Footer'
 
 class Navigation extends React.Component {
   constructor(props) {
@@ -41,10 +41,11 @@ class Navigation extends React.Component {
     // console.log('+++ Navigation:', this.props, this.state)
 
     return (
-      <div>
+      <div style={{ marginBottom: '440px' }}>
         <IndustrialHeader location={this.props.location} />
         { this.props.children }
         <button className={`scroltop fa fa-chevron-up`} style={{ display: this.state.showScrollTop === 'showScrollTop' ? 'block' : 'none' }} onClick={() => this.scrollTop() }></button>
+        <Footer />
       </div>
     )
   }

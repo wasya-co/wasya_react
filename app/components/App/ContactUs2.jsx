@@ -31,7 +31,7 @@ class ContactUs2 extends React.Component {
         <div className="content-area">
           <div className="container">
             <div className="row">
-              <div className="col-md-9">
+              <div className="col-lg-9 col-md-8 col-sm-7 col-xs-12">
                 <h4>Contact form</h4>
                 <div className="dzFormMsg"></div>
                 <div className="p-a30 bg-white clearfix m-b30">
@@ -84,7 +84,7 @@ class ContactUs2 extends React.Component {
                 </div>
               </div>
               
-              <div className="col-md-3">
+              <div className="col-lg-3 col-md-4 col-sm-5 col-xs-12" >
                 <h4>Contact Info</h4>
                 <div className="p-a30 bg-white m-b30">
                   <ul className="no-margin">

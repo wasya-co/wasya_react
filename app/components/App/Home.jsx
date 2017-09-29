@@ -55,17 +55,16 @@ class About extends React.Component {
 
 class Home extends React.Component {
   render () {
-    console.log('+++ render home:', this.props)
+    // console.log('+++ render home:', this.props)
 
     return (
-      <div>
+      <div className="page-content" >
         <MainBanner />
         <About />
         <Services />
         <OurProcess />
         <Team />
         <ContactUs2 />
-        <Footer />
       </div>
     )
   }
