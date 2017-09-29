@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import BackNavigation from '../MainNavigation/BackNavigation'
+import BackNavigation from '../App/BackNavigation'
 import OurProcess from './OurProcess'
 import { Footer } from '../Footer'
 

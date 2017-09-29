@@ -5,7 +5,6 @@ import { Grid, Row, Col } from 'react-bootstrap'
 
 import styles from './_App.scss'
 
-import BackNavigation from '../MainNavigation/BackNavigation'
 import { Footer } from '../Footer'
 
 import bg from './images/noisy_grid.png'
@@ -25,7 +24,6 @@ class Clients extends React.Component {
     let per_row = 2
     return (
       <div style={{ backgroundImage: `url(${bg})` }}>
-        <BackNavigation />
         <Grid>
           <Row>
             <Col xs={12}>

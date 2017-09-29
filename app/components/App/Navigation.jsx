@@ -8,8 +8,9 @@ import IndustrialHeader from './IndustrialHeader'
 class Navigation extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
-    this.scrollTop = this.scrollTop.bind(this)
+    this.state = { showScrollTop: '' }
+    this.scrollTop    = this.scrollTop.bind(this)
+    this.handleScroll = this.handleScroll.bind(this)
   }
 
   scrollTop () {
@@ -37,13 +38,13 @@ class Navigation extends React.Component {
   }
 
   render () {
-    // console.log('+++ Navigation:', this.props)
+    // console.log('+++ Navigation:', this.props, this.state)
 
     return (
       <div>
         <IndustrialHeader location={this.props.location} />
         { this.props.children }
-        <button className={`scroltop fa fa-chevron-up ${this.state.showScrollTop}`} onClick={() => this.scrollTop() }></button>
+        <button className={`scroltop fa fa-chevron-up`} style={{ display: this.state.showScrollTop === 'showScrollTop' ? 'block' : 'none' }} onClick={() => this.scrollTop() }></button>
       </div>
     )
   }

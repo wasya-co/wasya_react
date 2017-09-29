@@ -6,7 +6,6 @@ import { Grid, Row, Col,
 
 import styles from './_Stack.scss'
 
-import BackNavigation from '../MainNavigation/BackNavigation'
 import { Footer } from '../Footer'
 import Center from '../Center'
 
@@ -29,7 +28,6 @@ class Stack extends React.Component {
     let per_row = 2
     return (
       <div style={{ backgroundImage: `url(${bg})` }}>
-        <BackNavigation />
         <br /><br /><br />
         <Grid>
           <Row>
