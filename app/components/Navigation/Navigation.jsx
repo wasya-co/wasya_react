@@ -42,8 +42,10 @@ class Navigation extends React.Component {
 
     return (
       <div style={{ marginBottom: '440px' }}>
-        <IndustrialHeader location={this.props.location} />
-        { this.props.children }
+        <IndustrialHeader location={this.props.location} fixed={this.props.route.fixed} />
+        <div className="page-content" >
+          { this.props.children }
+        </div>
         <button className={`scroltop fa fa-chevron-up`} style={{ display: this.state.showScrollTop === 'showScrollTop' ? 'block' : 'none' }} onClick={() => this.scrollTop() }></button>
         <Footer />
       </div>
@@ -53,7 +55,6 @@ class Navigation extends React.Component {
 
 Navigation.propTypes = {
   children: PropTypes.node.isRequired,
-  // location: PropTypes.object.isRequred,
 }
 
 export default Navigation

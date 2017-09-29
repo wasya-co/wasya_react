@@ -42,7 +42,8 @@ const routes = [
     ],
   }, */
   { path: WRouter.pagesPath,
-    component: UnfixedNav,
+    component: Navigation,
+    fixed: 'unfixed',
     indexRoute: { component: AbstractPage },
     childRoutes: [
       { path: WRouter.termsPath, component: TermsPage },

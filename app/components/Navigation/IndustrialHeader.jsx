@@ -13,17 +13,24 @@ import WRouter from '../App/WasyaRouter'
 class IndustrialHeader extends React.Component {
   constructor(props) {
     super(props)
-    
-    console.log('+++ props are:', props)
+    // console.log('+++ IndustrialHeader constructor:', props)
 
-    this.state = { headerFixed: props.fixed ? 'is-fixed' : '', navCollapse: 'collapse' }
+    let headerFixed
+    if (props.fixed === 'unfixed') {
+      headerFixed = ''
+    }
+    if (props.fixed === true) {
+      headerFixed = 'is-fixed'
+    }
+
+    this.state = { headerFixed,
+                   navCollapse: 'collapse' }
 
     this.componentDidMOunt    = this.componentDidMount.bind(this)
     this.componentWillUnmount = this.componentWillUnmount.bind(this)
     this.handleScroll         = this.handleScroll.bind(this)
     this.toggleNav            = this.toggleNav.bind(this)
     this.goto                 = this.goto.bind(this)
-
   }
 
   handleScroll (e) {
@@ -34,8 +41,30 @@ class IndustrialHeader extends React.Component {
     }
   }
 
+  componentDidUpdate () {
+    // console.log('+++ Industrial Header componentDidUpdate:', this.props)
+  }
+
+  componentWillUpdate () {
+    // console.log('+++ Industrial Header componentWillUpdate:', this.props)
+  }
+
+  componentWillReceiveProps () {
+    // console.log('+++ Industrial Header componentWillReceiveProps:', this.props)
+
+    /* if (this.props.location && this.props.location.query && this.props.location.query.scrollTo) {
+      this.goto(this.props.location.query.scrollTo)
+    } */
+  }
+
+  componentWillMount () {
+    // console.log('+++ Industrial Header componentWillMount:', this.props)
+  }
+    
   componentDidMount () {
-    if (!this.props.fixed) {
+    // console.log('+++ Industrial Header componentDidMount:', this.props)
+
+    if (this.props.fixed !== true) {
       window.addEventListener('scroll', this.handleScroll)
     }
     if (this.props.location && this.props.location.query && this.props.location.query.scrollTo) {
@@ -44,7 +73,7 @@ class IndustrialHeader extends React.Component {
   }
 
   componentWillUnmount () {
-    if (!this.props.fixed) {
+    if (this.props.fixed !== true) {
       window.removeEventListener('scroll', this.handleScroll)
     }
   }
@@ -69,6 +98,8 @@ class IndustrialHeader extends React.Component {
   }
 
   render () {
+    // console.log('+++ IndustrialHeader render:', this.props, this.state)
+
     return (
       <header className="site-header header-style-5">
         <div className={`sticky-header main-bar-wraper ${this.state.headerFixed}`}>
