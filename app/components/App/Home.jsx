@@ -17,13 +17,10 @@ import logo3 from './images/logo-3.png'
 
 import FA from 'react-fontawesome'
 
-import MainNavigation from './MainNavigation'
-import Navigation2    from './Navigation2'
 import Services       from './Services'
 import OurProcess     from './OurProcess'
 import Team           from './Team'
 import ContactUs2     from './ContactUs2'
-import Footer         from '../Footer'
 
 class MainBanner extends React.Component {
   render () {

@@ -8,7 +8,7 @@ import scrollToElement from 'scroll-to-element'
 
 import logo3 from './images/logo-3.png'
 
-import WRouter from './WasyaRouter'
+import WRouter from '../App/WasyaRouter'
 
 class IndustrialHeader extends React.Component {
   constructor(props) {

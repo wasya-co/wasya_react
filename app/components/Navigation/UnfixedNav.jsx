@@ -5,14 +5,14 @@ import logo3 from './images/logo-3.png'
 
 import IndustrialHeader from './IndustrialHeader'
 
-class FixedNav extends React.Component {
+class UnfixedNav extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
   }
 
   render () {
-    console.log('+++ fixedNav:', this.props)
+    console.log('+++ unfixedNav:', this.props)
 
     return (
       <div>
@@ -29,4 +29,4 @@ FixedNav.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default FixedNav
+export default UnfixedNav
