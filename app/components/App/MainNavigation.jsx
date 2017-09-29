@@ -15,8 +15,6 @@ function handleTouchTap() {
   alert('onTouchTap triggered on the title component');
 }
 
-import Scroll from 'react-scroll'
-
 const styles = {
   title: {
     cursor: 'pointer',
