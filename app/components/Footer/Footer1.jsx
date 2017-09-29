@@ -1,12 +1,12 @@
-
 import React    from 'react'
 import ReactDOM from 'react-dom'
-import Moment from 'moment'
+import Moment   from 'moment'
 let moment = Moment
 
 import { Grid, Row, Col, 
          Panel, Button, 
-         FormGroup, FieldGroup, FormControl } from 'react-bootstrap'
+         FormGroup, FieldGroup, FormControl,
+} from 'react-bootstrap'
 
 import styles       from './_Footer.scss'
 import facebook     from "./images/facebook.png"
@@ -24,19 +24,6 @@ import us from './images/us.png'
 import co from './images/co.png'
 import ru from './images/ru.png'
 import br from './images/br.png'
-
-/**
- * just a line
- */
-class Footer0 extends React.Component {
-  render () {
-    return (
-      <footer style={{ backgroundImage: `url(${f0_bg})` }} >
-      &nbsp;
-      </footer>
-    )
-  }
-}
 
 /**
  * keep in touch, social, from our blog
@@ -100,4 +87,4 @@ class Footer1 extends React.Component {
   }
 } 
 
-export { Footer0, Footer1 }
+export default Footer1

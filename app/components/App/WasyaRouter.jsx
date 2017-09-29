@@ -2,11 +2,12 @@
 let WasyaRouter = {
   rootPath: '/',
 
-  bizServicesPath: '/services/business',
-
-  careersPath: '/pages/careers',
-
+  servicesPath:     '/services',
+  bizServicesPath:  '/services/business',
   techServicesPath: '/services/technology',
+
+  careersPath: '/careers',
+
   termsPath: '/pages/terms-of-service',
 }
 

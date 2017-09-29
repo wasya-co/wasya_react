@@ -4,8 +4,15 @@ import ReactDOM from 'react-dom'
 import { Grid, Row, Col } from 'react-bootstrap'
 
 import styles from './_App.scss'
-import bg3 from "./images/background/bg3-1.jpg"
-import bg4 from './images/background/colorGrid.jpg'
+// import bg3 from "./images/background/bg3-1.jpg"
+import bg5 from './images/circuit-boards/1.jpg'
+import bg6 from './images/circuit-boards/2.jpg'
+import bg7 from './images/circuit-boards/3.jpg'
+import bg8 from './images/circuit-boards/4.jpg'
+
+// import bg4 from './images/background/colorGrid.jpg'
+import bg9 from './images/background/fire_2-short.jpg'
+
 import logo3 from './images/logo-3.png'
 
 import FA from 'react-fontawesome'
@@ -22,7 +29,7 @@ class MainBanner extends React.Component {
   render () {
     return (
       <div>
-        <div className="dez-bnr-inr dez-bnr-inr-lg overlay-black-middle" style={{ backgroundImage: `url(${bg3})` }}>
+        <div className="dez-bnr-inr dez-bnr-inr-lg overlay-black-middle" style={{ backgroundImage: `url(${bg8})` }}>
           <div className="container">
             <div className="dez-bnr-inr-entry">
               <h1 className="text-white">Software Development & Consulting in South Bay Area</h1>
@@ -30,7 +37,7 @@ class MainBanner extends React.Component {
             </div>
           </div>
         </div>
-        <div style={{ backgroundImage: `url(${bg4})`, height: '20px', width: '100%', backgroundSize: "100%, 100%" }} className="bg-img-fix" />
+        <div style={{ backgroundImage: `url(${bg9})`, height: '20px', width: '100%', backgroundSize: "100%, 100%" }} className="bg-img-fix" />
       </div>
     )
   }

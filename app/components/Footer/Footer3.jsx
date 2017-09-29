@@ -22,8 +22,8 @@ class Footer3 extends React.Component {
     return (
       <footer className="site-footer trans-footer" >
         <div className="footer-top" style={{ background: `url(${world})`, 
-                                             backgroundPosition: 'bottom, bottom', 
-                                             backgroundRepeat: 'no-repeat',
+                                             backgroundPosition: 'left center', 
+                                             backgroundRepeat: 'repeat-x',
                                              height: '420px' }} >
           <div className="container saf-footer" >
             <Row>
