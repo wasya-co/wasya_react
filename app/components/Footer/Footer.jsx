@@ -25,6 +25,9 @@ import co from './images/co.png'
 import ru from './images/ru.png'
 import br from './images/br.png'
 
+/**
+ * just a line
+ */
 class Footer0 extends React.Component {
   render () {
     return (
@@ -35,6 +38,9 @@ class Footer0 extends React.Component {
   }
 }
 
+/**
+ * keep in touch, social, from our blog
+ */
 class Footer1 extends React.Component {
   constructor () {
     super();
@@ -44,30 +50,9 @@ class Footer1 extends React.Component {
     };
   }
 
-  componentDidMount () {
-    /* fetch("http://crossorigin.me/http://blog.wasya.co/?feed=json").then( (response) => {
-      return response.json()
-    }).then( (json) => {
-      json = json.slice(0, 3)
-      window.data = json;
-      this.setState({data: json});
-    }); */
-  }
-
-  /* static FieldGroup = function FieldGroup({ id, label, help, ...props }) {
-    return (
-      <FormGroup controlId={id}>
-        <ControlLabel>{label}</ControlLabel>
-        <FormControl {...props} />
-        {help && <HelpBlock>{help}</HelpBlock>}
-      </FormGroup>
-    );
-  } */
-
   render() {
     var blogTitles = [];
 
-    // @TODO: HEREHERE
     this.state.data.forEach(function(blogItem) {
       blogTitles.push(
         <div key={blogItem.title}>
@@ -115,59 +100,4 @@ class Footer1 extends React.Component {
   }
 } 
 
-class Footer2 extends React.Component {
-  render () {
-    var year = (new Date()).getFullYear();
-
-    return (
-      <footer className={styles.footer2} style={{ backgroundImage: `url(${bgTriangular})` }}>
-        <Grid>
-          <Row>
-            <Col xs={6} xsOffset={6}>
-              <span className="pull-right" >Wasya co &copy; {year}<br />v0.0.9</span>
-              <br />
-              <br />
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12}>
-              <div style={{ textAlign: 'center' }} >New York City &nbsp; | &nbsp; Chicago &nbsp; | &nbsp; Los Angeles &nbsp; | &nbsp; San Francisco</div>
-            </Col>
-            <Col xs={12}>
-              <Center>
-                <img src={us} alt='usa' />
-      &nbsp;
-      <img src={co} alt='colombia' />
-      &nbsp;
-      <img src={ru} alt='russia' />
-      &nbsp;
-      <img src={br} alt='brasil brazil' />
-              </Center>
-            </Col>
-          </Row>
-        </Grid>
-      </footer>
-    )
-  }
-}
-
-class Footer3 extends React.Component {
-  render () {
-    return (
-      <div>hello! footer 3</div>
-    )
-  }
-}
-
-class Footer extends React.Component {
-  render () {
-    return (
-      <div>
-        <Footer0 />
-        <Footer2 />
-      </div>
-    )
-  }
-}
-
-export { Footer, Footer0, Footer1, Footer2 }
+export { Footer0, Footer1 }

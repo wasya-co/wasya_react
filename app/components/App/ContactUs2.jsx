@@ -102,7 +102,7 @@ class ContactUs2 extends React.Component {
                         <p>+1 877 216 3525</p>
                       </div>
                     </li>
-                    {/*<li className="icon-bx-wraper left m-b30">
+                    <li className="icon-bx-wraper left m-b30">
                       <div className="icon-bx-xs bg-primary"> <a href="#" className="icon-cell"><i className="fa fa-map-marker"></i></a> </div>
                       <div className="icon-content">
                         <h6 className="text-uppercase m-b0 dez-tilte">Mailing Address</h6>
@@ -110,47 +110,14 @@ class ContactUs2 extends React.Component {
                           P O Box 2119<br />
                           San Jose, CA 95109</p>
                       </div>
-                    </li>*/}
+                    </li>
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="bg-img-fix" style={{ backgroundImage: `url(${world})` }} >
-            <div className="content-area">
-              <div className="container">
-                <div class="row">
-                  <div className="col-sm-12">
-                    <h4>Our Location</h4>
-                  </div>
-                  <div className="col-md-6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10671.067348341838!2d-121.89124455979633!3d37.33002320510599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1505428038490" width="100%" height="450" frameBorder="0" style={{ border: '0' }} allowFullScreen></iframe>
-                  </div>
-                  <div className="col-md-6" >
-                    <ul className="no-margin" style={{ paddingTop: '1em' }} >
-                      <li className="icon-bx-wraper left m-b30">
-                        <div className="icon-bx-xs bg-primary"> <a href="#" className="icon-cell"><i className="fa fa-map-marker"></i></a> </div>
-                        <div className="icon-content">
-                          <h6 className="text-uppercase m-b0 dez-tilte">Mailing Address</h6>
-                          <p style={{ background: 'white', padding: '1em 1em 1em 1em' }} >Wasya co <br />
-                            P O Box 2119<br />
-                            San Jose, CA 95109</p>
-                        </div>
-                      </li>
-                      <li className="icon-bx-wraper left m-b30">
-                        <div className="icon-bx-xs bg-primary"> <a href="#" className="icon-cell"><i className="fa fa-map-marker"></i></a> </div>
-                        <div className="icon-content">
-                          <h6 className="text-uppercase m-b0 dez-tilte">We Do Business In</h6>
-                          <br /><br />
-                          <p><Center><b>
-                            San Francisco &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Los Angeles &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; San Diego 
-                            <br />Chicago &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; New York &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Boston &nbsp;&nbsp;&nbsp;</b></Center></p>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="clearfix" />
+              <div className="col-sm-12">
+                <h4>Our Location</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10671.067348341838!2d-121.89124455979633!3d37.33002320510599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1505428038490" width="100%" height="450" frameBorder="0" style={{ border: '0' }} allowFullScreen></iframe>
+                <div className="clearfix" /><br />
               </div>
             </div>
           </div>
