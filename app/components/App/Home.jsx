@@ -21,7 +21,7 @@ class Home extends React.Component {
     // console.log('+++ render home:', this.props)
 
     return (
-      <div>
+      <div id="homeContent" >
         <MainBanner />
         <About />
         <Services />

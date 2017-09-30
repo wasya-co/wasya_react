@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router'
+import scrollToElement from 'scroll-to-element'
 
 import wasya_co from './images/wasya_co.png'
 import world from './images/world4.jpg'
@@ -13,8 +14,10 @@ class Footer3 extends React.Component {
     this.goto = this.goto.bind(this)
   }
 
-  goto () {}
- 
+  goto (where) {
+    scrollToElement(`#${where}Content`, { offset: -60 })
+  }
+
   render () {
     var year = (new Date()).getFullYear();
     return (
@@ -30,11 +33,13 @@ class Footer3 extends React.Component {
                   <h2 className="m-b15">Quick Links</h2>
                   <div className="dez-separator bg-primary"></div>
                   <ul>
-                    <li><a href="javacsript:;" onClick={ () => this.goto('about') } >About</a></li>
-                    <li><a href="javacsript:;" onClick={ () => this.goto('services') } >Services</a></li>
-                    <li><a href="javacsript:;" onClick={ () => this.goto('clients') } >Clients</a></li>
-                    <li><a href="javacsript:;" onClick={ () => this.goto('technology') } >Technology</a></li>
-                    <li><Link to={WRouter.careersPath} >Careers</Link></li>
+                    <li><Link href="javascript:;" onClick={ () => this.goto('home') } >Home</Link></li>
+                    <li><Link href="javascript:;" onClick={ () => this.goto('about') } >About</Link></li>
+                    <li><Link href="javascript:;" onClick={ () => this.goto('services') } >Services</Link></li>
+                    { /* <li><a href="javascript:;" onClick={ () => this.goto('clients') } >Clients</a></li> */ }
+                    <li><Link href="javascript:;" onClick={ () => this.goto('ourProcess') }>Process</Link></li>
+                    { /* <li><a href="javascript:;" onClick={ () => this.goto('technology') } >Technology</a></li> */ }
+                    { /* <li><Link to={WRouter.careersPath} >Careers</Link></li> */ }
                   </ul>
                 </div>
               </Col>

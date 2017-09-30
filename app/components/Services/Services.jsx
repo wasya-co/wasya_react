@@ -95,12 +95,12 @@ class Services extends React.Component {
             </Center>
 
             <p className="text-justify" >We offer two parallel services to our clients. We provide technical solutions to high-tech startups and mid-sized companies. We offer complete software solutions, support of existing solutions, data migrations, feature implementation, iterative development, and training. &nbsp;
-              <Button><Link to={WRouter.techServicesPath}>Read more.</Link></Button>
-              { /* <Link to={WRouter.techServicesPath}>Here</Link> */ }
+              { /* <Button><Link to={WRouter.techServicesPath}>Read more.</Link></Button> */ }
             </p>
 
             <p className="text-justify" >In this parallel, we perform business analysis, find critical issues & discovery across all areas of business (core value proposition, operations, sales, marketing, and finance) to propose quick wins and elimination of bottlenecks - how a manageable amount of effort can make the most impact on the business's bottom line. Additionally, we provide recommendations on sorporate culture, processes, and tools. High-impact business consulting to startups and companies in emerging markets. &nbsp;
-              <Button><Link to={WRouter.bizServicesPath}>Read more.</Link></Button></p>
+              { /* <Button><Link to={WRouter.bizServicesPath}>Read more.</Link></Button> */ }
+            </p>
 
           </Col>
         </Row>
