@@ -11,7 +11,7 @@ import bg7 from './images/circuit-boards/3.jpg'
 
 import About          from './About'
 import MainBanner     from './MainBanner'
-import { Services }   from '../Services'
+import Services       from './Services'
 import OurProcess     from './OurProcess'
 import Team           from './Team'
 import ContactUs2     from './ContactUs2'
@@ -21,7 +21,7 @@ class Home extends React.Component {
     // console.log('+++ render home:', this.props)
 
     return (
-      <div id="homeContent" >
+      <div>
         <MainBanner />
         <About />
         <Services />

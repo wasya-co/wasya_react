@@ -13,6 +13,7 @@ import WRouter from '../App/WasyaRouter'
 class IndustrialHeader extends React.Component {
   constructor(props) {
     super(props)
+    // console.log('+++ IndustrialHeader constructor:', props)
 
     let headerFixed
     if (props.fixed === 'unfixed') {
@@ -40,7 +41,29 @@ class IndustrialHeader extends React.Component {
     }
   }
 
+  componentDidUpdate () {
+    // console.log('+++ Industrial Header componentDidUpdate:', this.props)
+  }
+
+  componentWillUpdate () {
+    // console.log('+++ Industrial Header componentWillUpdate:', this.props)
+  }
+
+  componentWillReceiveProps () {
+    // console.log('+++ Industrial Header componentWillReceiveProps:', this.props)
+
+    /* if (this.props.location && this.props.location.query && this.props.location.query.scrollTo) {
+      this.goto(this.props.location.query.scrollTo)
+    } */
+  }
+
+  componentWillMount () {
+    // console.log('+++ Industrial Header componentWillMount:', this.props)
+  }
+    
   componentDidMount () {
+    // console.log('+++ Industrial Header componentDidMount:', this.props)
+
     if (this.props.fixed !== true) {
       window.addEventListener('scroll', this.handleScroll)
     }
@@ -91,23 +114,23 @@ class IndustrialHeader extends React.Component {
               </button>
               <div className={`header-nav navbar-collapse ${this.state.navCollapse}`} >
                 <ul className=" nav navbar-nav">
-                  <li className="active"> <Link href="javascript:;" onClick={() => this.goto('home') } >Home</Link></li>
-                  <li><Link href="javascript:;" onClick={ () => { this.goto('about') } } >About { /* <i className="fa fa-chevron-down"></i> */ }</Link>
-                    { /* <ul className="sub-menu">
+                  <li className="active"> <a href="javascript:;" className="scroltop" >Home</a></li>
+                  <li><Link href="javascript:;" onClick={ () => { this.goto('about') } } >About<i className="fa fa-chevron-down"></i></Link>
+                    <ul className="sub-menu">
                       <li><Link href="javascript:;" onClick={() => this.goto('ourStack') }>Stack</Link></li>
                       <li><Link href="javascript:;" onClick={() => this.goto('team') }>Team</Link></li>
-                    </ul> */ }
+                    </ul>                    
                   </li>
                   <li><Link href="javascript:;" onClick={ () => this.goto('services') } >Services</Link></li>
                   <li><Link href="javascript:;" onClick={() => this.goto('ourProcess') }>Process</Link></li>
-                  { /* <li><a href="javascript:;">Clients</a></li>
+                  <li><a href="javascript:;">Clients</a></li>
                   <li><a href="javascript:;">Technology</a></li>
                   <li><a href="javascript:;">Knowledge Base<i className="fa fa-chevron-down"></i></a>
                     <ul className="sub-menu">
                       <li><a href="javascript:;">Case Studies</a></li>
                       <li><a href="javascript:;">Articles</a></li>
                     </ul>
-                  </li> */ }
+                  </li>
                   <li><Link href="javascript:;" onClick={() => { this.goto('contactUs') }}>Contact Us</Link></li>
                 </ul>
               </div>
