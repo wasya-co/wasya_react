@@ -13,9 +13,7 @@ class Footer3 extends React.Component {
     this.goto = this.goto.bind(this)
   }
 
-  goto () {
-    ;
-  }
+  goto () {}
  
   render () {
     var year = (new Date()).getFullYear();
