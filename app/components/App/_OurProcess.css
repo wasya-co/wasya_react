@@ -1,12 +1,11 @@
-/* @import "toolkit"; */
 
-.timeline {
+#ourProcessContent .timeline {
   list-style: none;
   padding: 20px 0 20px;
   position: relative;
 }
 
-.timeline:before {
+#ourProcessContent .timeline:before {
   top: 0;
   bottom: 0;
   position: absolute;
@@ -17,32 +16,32 @@
   margin-left: -1.5px;
 }
 
-.timeline > li {
+#ourProcessContent .timeline > li {
   margin-bottom: 20px;
   position: relative;
 }
 
-.timeline > li:before,
-.timeline > li:after {
+#ourProcessContent .timeline > li:before,
+#ourProcessContent .timeline > li:after {
   content: " ";
   display: table;
 }
 
-.timeline > li:after {
+#ourProcessContent .timeline > li:after {
   clear: both;
 }
 
-.timeline > li:before,
-.timeline > li:after {
+#ourProcessContent .timeline > li:before,
+#ourProcessContent .timeline > li:after {
   content: " ";
   display: table;
 }
 
-.timeline > li:after {
+#ourProcessContent .timeline > li:after {
   clear: both;
 }
 
-.timeline > li > .panel {
+#ourProcessContent .timeline > li > .panel {
   width: 46%;
   float: left;
   border: 1px solid #d4d4d4;
@@ -53,7 +52,7 @@
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 }
 
-.timeline > li > .panel:before {
+#ourProcessContent .timeline > li > .panel:before {
   position: absolute;
   top: 26px;
   right: -15px;
@@ -65,7 +64,7 @@
   content: " ";
 }
 
-.timeline > li > .panel:after {
+#ourProcessContent .timeline > li > .panel:after {
   position: absolute;
   top: 27px;
   right: -14px;
@@ -77,7 +76,7 @@
   content: " ";
 }
 
-.timeline > li > .badge {
+#ourProcessContent .timeline > li > .badge {
   color: #fff;
   width: 50px;
   height: 50px;
@@ -96,66 +95,63 @@
   border-bottom-left-radius: 50%;
 }
 
-.normal {
+#ourProcessContent .normal, .inverted {
   position: relative;
 }
 
-.inverted {
-  position: relative;
-}
-
-.timeline > li.inverted > .panel {
+#ourProcessContent .timeline > li.inverted > .panel {
   float: right;
 }
 
-.timeline > li.inverted > .panel:before {
+#ourProcessContent .timeline > li.inverted > .panel:before {
   border-left-width: 0;
   border-right-width: 15px;
   left: -15px;
   right: auto;
 }
 
-.timeline > li.inverted > .panel:after {
+#ourProcessContent .timeline > li.inverted > .panel:after {
   border-left-width: 0;
   border-right-width: 14px;
   left: -14px;
   right: auto;
 }
 
-.primary {
+#ourProcessContent .primary {
   background-color: #2e6da4 !important;
 }
 
-.success {
+#ourProcessContent .success {
   background-color: #3f903f !important;
 }
 
-.warning {
+#ourProcessContent .warning {
   background-color: #f0ad4e !important;
 }
 
-.danger {
+#ourProcessContent .danger {
   background-color: #d9534f !important;
 }
 
-.info {
+#ourProcessContent .info {
   background-color: #5bc0de !important;
 }
 
-.title {
+#ourProcessContent .title {
   margin-top: 0;
   color: inherit;
 }
 
-.body > p,
-.body > ul {
+#ourProcessContent .body > p,
+#ourProcessContent .body > ul {
   margin-bottom: 0;
 }
 
-.body > p + p {
+#ourProcessContent .body > p + p {
   margin-top: 5px;
 }
 
-.process {
+#ourProcessContent .process {
   padding-top: 3em;
 }
+

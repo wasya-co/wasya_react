@@ -12,12 +12,14 @@ class Service extends React.Component {
 
   constructor(props) {
     super(props)
+
+    this.state = { item: '' }
+
     this.handleEnter = this.handleEnter.bind(this)
     this.handleLeave = this.handleLeave.bind(this)
-    this.state = { item: '' }
   }
 
-  handleEnter() {
+  handleEnter () {
     // console.log('handle enter')
     this.setState({ item:
                          <CSSTransitionGroup
@@ -30,15 +32,16 @@ class Service extends React.Component {
                            <div className={ styles.wrap } >
                              <img src={this.props.image} alt={this.props.title} style={{ maxWidth: '100%' }} />
                              <h3>{this.props.title}</h3>
+                             <div className="dez-separator-outer "><div className="dez-separator style-icon"><i className="fa fa-leaf"></i></div></div>
                              {this.props.descr.map(function(d, idx) {
-                                return <p key={idx} >{d}</p>
+                                return <p className="text-justify" key={idx} >{d}</p>
                               })}
                            </div>
                          </CSSTransitionGroup>
     })
   }
 
-  handleLeave() {}
+  handleLeave () {}
 
   render() {
     return (

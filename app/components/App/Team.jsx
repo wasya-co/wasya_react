@@ -5,50 +5,91 @@ import { Grid, Row, Col,
          Panel,
 } from 'react-bootstrap'
 
-import victor from './images/victor3.jpg'
-import oleg from './images/oleg.jpg'
-import team_bg from './images/bg/seamless-damask.jpg'
+import Center from '../Center'
+
+import victor  from './images/team/victor_500x600.jpg'
+import oleg    from './images/team/oleg_500x600.jpg'
+import kim     from './images/team/kim_500x600.jpg'
 
 class Team extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { team: [
+      { image: victor,
+        name: 'Victor Pudeyev',
+        title: 'Engineer',
+        description: [
+          "A full-stack engineer focusing on Ruby on Rails, Javascript, devops, and web application development for startups and agile teams."
+        ],
+      },
+      { image: kim,
+        name: 'Kim Sinton',
+        title: 'Advisor',
+        description: [
+          "An advisor to our team in technology field."
+        ],
+      },
+      { image: oleg,
+        name: 'Oleg Pudeyev',
+        title: 'Engineer',
+        description: [
+          "Full stack engineer and tech lead with 12 years of Web development experience with a focus on Ruby on Rails applications. Experienced in hands-on development, design and architecture, technical leadership, mentoring, project management and planning.",
+          " My objective is to write code that is beautiful, maintainable and delights customers when it is deployed."
+        ],
+      },
+
+    ] }
+  }
+
   render () {
+    let cols = []
+    this.state.team.map((i, p) => {
+      let descr = []
+      i.description.map((j, k) => {
+        descr.push(<p key={k} className="m-t10 m-b0 text-justify">{j}</p>)
+      })
+      cols.push(          
+        <Col key={p} 
+             xs={8} xsOffset={2} 
+             sm={6} smOffset={0} 
+             md={4} >
+          <div className="dez-box">
+            <div className="dez-media"> <a href="#"><img alt="" src={i.image} /></a> </div>
+            <div className="dez-info p-a20 p-t40 border-1">
+              <h4 className="dez-title m-tb0"><a href="#">{i.name}</a></h4>
+              <div className="bg-primary skew-content-box">
+                <ul className="dez-social-icon">
+                  <li><a href="javascript:void(0);" className="fa fa-facebook"></a></li>
+                  <li><a href="javascript:void(0);" className="fa fa-twitter"></a></li>
+                  <li><a href="javascript:void(0);" className="fa fa-linkedin"></a></li>
+                  <li><a href="javascript:void(0);" className="fa fa-google-plus"></a></li>
+                  <li><a href="javascript:void(0);" className="fa fa-pinterest-p"></a></li>
+                  <li><a href="javascript:void(0);" className="fa fa-instagram"></a></li>
+                </ul>
+              </div>
+              <span>{i.title}</span>
+              { descr }
+            </div>
+          </div>
+          <br /><br />
+        </Col>
+      )
+    })
+    
     return (
-      <div id='teamContent' >
-        <br /><br /><br />
-        <Grid>
-          <Row>
-            <Col xs={12} xsOffset={0} sm={10} smOffset={1} >
-              <h1 style={{ textAlign: 'center', backgroundImage: `url(${team_bg})`, color: 'white', padding: '.5em 0' }} ><span style={{ background: 'none' }} >Our Team</span></h1>
-              <p>We are a distributed, agile development team. We operate in several major US cities: San Francisco Bay Area, Los Angeles, Chicago and New York City. We reach out to our network of professionals if a project requires some specific expertise that we don't possess in-house, or if the quantity of work demands so.</p>
-              <p>Local teams work with local clients, so a client in Chicago will talk to our Chicago engineers.</p>
-              <p>&nbsp;</p>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} sm={6} lg={6}>
-              <Panel>
-                <img src={victor} style={{ textAlign: 'center' }} />
-                <h3>Hi, I'm Victor</h3>
-                <p>San Francisco Bay Area</p>
-                <p>A full-stack engineer focusing on Ruby on Rails, Javascript, devops, and web application development for startups and agile teams.</p>
-                <p>Resume: <a href="http://piousbox.github.io">http://piousbox.github.io</a></p>
-                <p>Blog: <a href="http://blog.piousbox.com">http://blog.piousbox.com</a></p>
-              </Panel>
-            </Col>
-            <Col xs={12} sm={6} lg={6}>
-              <Panel>
-                <img src={oleg} style={{ textAlign: 'center' }} />
-                <h3>Hi, I'm Oleg.</h3>
-                <p>New York City</p>
-                <p>Full stack engineer and tech lead with 12 years of Web development experience with a focus on Ruby on Rails applications. Experienced in hands-on development, design and architecture, technical leadership, mentoring, project management and planning. My objective is to write code that is beautiful, maintainable and delights customers when it is deployed.</p>
-                <p>Resume: <a href="http://olegp.com/resume/">http://olegp.com/resume/</a></p>
-                <p>Blog: <a href="http://bsdpower.com/">http://bsdpower.com/</a></p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-              </Panel>
-            </Col>
-          </Row>
-        </Grid>
-      </div>
+      <Grid id="teamContent" >
+        <Row>
+          <Col xs={12}>
+            <Center>
+              <h2 className="text-uppercase">Our Team</h2>
+              <div className="dez-separator-outer ">
+                <div className="dez-separator bg-primary style-skew"></div>
+              </div>
+            </Center>
+          </Col>
+          { cols }
+        </Row>
+      </Grid>
     )
   }
 }

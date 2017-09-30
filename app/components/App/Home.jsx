@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { Grid, Row, Col } from 'react-bootstrap'
+import { Grid, Row, Col, } from 'react-bootstrap'
 
 import bg5 from './images/circuit-boards/1.jpg'
 import bg6 from './images/circuit-boards/2.jpg'

@@ -8,6 +8,7 @@ let WasyaRouter = {
 
   careersPath: '/careers',
 
+  pagesPath: '/pages',
   termsPath: '/pages/terms-of-service',
 }
 
