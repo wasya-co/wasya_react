@@ -8,3 +8,4 @@ master - gets deployed (hm...)
 1.x.x - this
 
 2.0.0 - industry theme in React
+2.0.2 - it begins to appear the way I want it.

@@ -31,11 +31,10 @@ class OurProcess extends React.Component {
                     <h4 className="title">Step 1 - Whiteboard</h4>
                   </div>
                   <div className="body">
-                    <p>We sit down with product managers and stake holders and strategize on the approach to take. The results of this step are:</p>
-                    <ul>
-                      <li>An Actionable specification / user stories</li>
-                      <li>A sketch of design & functionality of all pages</li>
-                    </ul>
+                    <p>We sit down with product managers and stake holders and strategize on the approach to take. 
+                      The results of this step are: (1) An Actionable specification / user stories, and
+                      (2) A sketch of design & functionality of all pages
+                    </p>
                     <p>This establishes the common language to communicate with for the duration of the project.</p>
                   </div>
                 </div>
