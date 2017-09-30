@@ -19,6 +19,7 @@ class Team extends React.Component {
         name: 'Victor Pudeyev',
         title: 'Engineer',
         description: [
+          "Victor Piousbox, the great russian bear rider, owner of wooden rubles, conqueror of rivers and dataflows, fearless thinker and tinker, has been with Operaevent since the beginning. He has been honestly producing the technical foundation on which the platform relies for a while now. Before then, he has rotated many software engineering roles in a variety of companies in the Bay Area and elsewhere. In his spare time, he likes to run around in the forest shooting guns in the manner of a sport exercise, ride his motorcycle into the sunset, and read technical documentation to better his skill in technology bending.",
           "A full-stack engineer focusing on Ruby on Rails, Javascript, devops, and web application development for startups and agile teams."
         ],
       },
@@ -26,7 +27,7 @@ class Team extends React.Component {
         name: 'Kim Sinton',
         title: 'Advisor',
         description: [
-          "An advisor to our team in technology field."
+          "Kim is a front-end engineer with a vast professional experience. He finds innovative strategic solutions to the growing pains of the team and contributes invaluably to our overall vision."
         ],
       },
       { image: oleg,
