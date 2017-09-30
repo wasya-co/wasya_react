@@ -9,3 +9,7 @@ master - gets deployed (hm...)
 
 2.0.0 - industry theme in React
 2.0.2 - it begins to appear the way I want it.
+2.0.3 - fucked up
+2.0.4 - fucked up
+2.0.5 - like 2.0.2, works well, but single-page.
+
