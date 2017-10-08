@@ -12,4 +12,5 @@ master - gets deployed (hm...)
 2.0.3 - fucked up
 2.0.4 - fucked up
 2.0.5 - like 2.0.2, works well, but single-page.
+2.0.6 - cleaner, smaller images
 
