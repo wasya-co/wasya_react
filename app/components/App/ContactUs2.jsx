@@ -107,8 +107,8 @@ class ContactUs2 extends React.Component {
                       <div className="icon-content">
                         <h6 className="text-uppercase m-b0 dez-tilte">Mailing Address</h6>
                         <p>Wasya co <br />
-                          P O Box 2119<br />
-                          San Jose, CA 95109</p>
+                          P O Box 26234<br />
+                          San Jose, CA 95159</p>
                       </div>
                     </li>
                   </ul>
