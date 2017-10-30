@@ -4,6 +4,7 @@ import {
 } from 'react-router'
 import { connect } from 'react-redux'
 
+import Account    from './Account'
 import Home       from './Home'
 import { FixedNav, UnfixedNav, Navigation } from '../Navigation'
 import OurProcess from './OurProcess'
@@ -32,6 +33,7 @@ const routes = [
     childRoutes: [
       { path: WRouter.bizServicesPath,  component: BizServices },
       { path: WRouter.techServicesPath, component: TechServices },
+      { path: '/account',               component: Account },
     ],
   },
   /* { path: WRouter.careersPath,

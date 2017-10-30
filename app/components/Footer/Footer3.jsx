@@ -27,8 +27,9 @@ class Footer3 extends React.Component {
                                              backgroundRepeat: 'repeat-x',
                                              height: '420px' }} >
           <div className="container saf-footer" >
+
             <Row>
-              <Col xs={6} >
+              <Col xs={12} md={4} >
                 <div className="widget widget_services">
                   <h2 className="m-b15">Quick Links</h2>
                   <div className="dez-separator bg-primary"></div>
@@ -43,7 +44,7 @@ class Footer3 extends React.Component {
                   </ul>
                 </div>
               </Col>
-              <Col xs={6}>
+              <Col xs={12} md={4}>
                 <div className="widget">
                   <h2 className="m-b15">Contact Us</h2>
                   <div className="dez-separator bg-primary" />
@@ -65,7 +66,19 @@ class Footer3 extends React.Component {
                   </ul>
                 </div>                
               </Col>
+              <Col xs={12} md={4}>
+                <div className="widget widget_services">
+                  <h2 className="m-b15">&nbsp;</h2>
+                  <div className="dez-separator bg-primary"></div>
+                  <ul>
+                    <li>
+                      <Link to="/account">Account</Link>
+                    </li>
+                  </ul>
+                </div>
+              </Col>
             </Row>
+
           </div>
         </div>
         <div className="footer-bottom">

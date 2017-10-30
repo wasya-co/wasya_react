@@ -15,6 +15,7 @@
     "react-bootstrap": "^0.30.8",
     "react-dom": "^15.5.3",
     "react-fa": "^4.2.0",
+    "react-facebook-login": "^3.6.2",
     "react-fontawesome": "^1.6.1",
     "react-icons": "^2.2.5",
     "react-materialize": "^1.0.4",
