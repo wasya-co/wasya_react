@@ -4,7 +4,10 @@ import {
   Grid, Row, Col,
   Button, Panel,
 } from 'react-bootstrap'
-import FacebookLogin from 'react-facebook-login'
+import FacebookLogin      from 'react-facebook-login'
+import { Elements, StripeProvider } from 'react-stripe-elements'
+
+import MyCheckout from './MyCheckout'
 
 const responseFacebook = (r) => {
   console.log("+++ response:", r)
@@ -32,6 +35,11 @@ class Account extends React.Component {
                 <input type="text" placeholder="Invoice Number" />
                 <label>Amount</label>
                 <input type="number" placeholder="Amount" />
+                
+                <StripeProvider apiKey="pk_test_qr1QPmSpLdBFt1F7itdWJOj3" >
+                  <MyCheckout />
+                </StripeProvider>
+
                 <Button>Go</Button>
               </form>
             </Panel>

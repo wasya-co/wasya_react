@@ -21,7 +21,7 @@ class Footer3 extends React.Component {
   render () {
     var year = (new Date()).getFullYear();
     return (
-      <footer className="site-footer trans-footer" >
+      <footer className="site-footer trans-footer" style={{ zIndex: -1 }} >
         <div className="footer-top" style={{ background: `url(${world})`, 
                                              backgroundPosition: 'left center', 
                                              backgroundRepeat: 'repeat-x',

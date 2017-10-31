@@ -22,7 +22,7 @@ class FixedNav extends React.Component {
     return (
       <div>
         <IndustrialHeader fixed={true} />
-        <div style={{ minHeight: '300px', marginTop: '80px', marginBottom: '400px', zIndex: 5, background: 'white' }}>
+        <div style={{ minHeight: '300px', marginTop: '60px', marginBottom: '400px', zIndex: 5, background: 'white' }}>
           { this.props.children }
         </div>
         <button className={`scroltop fa fa-chevron-up`} style={{ display:  this.state.showScrollTop === 'showScrollTop' ? 'block' : 'none' }} onClick={() => this.scrollTop() }></button>
