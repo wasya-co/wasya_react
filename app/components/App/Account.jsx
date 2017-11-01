@@ -42,7 +42,7 @@ class CheckoutForm extends React.Component {
           if (_data.status === 'ok') {
             this.setState({ showConfirm: true, token })
           } else {
-            throw('+++ cannot validate invoice2:', _data)
+            throw ('+++ cannot validate invoice2:', _data)
           }
         }).catch(_err => {
           console.log('+++ cannot validate invoice:', _err)
