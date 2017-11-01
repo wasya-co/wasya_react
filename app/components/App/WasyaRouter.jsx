@@ -8,6 +8,9 @@ let WasyaRouter = {
 
   careersPath: '/careers',
 
+  makePayment: '/api/payments',
+  findInvoice: '/api/invoices/search',
+
   pagesPath: '/pages',
   termsPath: '/pages/terms-of-service',
 }
