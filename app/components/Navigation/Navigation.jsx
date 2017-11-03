@@ -41,7 +41,7 @@ class Navigation extends React.Component {
     // console.log('+++ Navigation:', this.props, this.state)
 
     return (
-      <div style={{ marginBottom: '440px' }}>
+      <div style={{ marginBottom: '650px' }} >
         <IndustrialHeader location={this.props.location} fixed={this.props.route.fixed} />
         <div className="page-content" >
           { this.props.children }

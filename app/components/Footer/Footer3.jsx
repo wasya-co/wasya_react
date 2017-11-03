@@ -22,29 +22,44 @@ class Footer3 extends React.Component {
     var year = (new Date()).getFullYear();
     return (
       <footer className="site-footer trans-footer" style={{ zIndex: -1 }} >
-        <div className="footer-top" style={{ background: `url(${world})`, 
+        <div className="footer-top" style={{ background: `black url(${world})`, 
                                              backgroundPosition: 'left center', 
-                                             backgroundRepeat: 'repeat-x',
-                                             height: '420px' }} >
+                                             backgroundRepeat: 'no-repeat',
+                                             minHeight: '420px' }} >
           <div className="container saf-footer" >
 
             <Row>
-              <Col xs={12} md={4} >
-                <div className="widget widget_services">
-                  <h2 className="m-b15">Quick Links</h2>
-                  <div className="dez-separator bg-primary"></div>
-                  <ul>
-                    <li><Link href="javascript:;" onClick={ () => this.goto('home') } >Home</Link></li>
-                    <li><Link href="javascript:;" onClick={ () => this.goto('about') } >About</Link></li>
-                    <li><Link href="javascript:;" onClick={ () => this.goto('services') } >Services</Link></li>
-                    { /* <li><a href="javascript:;" onClick={ () => this.goto('clients') } >Clients</a></li> */ }
-                    <li><Link href="javascript:;" onClick={ () => this.goto('ourProcess') }>Process</Link></li>
-                    { /* <li><a href="javascript:;" onClick={ () => this.goto('technology') } >Technology</a></li> */ }
-                    { /* <li><Link to={WRouter.careersPath} >Careers</Link></li> */ }
-                  </ul>
-                </div>
+              <Col xs={12} md={8} sm={6} >
+                <Row>
+                  <Col xs={12} md={6} sm={12} >
+                    <div className="widget widget_services" id="footerServices">
+                      <h2 className="m-b15">Quick Links</h2>
+                      <div className="dez-separator bg-primary"></div>
+                      <ul>
+                        <li><Link href="javascript:;" onClick={ () => this.goto('home') } >Home</Link></li>
+                        <li><Link href="javascript:;" onClick={ () => this.goto('about') } >About</Link></li>
+                        <li><Link href="javascript:;" onClick={ () => this.goto('services') } >Services</Link></li>
+                        { /* <li><a href="javascript:;" onClick={ () => this.goto('clients') } >Clients</a></li> */ }
+                        <li><Link href="javascript:;" onClick={ () => this.goto('ourProcess') }>Process</Link></li>
+                        { /* <li><a href="javascript:;" onClick={ () => this.goto('technology') } >Technology</a></li> */ }
+                        { /* <li><Link to={WRouter.careersPath} >Careers</Link></li> */ }
+                      </ul>
+                    </div>
+                  </Col>
+                  <Col xs={12} md={6} sm={12} >
+                    <div className="widget widget_meta" id="footerMeta" >
+                      <h2 className="m-b15">&nbsp;</h2>
+                      <div className="dez-separator bg-primary"></div>
+                      <ul>
+                        <li>
+                          <Link to="/account">Account</Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </Col>
+                </Row>
               </Col>
-              <Col xs={12} md={4}>
+              <Col xs={12} md={4} sm={6} >
                 <div className="widget">
                   <h2 className="m-b15">Contact Us</h2>
                   <div className="dez-separator bg-primary" />
@@ -66,17 +81,6 @@ class Footer3 extends React.Component {
                   </ul>
                 </div>                
               </Col>
-              <Col xs={12} md={4}>
-                <div className="widget widget_services">
-                  <h2 className="m-b15">&nbsp;</h2>
-                  <div className="dez-separator bg-primary"></div>
-                  <ul>
-                    <li>
-                      <Link to="/account">Account</Link>
-                    </li>
-                  </ul>
-                </div>
-              </Col>
             </Row>
 
           </div>
@@ -85,8 +89,9 @@ class Footer3 extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-sm-12 text-left "> 
-                <span>Copyright &copy; 2017 
-                  <img style={{ height: '30px' }} src={wasya_co} alt='wasya co' />
+                <span>Copyright &copy; 2017 &nbsp; 
+                  { /* <img style={{ height: '30px' }} src={wasya_co} alt='wasya co' /> */ }
+                  Wasya co
                 </span> | <Link to={WRouter.termsPath} >Terms of Service</Link>
               </div>
             </div>
