@@ -14,4 +14,5 @@ master - gets deployed (hm...)
 2.0.5 - like 2.0.2, works well, but single-page.
 2.0.6 - cleaner, smaller images
 2.0.7 - introducing stripe
+2.0.8 - working on a better-mobile footer
 
