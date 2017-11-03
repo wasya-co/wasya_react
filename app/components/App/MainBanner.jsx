@@ -7,7 +7,10 @@ class MainBanner extends React.Component {
   render () {
     return (
       <div>
-        <div className="dez-bnr-inr dez-bnr-inr-lg overlay-black-middle" style={{ backgroundImage: `url(${bg8})` }}>
+        <div className="dez-bnr-inr dez-bnr-inr-lg overlay-black-middle" style={{ 
+          backgroundImage: `url(${bg8})`,
+          maxHeight: '500px',
+        }}>
           <div className="container">
             <div className="dez-bnr-inr-entry">
               <h1 className="text-white">Software Development & Consulting in South Bay Area</h1>
