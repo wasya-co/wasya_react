@@ -6,6 +6,7 @@ import { Grid, Row, Col,
 } from 'react-bootstrap'
 
 import Center from '../Center'
+import SectionHeader from './SectionHeader'
 
 import victor  from './images/team/victor_500x600.jpg'
 import oleg    from './images/team/oleg_500x600.jpg'
@@ -81,12 +82,7 @@ class Team extends React.Component {
       <Grid id="teamContent" >
         <Row>
           <Col xs={12}>
-            <Center>
-              <h2 className="text-uppercase">Our Team</h2>
-              <div className="dez-separator-outer ">
-                <div className="dez-separator bg-primary style-skew"></div>
-              </div>
-            </Center>
+            <SectionHeader>Our Team</SectionHeader>
           </Col>
           { cols }
         </Row>

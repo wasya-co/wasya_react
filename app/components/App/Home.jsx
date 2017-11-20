@@ -15,6 +15,7 @@ import { Services }   from '../Services'
 import OurProcess     from './OurProcess'
 import Team           from './Team'
 import ContactUs2     from './ContactUs2'
+import Testimonials   from './Testimonials'
 
 class Home extends React.Component {
   render () {
@@ -27,6 +28,7 @@ class Home extends React.Component {
         <Services />
         <OurProcess />
         <Team />
+        <Testimonials />
         <ContactUs2 />
       </div>
     )
