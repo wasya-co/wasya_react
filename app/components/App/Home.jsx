@@ -28,7 +28,7 @@ class Home extends React.Component {
         <Services />
         <OurProcess />
         <Team />
-        <Testimonials />
+        <Testimonials />{ /* and Clients */ }
         <ContactUs2 />
       </div>
     )
