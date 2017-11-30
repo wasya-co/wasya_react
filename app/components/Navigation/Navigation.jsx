@@ -14,6 +14,8 @@ class Navigation extends React.Component {
   }
 
   scrollTop () {
+    // console.log('+++ scollTop here')
+
     scrollToElement('body')
   }
 
@@ -35,6 +37,20 @@ class Navigation extends React.Component {
     if (!this.props.fixed) {
       window.removeEventListener('scroll', this.handleScroll)
     }
+  }
+
+  componentWillReceiveProps (p) {
+    setTimeout(() => {
+      console.log("+++ +++ Navigation will recieve props?", p)
+      if (p.location.query && p.location.query.scrollTo) {
+        console.log('+++ here:', `${p.location.query.scrollTo}Content`)
+        scrollToElement(`#${p.location.query.scrollTo}Content`, { offset: -60 })
+      }
+    }, 0)
+  }
+
+  componentWillUpdate () {
+    // happens too often
   }
 
   render () {

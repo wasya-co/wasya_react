@@ -101,7 +101,7 @@ class About extends React.Component {
   }
 
   render () {
-    console.log('+++ About render:', this.props, this.state)
+    // console.log('+++ About render:', this.props, this.state)
 
     return (
       <div id="aboutContent" className="p-a30 bg-white m-b40">
