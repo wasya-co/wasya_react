@@ -3,13 +3,13 @@ import { Grid, Row, Col } from 'react-bootstrap'
 import SectionHeader from './SectionHeader'
 
 import nexentaLogo from './images/clients-logos/nexenta2.jpg'
-import creekLogo from './images/clients-logos/creek.png'
-import liatrioLogo from './images/clients-logos/liatrio.jpg'
-import mediatekLogo from './images/clients-logos/mediatek.jpg'
-import operaeventLogo from './images/clients-logos/operaevent.png'
-import signvoxLogo from './images/clients-logos/signvox2.png'
-import zmdigitalLogo from './images/clients-logos/zmdigital.png'
-import redesLogo from './images/clients-logos/redes.png'
+import creekLogo from './images/clients-logos/creek2.jpg'
+import liatrioLogo from './images/clients-logos/liatrio2.jpg'
+import mediatekLogo from './images/clients-logos/mediatek2.jpg'
+import operaeventLogo from './images/clients-logos/operaevent2.jpg'
+import signvoxLogo from './images/clients-logos/signvox2.jpg'
+import zmdigitalLogo from './images/clients-logos/zmdigital2.jpg'
+import redesLogo from './images/clients-logos/redes2.jpg'
 
 class Testimonials extends React.Component {
   render () {
@@ -19,18 +19,19 @@ class Testimonials extends React.Component {
           <SectionHeader>Our Clients</SectionHeader>
           <Grid>
             <Row>
-              <Col sm={6} md={3}><img src={nexentaLogo} alt="Nexenta" style={{ width: '100%' }} /></Col>
-              <Col sm={6} md={3}><img src={creekLogo} alt="Nexenta" style={{ width: '100%' }} /></Col>
-              <Col sm={6} md={3}><img src={liatrioLogo} alt="Nexenta" style={{ width: '100%' }} /></Col>
-              <Col sm={6} md={3}><img src={mediatekLogo} alt="Nexenta" style={{ width: '100%' }} /></Col>
+              <Col sm={6} md={3}><img src={nexentaLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
+              <Col sm={6} md={3}><img src={creekLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
+              <Col sm={6} md={3}><img src={liatrioLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
+              <Col sm={6} md={3}><img src={mediatekLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
             </Row>
             <Row>
-              <Col sm={6} md={3}><img src={operaeventLogo} alt="Nexenta" style={{ width: '100%' }} /></Col>
-              <Col sm={6} md={3}><img src={signvoxLogo} alt="Nexenta" style={{ width: '100%' }} /></Col>
-              <Col sm={6} md={3}><img src={zmdigitalLogo} alt="Nexenta" style={{ width: '100%' }} /></Col>
-              <Col sm={6} md={3}><img src={redesLogo} alt="Nexenta" style={{ width: '100%' }} /></Col>
+              <Col sm={6} md={3}><img src={operaeventLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
+              <Col sm={6} md={3}><img src={signvoxLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
+              <Col sm={6} md={3}><img src={zmdigitalLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
+              <Col sm={6} md={3}><img src={redesLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
             </Row>
           </Grid>
+          <div style={{ height: '100px' }} />
 
           <SectionHeader>What People Are Saying</SectionHeader>
           <Grid>
