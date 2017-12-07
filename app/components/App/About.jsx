@@ -87,17 +87,28 @@ class About extends React.Component {
 class About extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = { swipeAnim: 'swipe-anim-pre',
+    }
 
-    this.componentDidMount = this.componentDidMount(this)
+    this.componentDidMount    = this.componentDidMount.bind(this)
+    this.componentWillUnmount = this.componentWillUnmount.bind(this)
+    this.handleScroll         = this.handleScroll.bind(this)
   }
 
   componentDidMount () {
-    console.log('+++ About componentDidMount:', this.props)
+    window.addEventListener('scroll', this.handleScroll)
+  }
 
-    /* if (this.props.location && this.props.location.query && this.props.location.query.scrollTo) {
-       this.goto(this.props.location.query.scrollTo)
-       } */
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll (e) {
+    if (window.scrollY > 10) {
+      this.setState({ swipeAnim: 'swipe-anim', })
+    } /* else {
+      this.setState({ swipeAnim: 'swipe-anim-pre', })
+    } */
   }
 
   render () {
@@ -106,7 +117,7 @@ class About extends React.Component {
     return (
       <div id="aboutContent" className="p-a30 bg-white m-b40">
         <div className="section-head text-center">
-          <h2 className="text-uppercase"><img src={ logo3 } alt='wasya co' /></h2>
+          <h2 className={`text-uppercase ${this.state.swipeAnim}`} ><img src={ logo3 } alt='wasya co' /></h2>
           <div className="dez-separator-outer "><div className="dez-separator style-icon"><i className="fa fa-leaf"></i></div></div>
           <br />
           <p className="justify">We are a software consulting firm that specializes in full-cycle web application development. We service startups and small local businesses that are focused on technology. We utilize modern best development practices and provide our clients with cost-effective and performant tools.</p>
