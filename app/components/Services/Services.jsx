@@ -14,73 +14,97 @@ class Services extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      rows: [
-        [
-          { title: "Ruby on Rails",
-            short: "ruby",
-            descr: [ "Our framework for rapid prototyping and non-real-time applications is Ruby on Rails. " +
-                     "We use it for constructing APIs, providing backend for websites, generating static websites, and as the tool for general scripting. " ],
-          },
-          { short: "node",
-            title: "Node.js",
-            descr: [ "Node.js and Socket.js are our tools of choice for implementing real-time applications, event-driven applications, and microservices. " +
-                     "We tend to use Node in combination with websockets. " ],
-          },
-          { short: "react",
-            title: "React.js",
-            descr: [ "We write frontend code using the React framework. It is the most popular front-end ecosystem currently available. ",
-                     "Previously, we have worked a lot with Backbone and Angular.js. " ],
-          },
-          { short: "chef",
-            title: 'Chef',
-            descr: [ "We wire up build/deploy pipelines using Chef. Simple deployments are done with standalone chef. For more complex cases we use server-client architecture., in which a change is propagated to each machine from a central repository. "
-            ],
-          },
-        ], [
-          { short: "api",
-            title: "API's",
-            descr: [ "We are experts at building custom API's (ReSTful as well as event-driven). Documentation with Docs.io (formerly swagger). Test-driven. Deployed at scale. " ],
-          },
-          { short: "mvp",
-            title: "MVP's",
-            descr: [ "One of the most important steps in develoing consumer facing applications is market validation. We employ the lean methologody & iterative development to build versions of the product that effectively validate the market and the concept. " ],
-          },
-          { short: 'uiux',
-            title: "UI/UX",
-            descr: [ "Modern software tools are expected to be highly usable, to the degree of not requiring documentation. The user interface should be self-explanatory,  and the user experience intuitive. " ],
-          },
-          { short: "devops",
-            title: "Devops",
-            descr: [ "The mythical creature of Devops does not lend itself to being caught easily. ",
-                     "We script repetitive maintenance tasks, automate build/deploy pipelines, and enable efficient operation.",
-            ],
-          },
-        ],
-
-        /** 
-         * automation, 
-         * project management, 
-         * business development,
-         * rapid prototyping 
-         */
-
-      ],
+      items: {
+        ruby: { title: "Ruby on Rails",
+                short: "ruby",
+                descr: [ "Our framework for rapid prototyping and non-real-time applications is Ruby on Rails. " +
+                         "We use it for constructing APIs, providing backend for websites, generating static websites, and as the tool for general scripting. " ],
+        },
+        node: { short: "node",
+                title: "Node.js",
+                descr: [ "Node.js and Socket.js are our tools of choice for implementing real-time applications, event-driven applications, and microservices. " +
+                         "We tend to use Node in combination with websockets. " ],
+        },
+        react: { short: "react",
+                 title: "React.js",
+                 descr: [ "We write frontend code using the React framework. It is the most popular front-end ecosystem currently available. ",
+                          "Previously, we have worked a lot with Backbone and Angular.js. " ],
+        },
+        chef: { short: "chef",
+                title: 'Chef',
+                descr: [ "We wire up build/deploy pipelines using Chef. Simple deployments are done with standalone chef. For more complex cases we use server-client architecture., in which a change is propagated to each machine from a central repository. " ],
+        },
+        api: { short: "api",
+               title: "API's",
+               descr: [ "We are experts at building custom API's (ReSTful as well as event-driven). Documentation with Docs.io (formerly swagger). Test-driven. Deployed at scale. " ],
+        },
+        mvp: { short: "mvp",
+               title: "MVP's",
+               descr: [ "One of the most important steps in develoing consumer facing applications is market validation. We employ the lean methologody & iterative development to build versions of the product that effectively validate the market and the concept. " ],
+        },
+        uiux: { short: 'uiux',
+                title: "UI/UX",
+                descr: [ "Modern software tools are expected to be highly usable, to the degree of not requiring documentation. The user interface should be self-explanatory,  and the user experience intuitive. " ],
+        },
+        devops: { short: "devops",
+                  title: "Devops",
+                  descr: [ "The mythical creature of Devops does not lend itself to being caught easily. ",
+                           "We script repetitive maintenance tasks, automate build/deploy pipelines, and enable efficient operation." ],
+        },
+      }
+      /** 
+       * automation, 
+       * project management, 
+       * business development,
+       * rapid prototyping 
+       */
     }
   }
   
   componentDidMount () {
   }
-
+  
   render () {
-    let mapRows = []
-    let items
-    this.state.rows.map((rows, idx) => {
-      items = []
-      rows.map((item) => {
-        items.push(<Col xs={12} sm={6} lg={3} key={item.short} ><Service service={item} /></Col>)
-      })
-      mapRows.push(<Row key={idx} >{ items }</Row>)
-    })
+    let ruby   = (<Service service={this.state.items.ruby} />)
+    let node   = (<Service service={this.state.items.node} />)
+    let react  = (<Service service={this.state.items.react} />)
+    let chef   = (<Service service={this.state.items.chef} />)
+
+    let api    = (<Service service={this.state.items.api} />)
+    let mvp    = (<Service service={this.state.items.mvp} />)
+    let uiux   = (<Service service={this.state.items.uiux} />)
+    let devops = (<Service service={this.state.items.devops} />)
+
+    let row1 = (
+      <Row>
+        <Col xs={12} md={12} lg={6} >
+          <Row>
+            <Col xs={12} md={6}>{ruby}</Col>
+            <Col xs={12} md={6}>{node}</Col>
+          </Row>
+        </Col>
+        <Col xs={12} md={12} lg={6}>
+          <Row>
+            <Col xs={12} md={6}>{react}</Col>
+            <Col xs={12} md={6}>{chef}</Col>
+          </Row>
+        </Col>
+      </Row>)
+      let row2 = (
+        <Row>
+          <Col xs={12} md={12} lg={6} >
+            <Row>
+              <Col xs={12} md={6}>{api}</Col>
+              <Col xs={12} md={6}>{mvp}</Col>
+            </Row>
+          </Col>
+          <Col xs={12} md={12} lg={6}>
+            <Row>
+              <Col xs={12} md={6}>{uiux}</Col>
+              <Col xs={12} md={6}>{devops}</Col>
+            </Row>
+          </Col>
+        </Row>)
     
     return (
       <div id="servicesContent" ><Grid >
@@ -119,7 +143,7 @@ class Services extends React.Component {
           </Col>
         </Row>
         <br /><br />
-        { mapRows }
+        { row1 }{ row2 }
       </Grid></div>
     )
   }
