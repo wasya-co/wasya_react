@@ -17,3 +17,4 @@ master - gets deployed (hm...)
 2.0.8 - working on a better-mobile footer
         fixed minor responsive stuff, all good
 2.0.9 - let's wire in blog
+        and increased team size to 6
