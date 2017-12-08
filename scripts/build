@@ -3,6 +3,8 @@
 set -x
 
 tagNumber=`git branch | grep -e "^*" | cut -d' ' -f 2`
+echo "tag number:"
+echo "$tagNumber"
 
 npm run test-travis &&
 
