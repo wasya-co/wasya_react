@@ -5,12 +5,14 @@ import {
 import { connect } from 'react-redux'
 
 import Account    from './Account'
+import BlogIndex  from '../Blog'
 import Home       from './Home'
 import { FixedNav, UnfixedNav, Navigation } from '../Navigation'
-import OurProcess from './OurProcess'
 import Products   from './Products'
 import Clients    from './Clients'
+import OurProcess from './OurProcess'
 import OurStack   from '../Stack/Stack'
+import OurWork    from './OurWork'
 import { BizServices, TechServices } from '../Services'
 import WRouter from './WasyaRouter'
 import { Careers, DesignerCareer } from '../Careers'
@@ -49,6 +51,8 @@ const routes = [
     indexRoute: { component: AbstractPage },
     childRoutes: [
       { path: WRouter.termsPath, component: TermsPage },
+      { path: '/our-work',     component: OurWork },
+      { path: '/blog',         component: BlogIndex },
     ],
   },
 ]

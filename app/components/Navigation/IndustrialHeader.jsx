@@ -90,17 +90,19 @@ class IndustrialHeader extends React.Component {
                 <span className="icon-bar"></span> 
               </button>
               <div className={`header-nav navbar-collapse ${this.state.navCollapse}`} >
-                <ul className=" nav navbar-nav">
-                  <li className="active"> <Link href="javascript:;" onClick={() => this.goto('home') } >Home</Link></li>
+                <ul className="nav navbar-nav">
+                  { /* <li className="active"> <Link href="javascript:;" onClick={() => this.goto('home') } >Home</Link></li> */ }
                   <li><Link href="javascript:;" onClick={ () => { this.goto('about') } } >About { /* <i className="fa fa-chevron-down"></i> */ }</Link>
                     { /* <ul className="sub-menu">
-                      <li><Link href="javascript:;" onClick={() => this.goto('ourStack') }>Stack</Link></li>
-                      <li><Link href="javascript:;" onClick={() => this.goto('team') }>Team</Link></li>
-                    </ul> */ }
+                         <li><Link href="javascript:;" onClick={() => this.goto('ourStack') }>Stack</Link></li>
+                         <li><Link href="javascript:;" onClick={() => this.goto('team') }>Team</Link></li>
+                         </ul> */ }
                   </li>
+                  <li><Link href="/our-work" >Our Work</Link></li>
                   <li><Link href="javascript:;" onClick={ () => this.goto('services') } >Services</Link></li>
-                  <li><Link href="/scrollTo=process" onClick={() => this.goto('ourProcess') }>Process</Link></li>
-                  <li><Link href="/blog" onClick={() => this.goto('ourProcess') }>Blog</Link></li>
+                  { /* <li><Link href="/scrollTo=process" onClick={() => this.goto('ourProcess') }>Process</Link></li> */ }
+                  <li><Link href="/products" >Products</Link></li>
+                  <li><Link href="/blog" }>Blog</Link></li>
                   { /* <li><a href="javascript:;">Clients</a></li>
                   <li><a href="javascript:;">Technology</a></li>
                   <li><a href="javascript:;">Knowledge Base<i className="fa fa-chevron-down"></i></a>
