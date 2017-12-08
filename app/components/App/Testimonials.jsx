@@ -19,16 +19,32 @@ class Testimonials extends React.Component {
           <SectionHeader>Our Clients</SectionHeader>
           <Grid>
             <Row>
-              <Col sm={6} md={3}><img src={nexentaLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
-              <Col sm={6} md={3}><img src={creekLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
-              <Col sm={6} md={3}><img src={liatrioLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
-              <Col sm={6} md={3}><img src={mediatekLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
+              <Col xs={12} md={6} >
+                <Row>
+                  <Col xs={6} md={6}><img src={nexentaLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
+                  <Col xs={6} md={6}><img src={creekLogo} alt="Creek" style={{ width: '80%' }} /></Col>
+                </Row>
+              </Col>
+              <Col xs={12} md={6} >
+                <Row>
+                  <Col xs={6} md={6}><img src={liatrioLogo} alt="Liatrio" style={{ width: '80%' }} /></Col>
+                  <Col xs={6} md={6}><img src={mediatekLogo} alt="Mediatek" style={{ width: '80%' }} /></Col>
+                </Row>
+              </Col>
             </Row>
             <Row>
-              <Col sm={6} md={3}><img src={operaeventLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
-              <Col sm={6} md={3}><img src={signvoxLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
-              <Col sm={6} md={3}><img src={zmdigitalLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
-              <Col sm={6} md={3}><img src={redesLogo} alt="Nexenta" style={{ width: '80%' }} /></Col>
+              <Col xs={12} md={6}>
+                <Row>
+                  <Col xs={6}><img src={operaeventLogo} alt="Operaevent" style={{ width: '80%' }} /></Col>
+                  <Col xs={6}><img src={signvoxLogo} alt="Signvox" style={{ width: '80%' }} /></Col>
+                </Row>
+              </Col>
+              <Col xs={12} md={6}>
+                <Row>
+                  <Col xs={6}><img src={zmdigitalLogo} alt="zmdigital" style={{ width: '80%' }} /></Col>
+                  <Col xs={6}><img src={redesLogo} alt="redes y edificaciones" style={{ width: '80%' }} /></Col>
+                </Row>
+              </Col>
             </Row>
           </Grid>
           <div style={{ height: '100px' }} />
