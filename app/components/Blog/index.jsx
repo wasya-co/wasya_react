@@ -1,5 +1,7 @@
 import React from 'react'
 
+import config from 'config'
+
 import { 
   Grid, Row, Col,
 } from 'react-bootstrap'
@@ -13,7 +15,7 @@ class BlogIndex extends React.Component {
   }
 
   componentWillMount () {
-    fetch("http://localhost:3000/api/sites/view/wasya.co/reports", {}).then(r => r.json()).then(_data => {
+    fetch(`${config.apiUrl}/api/sites/view/wasya.co/reports`, {}).then(r => r.json()).then(_data => {
       console.log('+++ data:', _data)
       this.setState({ items: _data })
     }).catch(_e => {
