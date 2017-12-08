@@ -61,12 +61,8 @@ class Team extends React.Component {
               <h4 className="dez-title m-tb0"><a href="#">{i.name}</a></h4>
               <div className="bg-primary skew-content-box">
                 <ul className="dez-social-icon">
-                  <li><a href="javascript:void(0);" className="fa fa-facebook"></a></li>
-                  <li><a href="javascript:void(0);" className="fa fa-twitter"></a></li>
+                  <li><a href="javascript:void(0);" className="fa fa-github"></a></li>
                   <li><a href="javascript:void(0);" className="fa fa-linkedin"></a></li>
-                  <li><a href="javascript:void(0);" className="fa fa-google-plus"></a></li>
-                  <li><a href="javascript:void(0);" className="fa fa-pinterest-p"></a></li>
-                  <li><a href="javascript:void(0);" className="fa fa-instagram"></a></li>
                 </ul>
               </div>
               <span>{i.title}</span>

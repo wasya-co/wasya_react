@@ -90,21 +90,21 @@ class Services extends React.Component {
           </Row>
         </Col>
       </Row>)
-      let row2 = (
-        <Row>
-          <Col xs={12} md={12} lg={6} >
-            <Row>
-              <Col xs={12} md={6}>{api}</Col>
-              <Col xs={12} md={6}>{mvp}</Col>
-            </Row>
-          </Col>
-          <Col xs={12} md={12} lg={6}>
-            <Row>
-              <Col xs={12} md={6}>{uiux}</Col>
-              <Col xs={12} md={6}>{devops}</Col>
-            </Row>
-          </Col>
-        </Row>)
+    let row2 = (
+      <Row>
+        <Col xs={12} md={12} lg={6} >
+          <Row>
+            <Col xs={12} md={6}>{api}</Col>
+            <Col xs={12} md={6}>{mvp}</Col>
+          </Row>
+        </Col>
+        <Col xs={12} md={12} lg={6}>
+          <Row>
+            <Col xs={12} md={6}>{uiux}</Col>
+            <Col xs={12} md={6}>{devops}</Col>
+          </Row>
+        </Col>
+      </Row>)
     
     return (
       <div id="servicesContent" ><Grid >

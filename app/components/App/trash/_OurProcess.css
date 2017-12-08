@@ -12,7 +12,7 @@
   content: " ";
   width: 3px;
   background-color: #ccc;
-  left: 50%;
+  /* left: 50%; */ /* this is in responsive now */
   margin-left: -1.5px;
 }
 
