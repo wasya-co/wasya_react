@@ -18,7 +18,7 @@ import bondar  from './images/team/bondar_500x600.jpg'
 class TeamMember extends React.Component {
   render () {
     let description = []
-    this.props.member.description.map((p,idx) => {
+    this.props.member.description.map((p, idx) => {
       description.push(<p key={idx} >{p}</p>)
     })
     return (
