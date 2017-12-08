@@ -13,7 +13,7 @@ import redesLogo from './images/clients-logos/redes2.jpg'
 
 class Testimonials extends React.Component {
   render () {
-    return(
+    return (
       <div className="section-full bg-white bg-img-fix content-inner">
         <div className="container">
           <SectionHeader>Our Clients</SectionHeader>

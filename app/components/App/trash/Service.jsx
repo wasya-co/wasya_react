@@ -30,8 +30,8 @@ class Service extends React.Component {
                              transitionLeaveTimeout={0}
                          >
                            <div className={ styles.wrap } >
-                             <img src={this.props.image} alt={this.props.title} style={{ maxWidth: '100%' }} />
-                             <h3>{this.props.title}</h3>
+                             <img className={`fade-anim-pre`} src={this.props.image} alt={this.props.title} style={{ maxWidth: '100%' }} />
+                             <h3>{this.props.title}</h3>??
                              <div className="dez-separator-outer "><div className="dez-separator style-icon"><i className="fa fa-leaf"></i></div></div>
                              {this.props.descr.map(function(d, idx) {
                                 return <p className="text-justify" key={idx} >{d}</p>
