@@ -9,9 +9,33 @@ import blogImg from './images/bg/blog.jpg'
 class BlogIndex extends React.Component {
   constructor(props) {
     super(props)
+    this.state= { items: [ { name: 'Loading...' } ] }
+  }
+
+  componentWillMount () {
+    fetch("http://localhost:3000/api/sites/view/wasya.co/reports", {}).then(r => r.json()).then(_data => {
+      console.log('+++ data:', _data)
+      this.setState({ items: _data })
+    }).catch(_e => {
+      console.log('+++ problem:', _e)
+    })
   }
 
   render () {
+    let items = []
+    this.state.items.map((item, idx) => {
+      items.push(
+        <div>
+          <br />
+          <h1 className="m-b20 m-t0">{ item.name }</h1>
+          <div className="dez-separator bg-primary"></div>
+          <div><em>{item.created_at ? `On ${item.created_at}` : null}</em></div>
+          <h2>{ item.subhead }</h2>
+          <div dangerouslySetInnerHTML={{__html: item.description }} />
+          <br /><br /><br />
+        </div>)
+    })
+
     return (
       <div>
         <div style={{ backgroundImage: `url(${blogImg})` }} className="dez-bnr-inr overlay-black-middle">
@@ -24,44 +48,7 @@ class BlogIndex extends React.Component {
         <Grid>
           <Row>
             <Col md={9} sm={12} className="m-b30">
-              <br />
-              <h1 className="m-b20 m-t0">Blog Title</h1>
-              <div className="dez-separator bg-primary"></div>
-              <div><em>blog metadata</em></div>
-              <h2>blog subhead</h2>
-              <p className="text-justify" >
-                By accessing this web site, you are agreeing to be bound by these 
-                web site Terms and Conditions of Use, all applicable laws and regulations, 
-                and agree that you are responsible for compliance with any applicable local 
-                laws. If you do not agree with any of these terms, you are prohibited from 
-                using or accessing this site. The materials contained in this web site are 
-                protected by applicable copyright and trade mark law.
-              </p>
-              <p className="text-justify" >
-                By accessing this web site, you are agreeing to be bound by these 
-                web site Terms and Conditions of Use, all applicable laws and regulations, 
-                and agree that you are responsible for compliance with any applicable local 
-                laws. If you do not agree with any of these terms, you are prohibited from 
-                using or accessing this site. The materials contained in this web site are 
-                protected by applicable copyright and trade mark law.
-              </p>
-              <br /><br /><br />
-
-              <br />
-              <h1 className="m-b20 m-t0">Blog Title</h1>
-              <div className="dez-separator bg-primary"></div>
-              <h2>blog subhead</h2>
-              paragraphs of blog description
-              <p className="text-justify" >
-                By accessing this web site, you are agreeing to be bound by these 
-                web site Terms and Conditions of Use, all applicable laws and regulations, 
-                and agree that you are responsible for compliance with any applicable local 
-                laws. If you do not agree with any of these terms, you are prohibited from 
-                using or accessing this site. The materials contained in this web site are 
-                protected by applicable copyright and trade mark law.
-              </p>
-              <p><em>blog metadata</em></p>
-
+              { items }
             </Col>
           </Row>
         </Grid>
