@@ -133,7 +133,7 @@ class Services extends React.Component {
           <Col xs={8} xsOffset={2} >
 
             <Center>
-              <h3 id="technologyServices" className="text-uppercase">Technology Services</h3>
+              <h3 id="technologyServices" className="text-uppercase">Software Development</h3>
               <div className="dez-separator-outer ">
                 <div className="dez-separator bg-primary style-skew"></div>
               </div>
