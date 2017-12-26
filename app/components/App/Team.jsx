@@ -100,6 +100,9 @@ class Team extends React.Component {
         name: 'Stephen Kim',
         title: 'Legal Advisor',
         description: [ 'Stephen is the legal advisor to the team.' ],
+        links: [
+          { icon: 'fa-globe', title: 'Website', link: 'https://skim.law' },
+        ],
       },
       bondar: {
         image: bondar,
