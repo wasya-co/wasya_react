@@ -82,9 +82,9 @@ class Team extends React.Component {
                 "His objective is to write code that is beautiful, maintainable and delights customers when it is deployed."
               ],
               links: [
-                { icon: 'fa-file-pdf-o',  title: 'Resume',   link: 'http://olegp.com/resume/oleg-pudeyev-resume.pdf' },
-                { icon: 'fa-github',   title: 'Github',   link: 'https://github.com/p' },
-                { icon: 'fa-linkedin', title: 'LinkedIn', link: 'https://www.linkedin.com/in/olegpudeyev/' },
+                { icon: 'fa-file-pdf-o', title: 'Resume',   link: 'http://olegp.com/resume/oleg-pudeyev-resume.pdf' },
+                { icon: 'fa-github',     title: 'Github',   link: 'https://github.com/p' },
+                { icon: 'fa-linkedin',   title: 'LinkedIn', link: 'https://www.linkedin.com/in/olegpudeyev/' },
               ],
       },
       brad: { image: brad,
@@ -109,6 +109,9 @@ class Team extends React.Component {
         name: 'Julia Bondar',
         title: 'Cultural Advisor',
         description: [ 'Julia is a cultural advisor to the team. Occasionally, she acts in the role of HR.' ],
+        links: [
+          { icon: 'fa-file-pdf-o', title: 'Resume', link: 'https://s3.amazonaws.com/ish-archive/2017/hunter/20171231_bondar_resume.pdf' },
+        ],
       },
     } }
   }
