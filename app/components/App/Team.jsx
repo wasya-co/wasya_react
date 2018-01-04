@@ -26,13 +26,13 @@ class TeamMember extends React.Component {
     let links = []
     if (this.props.member.links) {
       this.props.member.links.map((icon, idx) => {
-        icons.push(<li><a href={icon.link} className={`fa ${icon.icon}`}></a></li>)
-        links.push(<li><a href={icon.link} className="btn btn-default" >{icon.title}</a></li>)
+        icons.push(<li key={idx} ><a href={icon.link} className={`fa ${icon.icon}`}></a></li>)
+        links.push(<li key={idx} ><a href={icon.link} className="btn btn-default" >{icon.title}</a></li>)
       })
     }
 
     return (
-      <div className="dez-box team-member" >
+      <div className="dez-box team-member drop-shadow" >
         <div className="dez-media"> <a href="#"><img alt="" src={this.props.member.image} /></a> </div>
         <div className="dez-info p-a20 p-t40 border-1">
           <h4 className="dez-title m-tb0"><a href="#">{this.props.member.name}</a></h4>

@@ -5,10 +5,9 @@ import { Panel } from 'react-bootstrap'
 import Center from '../Center'
 
 class Service extends React.Component {
-
   constructor(props) {
     super(props)
-    this.state = { fadeAnim: 'fade-anim-pre' }
+    this.state = { fadeAnim: 'fade-anim-pre', posY: 0 }
 
     this.componentDidMount    = this.componentDidMount.bind(this)
     this.componentWillUnmount = this.componentWillUnmount.bind(this)
@@ -16,8 +15,10 @@ class Service extends React.Component {
   }
 
   componentDidMount () {
+    console.log('+++ what this?', ReactDOM.findDOMNode(this).getBoundingClientRect())
+
     window.addEventListener('scroll', this.handleScroll)
-    this.setState({ posY: ReactDOM.findDOMNode(this).getBoundingClientRect().y })
+    this.setState({ posY: ReactDOM.findDOMNode(this).getBoundingClientRect().top })
   }
 
   componentWillUnmount () {
@@ -25,7 +26,10 @@ class Service extends React.Component {
   }
 
   handleScroll (e) {
+    console.log(this.state.posY, window.innerHeight/2)
+
     if (window.scrollY > this.state.posY - window.innerHeight/2) {
+      console.log('set state!')
       this.setState({ fadeAnim: 'fade-anim', })
     }
   }
@@ -37,16 +41,18 @@ class Service extends React.Component {
     let image   = require(`./images/400x200/${service.short}.jpg`)
     
     return (
-      <Panel>
+      <div className="drop-shadow" >
         <Center>
           <img className={this.state.fadeAnim} src={image} alt={service.title} style={{ maxWidth: '100%' }} />
           <h3>{service.title}</h3>
           <div className="dez-separator-outer "><div className="dez-separator style-icon"><i className="fa fa-leaf"></i></div></div>
         </Center>
-        {service.descr.map(function(d, idx) {
-           return <p className="text-justify" key={idx} >{d}</p>
-         })}
-      </Panel>
+        <div style={{ padding: '1em' }} >
+          {service.descr.map(function(d, idx) {
+             return <p className="text-justify" key={idx} >{d}</p>
+           })}
+        </div>
+      </div>
     )
   }
 }

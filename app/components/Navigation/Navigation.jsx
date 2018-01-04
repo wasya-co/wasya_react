@@ -41,7 +41,7 @@ class Navigation extends React.Component {
 
   componentWillReceiveProps (p) {
     setTimeout(() => {
-      console.log("+++ +++ Navigation will recieve props?", p)
+      // console.log("+++ +++ Navigation will recieve props?", p)
       if (p.location.query && p.location.query.scrollTo) {
         console.log('+++ here:', `${p.location.query.scrollTo}Content`)
         scrollToElement(`#${p.location.query.scrollTo}Content`, { offset: -60 })
@@ -63,7 +63,7 @@ class Navigation extends React.Component {
           { this.props.children }
         </div>
         <button className={`scroltop fa fa-chevron-up`} style={{ display: this.state.showScrollTop === 'showScrollTop' ? 'block' : 'none' }} onClick={() => this.scrollTop() }></button>
-        <Footer />
+        <Footer fixed={true} />
       </div>
     )
   }

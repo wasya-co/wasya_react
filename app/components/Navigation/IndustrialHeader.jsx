@@ -101,7 +101,7 @@ class IndustrialHeader extends React.Component {
                   <li><Link href="javascript:;" onClick={() => this.goto('team') }>Team</Link></li>
                   { /* <li><Link href="/our-work" >Our Work</Link></li> */ }
                   <li><Link href="javascript:;" onClick={ () => this.goto('services') } >Services</Link></li>
-                  <li><Link href="javascript:;" onClick={ () => this.goto('ourProcess') } >OurProcess</Link></li>
+                  <li><Link to={AppRouter.ourProcessLink()} >Our Process</Link></li>
                   { /* <li><Link href="/scrollTo=process" onClick={() => this.goto('ourProcess') }>Process</Link></li> */ }
                   { /* <li><Link href="/products" >Products</Link></li> */ }
                   <li><Link to={AppRouter.blogLink()} >Blog</Link></li>

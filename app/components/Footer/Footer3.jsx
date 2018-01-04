@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
-import { Link } from 'react-router'
 import scrollToElement from 'scroll-to-element'
+import { Link, browserHistory } from 'react-router'
 
 import wasya_co from './images/wasya_co.png'
 import world from './images/world4.jpg'
@@ -11,11 +11,12 @@ import AppRouter from '../App/AppRouter'
 class Footer3 extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {}
     this.goto = this.goto.bind(this)
   }
 
   goto (where) {
-    scrollToElement(`#${where}Content`, { offset: -60 })
+    browserHistory.push(`${AppRouter.rootPath}?scrollTo=${where}`)
   }
 
   render () {
@@ -40,7 +41,8 @@ class Footer3 extends React.Component {
                         <li><Link href="javascript:;" onClick={ () => this.goto('about') } >About</Link></li>
                         <li><Link href="javascript:;" onClick={ () => this.goto('services') } >Services</Link></li>
                         { /* <li><a href="javascript:;" onClick={ () => this.goto('clients') } >Clients</a></li> */ }
-                        <li><Link href="javascript:;" onClick={ () => this.goto('ourProcess') }>Process</Link></li>
+                        <li><Link to={AppRouter.ourProcessLink()} >Our Process</Link></li>
+                        { /* <li><Link to={AppRouter.ourStackLink()} >Our Stack</Link></li> */ }
                         { /* <li><a href="javascript:;" onClick={ () => this.goto('technology') } >Technology</a></li> */ }
                         { /* <li><Link to={AppRouter.careersPath} >Careers</Link></li> */ }
                       </ul>
