@@ -6,7 +6,7 @@ import scrollToElement from 'scroll-to-element'
 import wasya_co from './images/wasya_co.png'
 import world from './images/world4.jpg'
 
-import WRouter from '../App/WasyaRouter'
+import AppRouter from '../App/AppRouter'
 
 class Footer3 extends React.Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class Footer3 extends React.Component {
                         { /* <li><a href="javascript:;" onClick={ () => this.goto('clients') } >Clients</a></li> */ }
                         <li><Link href="javascript:;" onClick={ () => this.goto('ourProcess') }>Process</Link></li>
                         { /* <li><a href="javascript:;" onClick={ () => this.goto('technology') } >Technology</a></li> */ }
-                        { /* <li><Link to={WRouter.careersPath} >Careers</Link></li> */ }
+                        { /* <li><Link to={AppRouter.careersPath} >Careers</Link></li> */ }
                       </ul>
                     </div>
                   </Col>
@@ -92,7 +92,7 @@ class Footer3 extends React.Component {
                 <span>Copyright &copy; 2017 &nbsp; 
                   { /* <img style={{ height: '30px' }} src={wasya_co} alt='wasya co' /> */ }
                   Wasya co
-                </span> | <Link to={WRouter.termsPath} >Terms of Service</Link>
+                </span> | <Link to={AppRouter.termsPath} >Terms of Service</Link>
               </div>
             </div>
           </div>

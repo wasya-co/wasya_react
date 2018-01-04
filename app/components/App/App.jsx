@@ -14,12 +14,12 @@ import OurProcess from './OurProcess'
 import OurStack   from '../Stack/Stack'
 import OurWork    from './OurWork'
 import { BizServices, TechServices } from '../Services'
-import WRouter from './WasyaRouter'
+import AppRouter from './AppRouter'
 import { Careers, DesignerCareer } from '../Careers'
 import { AbstractPage, TermsPage } from '../Pages'
 
 const routes = [
-  { path: WRouter.rootPath,
+  { path: AppRouter.rootPath,
     component: Navigation,
     indexRoute: { component: Home },
     childRoutes: [
@@ -29,28 +29,28 @@ const routes = [
       { path: '/our-stack',    component: OurStack },
     ],
   },
-  { path: WRouter.servicesPath,
+  { path: AppRouter.servicesPath,
     component: FixedNav,
     indexRoute: { component: Home },
     childRoutes: [
-      { path: WRouter.bizServicesPath,  component: BizServices },
-      { path: WRouter.techServicesPath, component: TechServices },
+      { path: AppRouter.bizServicesPath,  component: BizServices },
+      { path: AppRouter.techServicesPath, component: TechServices },
       { path: '/account',               component: Account },
     ],
   },
-  /* { path: WRouter.careersPath,
+  /* { path: AppRouter.careersPath,
     component: UnfixedNav,
     indexRoute: { component: Careers },
     childRoutes: [
-      { path: WRouter.designerCareersPath, component: DesignerCareer },
+      { path: AppRouter.designerCareersPath, component: DesignerCareer },
     ],
   }, */
-  { path: WRouter.pagesPath,
+  { path: AppRouter.pagesPath,
     component: Navigation,
     fixed: 'unfixed',
     indexRoute: { component: AbstractPage },
     childRoutes: [
-      { path: WRouter.termsPath, component: TermsPage },
+      { path: AppRouter.termsPath, component: TermsPage },
       { path: '/our-work',     component: OurWork },
       { path: '/blog',         component: BlogIndex },
     ],

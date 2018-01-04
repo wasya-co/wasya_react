@@ -7,7 +7,7 @@ import { Link } from 'react-router'
 
 import graffiti from './images/graffiti.jpg'
 
-import WRouter from '../App/WasyaRouter'
+import AppRouter from '../App/AppRouter'
 
 class TermsPage extends React.Component {
   render () {
@@ -24,7 +24,7 @@ class TermsPage extends React.Component {
         { /* <div className="breadcrumb-row">
           <div className="container">
             <ul className="list-inline">
-              <li><Link to={WRouter.rootPath} >Home</Link></li>
+              <li><Link to={AppRouter.rootPath} >Home</Link></li>
               <li> Terms of Service</li>
             </ul>
           </div>

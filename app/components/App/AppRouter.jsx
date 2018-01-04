@@ -1,5 +1,5 @@
 
-let WasyaRouter = {
+let AppRouter = {
   rootPath: '/',
 
   servicesPath:     '/services',
@@ -15,4 +15,4 @@ let WasyaRouter = {
   termsPath: '/pages/terms-of-service',
 }
 
-export default WasyaRouter
+export default AppRouter
