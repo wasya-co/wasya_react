@@ -28,7 +28,7 @@ class OurProcess extends React.Component {
           </Col>
           <Col xs={10} xsOffset={1} md={8} mdOffset={2}>
             <p >We work in iterative cycles. The methodology we use is sprint and kanban. Our preferred sprint length is the industry-standard 2 weeks. Kanban refers to keeping tracks of small, accomplishable tasks by means of cards, and moving the cards through lanes. Our typical lanes are "todo", "doing" and "done", although this varies as the complexity grows.</p>
-            <Center><Button bsStyle="success" ><Link style={{ color: 'white' }} to={AppRouter.ourProcessLink()}>Read More</Link></Button></Center>
+            <Center><Link to={AppRouter.ourProcessLink()}><Button bsStyle="success" >Read More</Button></Link></Center>
             <div style={{height: '200px'}} />
           </Col>
         </Row>

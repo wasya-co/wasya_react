@@ -41,9 +41,7 @@ class Navigation extends React.Component {
 
   componentWillReceiveProps (p) {
     setTimeout(() => {
-      // console.log("+++ +++ Navigation will recieve props?", p)
       if (p.location.query && p.location.query.scrollTo) {
-        console.log('+++ here:', `${p.location.query.scrollTo}Content`)
         scrollToElement(`#${p.location.query.scrollTo}Content`, { offset: -60 })
       }
     }, 0)

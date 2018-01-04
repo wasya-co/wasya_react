@@ -15,8 +15,6 @@ class Service extends React.Component {
   }
 
   componentDidMount () {
-    console.log('+++ what this?', ReactDOM.findDOMNode(this).getBoundingClientRect())
-
     window.addEventListener('scroll', this.handleScroll)
     this.setState({ posY: ReactDOM.findDOMNode(this).getBoundingClientRect().top })
   }
@@ -26,8 +24,6 @@ class Service extends React.Component {
   }
 
   handleScroll (e) {
-    console.log(this.state.posY, window.innerHeight/2)
-
     if (window.scrollY > this.state.posY - window.innerHeight/2) {
       console.log('set state!')
       this.setState({ fadeAnim: 'fade-anim', })
