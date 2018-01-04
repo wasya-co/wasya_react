@@ -12,7 +12,7 @@ import {
 } from 'react-stripe-elements'
 
 import config from 'config'
-import WRouter from './WasyaRouter'
+import AppRouter from './AppRouter'
 
 const responseFacebook = (r) => {
   console.log("+++ response:", r)
@@ -31,7 +31,7 @@ class CheckoutForm extends React.Component {
     this.props.stripe.createToken().then(({token}) => {
       console.log('+++ received token:', token)
       if (token) {
-        let validateInvoiceUrl = `${config.apiUrl}${WRouter.findInvoice}`
+        let validateInvoiceUrl = `${config.apiUrl}${AppRouter.findInvoice}`
         fetch(validateInvoiceUrl, {
           method: 'POST',
           headers: new Headers({
@@ -62,7 +62,7 @@ class CheckoutForm extends React.Component {
     let payload = Object.assign({}, { token: this.state.token,
                                       email: this.state.invoiceEmail, number: this.state.invoiceNumber,
                                       amount: this.state.invoiceAmount, })
-    let url = `${config.apiUrl}${WRouter.makePayment}`
+    let url = `${config.apiUrl}${AppRouter.makePayment}`
     fetch(url, {
       method: 'POST',
       headers: new Headers({

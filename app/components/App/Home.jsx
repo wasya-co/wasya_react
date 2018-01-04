@@ -12,7 +12,7 @@ import bg7 from './images/circuit-boards/3.jpg'
 import About          from './About'
 import MainBanner     from './MainBanner'
 import { Services }   from '../Services'
-import OurProcess     from './OurProcess'
+import OurProcessSimple from './OurProcessSimple'
 import Team           from './Team'
 import ContactUs2     from './ContactUs2'
 import Testimonials   from './Testimonials'
@@ -26,7 +26,7 @@ class Home extends React.Component {
         <MainBanner />
         <About />
         <Services />
-        <OurProcess />
+        <OurProcessSimple />
         <Team />
         <Testimonials />{ /* and Clients */ }
         <ContactUs2 />
