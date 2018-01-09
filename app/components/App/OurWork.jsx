@@ -1,18 +1,62 @@
 import React from 'react';
-import { Grid, Row, Col, } from 'react-bootstrap'
+import {
+  Grid, Row, Col, 
+  Panel, Button,
+} from 'react-bootstrap'
 
 import Center from '../Center'
 import Testimonials from './Testimonials'
 
 import skyscrapers from './images/background/skyscrapers.jpg'
 
+import oeImg       from './images/our-work/operaevent.png'
+import creekImg    from './images/our-work/creek.png'
+import habiticaImg from './images/our-work/habitica.png'
+import sturfeeImg  from './images/our-work/sturfee.png'
+import serroImg    from './images/our-work/serro.png'
+import nexentaImg  from './images/our-work/nexenta.png'
+
 class OurWork extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    let oe       = { title: 'Operaevent - The Portal (2017)',
+                     description: [ 'Operaevent is a leader in chatbots for twitch.tv, and platform tools for streamers. Wasya helped Operaevent design and build its flagship product, the Gather platform. The platform introduces a game ecosystem, minigames, spendable currency, and quests and character progression to the stream.' ],
+                     image: oeImg, }
+    let creek    = { title: 'Creek Enterprise - The Invoicing Tool (2017)',
+                     description: [ "Wasya Co build the modern version of Creek's internal invoicing tool. The invoicing tool is used to manage estimates and payments to hundreds of contractors in North America." ],
+                     image: creekImg }
+    let habitica = { title: 'Habitica - Modifications to the Core Platform (2016)',
+                     description: [ 'We helped Habitica with backend work, developing the next version of the habitica.com platform.' ],
+                     image: habiticaImg }
+    let sturfee  = { title: 'Sturfee - A Build Automation Pipeline (2016) ',
+                     description: [ 'Sturfee is a computer vision startup in San Francsico. They use map and image statistical analysis tools to derive "learned" properties from images. Sturfee derives "learned" information such as building position, dimensions, window count, and syncs with other metadata such as business entities and events that happen in a particular geographical location. Applications of this technology include travel & tourism, construction, and self-driving cars & urban navigation.',
+                                    'Wasya Co helped Sturfee build a build-and-deploy pipeline that automates deployments to selected code version to a selected environment. This ultimately results in much higher team efficiency, as engineers can take a hands-off approach to infrastructure management, and focus instead on research and development, and building out the actual product.' ],
+                     image: sturfeeImg }
+    let serro    = { title: 'Serro LLC - The Project Management Tool (2014)',
+                     description: [ 'Serro builds datacenters for enterprise clients in North America. Managing multiple construction projects is challenging, and Serro designed a custom project management tool to accomplish this task. Wasya Co built and deployed the tool over 4 months.' ],
+                     image: serroImg }
+    let nexenta  = { title: 'Nexenta - The Horizon Dashboard (2014)',
+                     description: [ 'Among other projects, Nexenta required building a front-end component to one of its storage adapters. Nexenta plugs into Swift, a component of OpenStack, to provide object storage to the OpenStack cluster. The Nexenta Horizon Dashboard is the User Interface component that allows admins to install and monitor it. We implemented the dashboard in agile, iterative manner over the course of one month.' ],
+                     image: nexentaImg }
+
+    this.state = { samples: [ oe, creek, habitica, sturfee, serro, nexenta, ] }
   }
 
   render () {
+    let ourWork = []
+    this.state.samples.map((sample, idx) => {
+      ourWork.push(
+        <Col key={idx} xs={12} md={6}>
+          <div className="drop-shadow">
+            <Panel>
+              <h3>{sample.title}</h3>
+              <img src={sample.image} alt={sample.title} />
+              sample.description.map((p, idx2) => {<p key={idx2}>{p}</p>})
+            </Panel>
+          </div>
+        </Col>)
+    })
+
     return (
       <div>
         <div style={{ backgroundImage: `url(${skyscrapers})` }} className="dez-bnr-inr overlay-black-middle">
@@ -23,128 +67,14 @@ class OurWork extends React.Component {
           </div>
         </div>
 
-        <Grid id="ourProcessContent" className="description" >
+        <Grid id="ourWorkContent" className="description" >
           <Row>
-            <Col xs={12} xsOffset={0} md={8} mdOffset={2}>
+            <Col xs={12} xsOffset={0} md={12} mdOffset={0} >
               <br /><br />
-              <p >We work in iterative cycles. The methodology we use is sprint and kanban. Our preferred sprint length is the industry-standard 2 weeks. Kanban refers to keeping tracks of small, accomplishable tasks by means of cards, and moving the cards through lanes. Our typical lanes are "todo", "doing" and "done", although this varies as the complexity grows. If the work is split by team function, this is reflected by the lanes. There can be additional lanes for "content", "Q/A", "graphics", "marketing", and "sales". Our iterative cycle consists of the following steps:</p>
-
-              <div className="star-wrapper">
-                <div className="star">
-                  <div>
-                    <h5>Step 1: Scope & Mockup</h5>
-                    <div className="arrow"></div>
-                  </div>
-                  <div>
-                    <h5>Step 2: Develop & Test</h5>
-                    <div className="arrow"></div>
-                  </div>
-                  <div>
-                    <h5>Step 3: Deploy & Automate</h5>
-                    <div className="arrow"></div>
-                  </div>
-                  <div>
-                    <h5>Step 4: Monitor & Collect Feedback</h5>
-                    <div className="arrow"></div>
-                  </div>
-                  <div>
-                    <h5>Step 5: Benchmark & Pentest</h5>
-                    <div className="arrow"></div>
-                  </div>
-                  <em>Agile<br />Scrum</em>
-                </div>
-              </div>
-
-              { /* <ul style={{ color: 'white' }} >
-                <li>Scope & Mockup</li>
-                <li>Develop & Test</li>
-                <li>Deploy & Automate</li>
-                <li>Monitor & Collect Feedback</li>
-                <li>Benchmark & Pentest</li>
-              </ul> */ }
-
-              <p>Kanban and spring planning help us split the work into accomplishable tasks. We would rather deliver early, than allow scope creep and deliver late. It is important to note that the work is iterative, as opposed to waterfall. After some scoping and mocking is done, and some software is built and deployed, and accepted, there is typically more scoping and more development. This relieves the stress on the shareholders, who aren't required to specify the scope correctly at the onset of the project. In prototyping and delivering viable early-stage products, it is critical to keep the scope flexible, as it inevitably changes during the project run.</p>
+              <p >Some of our clients over the years have included the following.</p>
             </Col>
           </Row>
-          <Row style={{ position: 'relative' }} >
-            { /* <Col xs={12}>
-              <Center>
-                <h2 className="text-uppercase">Our Process</h2>
-                <div className="dez-separator-outer ">
-                  <div className="dez-separator bg-primary style-skew"></div>
-                </div>
-              </Center>
-            </Col> */ }
-            <ul className="timeline">
-              <Col xs={11} xsOffset={1} md={6} mdOffset={6} >
-                <li className="inverted" >
-                  <div className="badge"><i className="glyphicon glyphicon-blackboard"></i></div>
-                  <div className="panel">
-                    <div className="timeline-heading">
-                      <h4 className="title">Step 1. Scope & Mockup</h4>
-                    </div>
-                    <div className="body">
-                      <p>We are good at estimating how long it will take to deliver code. It is a part of our job. In order to arrive at accurate estimates, we break down the work into accomplishable, measurable chunks. Optionally, we calculate the velocity of the team (how quickly stuff gets done) to adjust future estimates.</p>
-                      <p>We separate graphic design from backend development. We strive to have different team members handling each category of tasks, although in a small enough team that is not possible. We prefer to sign off on mockups before they are implemented, to relieve the stress on the developers. We understand that frontend work and backend work involve very different ways of thinking, and prefer to hand off front- and back-end tasks to different team members.</p>
-                    </div>
-                  </div>
-                </li>
-                <li className="inverted" >
-                  <div className="badge" ><i className="glyphicon glyphicon-wrench"></i></div>
-                  <div className=' panel' >
-                    <div className="timeline-heading">
-                      <h4 className="title">Step 2. Develop & Test</h4>
-                    </div>
-                    <div className='body' >
-                      <p>The majority of work happens in this step.</p>
-                      <p>Although Quality Assurance (Q/A) is often a separate step from development, we think of it as one. The developer writes the tests for her own code, in the process called test-driven development (TDD). Depending on the client needs, we may also implement behavior-driven development (BDD). If we add a separate Q/A step to the development cycle, as per client needs, we still keep development test-driven.</p>
-                    </div>
-                  </div>
-                </li>
-                <li className='inverted' >
-                  <div className="badge info"><i className="glyphicon glyphicon-modal-window"></i></div>
-                  <div className='panel' >
-                    <div className="timeline-heading">
-                      <h4 className="title">Step 3. Deploy & Automate</h4>
-                    </div>
-                    <div className="body">
-                      <p>Delivering software can be more difficult than making it. That is why we build and use automation tools as a part of our job. Seamless deployments, automatic deployments relieve stress on the team and reduce mistakes and bugs. We balance application complexity against automation complexity: where it is appropriate, we increase automation; at other times, we increase the application layer.</p>
-                    </div>
-                  </div>
-                </li>
-                <li className="inverted">
-                  <div className="badge info"><i className="glyphicon glyphicon-thumbs-up"></i></div>
-                  <div className="panel">
-                    <div className="timeline-heading">
-                      <h4 className="timeline-title">Step 4. Monitor & Collect Feedback</h4>
-                    </div>
-                    <div className="body">
-                      <p>Monitoring here refers to automatic health checks that are built into the infrastructure. Backups and disaster recovery are also done during this step. Collecting feedback is more human: we sit with stakeholders and end users and discuss how the software is performing, what should be changed and improved upon. Collecting and acting on feedback from the actual users is a critical component of our development cycle.</p>
-                    </div>
-                  </div>
-                </li>
-                <li className="inverted">
-                  <div className="badge info"><i className="glyphicon glyphicon-hand-right"></i></div>
-                  <div className='panel'>
-                    <div className="timeline-heading">
-                      <h4 className="timeline-title">Step 5. Benchmark & Pentest</h4>
-                    </div>
-                    <div className="body">
-                      <p>Depending on client needs we benchmark the performance of the application. This is an early step in getting it ready to scale. Some scaling decisions are made during the development step: we always strive to make scalable technology decisions. In order to actually scale, we measure throughput and application performance, and tweak settings and components. The make informed decisions, backed by data, when addressing specific scaling issues.</p>
-                      <p>Privacy and security are a part of our job. We perform penetration testing and security testing according to client needs and latest industry standards.</p>
-                      <p>At the end of step 5, we are ready to sit with stakeholders to address the current needs and outline the next tasks, that go into the next sprint. Our preferred sprint length is the industry-standard 2 weeks.</p>
-                    </div>
-                  </div>
-                </li>
-              </Col>
-              <div className="clearfix" />
-            </ul>
-          </Row>
-          <Row>
-            <Col xs={12} xsOffset={0} md={8} mdOffset={2}>
-            <p>At the end of step 5, we are ready to sit with stakeholders to address the current needs and outline the next tasks, that go into the next sprint. Our preferred sprint length is the industry-standard 2 weeks.</p>
-            </Col>
-          </Row>
+          <Row>{ ourWork }</Row>
           <Testimonials />
           <div style={{ height: '100px' }} />
         </Grid>

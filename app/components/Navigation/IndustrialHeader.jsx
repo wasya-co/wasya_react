@@ -6,7 +6,7 @@ import {
 import { Link, browserHistory } from 'react-router'
 import scrollToElement from 'scroll-to-element'
 
-import logo3 from './images/logo-4.png'
+import logo3 from './images/logo-4.png' // Wásya Co
 
 import AppRouter from '../App/AppRouter'
 
