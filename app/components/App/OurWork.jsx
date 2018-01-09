@@ -47,8 +47,8 @@ class OurWork extends React.Component {
     let ourWork = []
     this.state.samples.map((sample, idx) => {
       let ps = []
-      sample.description.map((p, idx) => {
-        ps.push(<p key={idx}>{p}</p>)
+      sample.description.map((p, idx2) => {
+        ps.push(<p key={idx2}>{p}</p>)
       })
 
       ourWork.push(
