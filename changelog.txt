@@ -18,3 +18,5 @@ master - gets deployed (hm...)
         fixed minor responsive stuff, all good
 2.0.9 - let's wire in blog
         and increased team size to 6
+        our-process is in
+        lets wire in our-clients

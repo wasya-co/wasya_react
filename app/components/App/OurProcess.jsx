@@ -4,7 +4,8 @@ import { Grid, Row, Col, } from 'react-bootstrap'
 
 import Center from '../Center'
 
-import assembly from './images/assembly.jpg'
+import assembly from './images/background/assembly.jpg'
+import scrum    from './images/agile-scrum.jpg'
 
 class OurProcess extends React.Component {
   constructor(props) {
@@ -143,9 +144,10 @@ class OurProcess extends React.Component {
           <Row>
             <Col xs={12} xsOffset={0} md={8} mdOffset={2}>
             <p>At the end of step 5, we are ready to sit with stakeholders to address the current needs and outline the next tasks, that go into the next sprint. Our preferred sprint length is the industry-standard 2 weeks.</p>
-            <div style={{ height: '200px' }} />
             </Col>
           </Row>
+          <div style={{ margin: 'auto', textAlign: 'center' }}><img src={scrum} alt='agile scrum' /></div>
+          <div style={{ height: '100px' }} />
         </Grid>
       </div>
     )

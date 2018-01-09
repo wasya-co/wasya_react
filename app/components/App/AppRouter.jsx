@@ -15,6 +15,8 @@ let AppRouter = {
   ourProcessPath: '/our-process',
   ourStackLink: () => { return '/our-stack' },
   ourStackPath: '/our-stack',
+  ourWorkLink: () => { return '/our-work' },
+  ourWorkPath: '/our-work',
 
   pagesPath: '/pages',
 

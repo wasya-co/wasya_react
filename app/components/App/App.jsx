@@ -9,7 +9,6 @@ import { BlogIndex } from '../Blog'
 import Home       from './Home'
 import { FixedNav, UnfixedNav, Navigation } from '../Navigation'
 import Products   from './Products'
-import Clients    from './Clients'
 import OurProcess from './OurProcess'
 import OurStack   from '../Stack/Stack'
 import OurWork    from './OurWork'
@@ -25,7 +24,6 @@ const routes = [
     childRoutes: [
       // { path: AppRouter.ourProcessPath,  component: OurProcess },
       { path: '/products',     component: Products },
-      { path: '/clients',      component: Clients },
       { path: AppRouter.ourStackPath,    component: OurStack },
     ],
   },
@@ -42,6 +40,11 @@ const routes = [
     component: Navigation,
     fixed: 'unfixed',
     indexRoute: { component: OurProcess },
+  },
+  { path: AppRouter.ourWorkPath,
+    component: Navigation,
+    fixed: 'unfixed',
+    indexRoute: { component: OurWork },
   },
   /* { path: AppRouter.careersPath,
     component: UnfixedNav,

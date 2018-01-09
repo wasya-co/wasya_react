@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Grid, Row, Col } from 'react-bootstrap'
 
-import logo3 from './images/logo-3.png'
+import logo3 from './images/logo-4.png'
 
 class About extends React.Component {
   constructor(props) {

@@ -40,8 +40,8 @@ class Footer3 extends React.Component {
                         <li><Link href="javascript:;" onClick={ () => this.goto('home') } >Home</Link></li>
                         <li><Link href="javascript:;" onClick={ () => this.goto('about') } >About</Link></li>
                         <li><Link href="javascript:;" onClick={ () => this.goto('services') } >Services</Link></li>
-                        { /* <li><a href="javascript:;" onClick={ () => this.goto('clients') } >Clients</a></li> */ }
                         <li><Link to={AppRouter.ourProcessLink()} >Our Process</Link></li>
+                        <li><Link to={AppRouter.ourWorkLink()} >Our Work</Link></li>
                         { /* <li><Link to={AppRouter.ourStackLink()} >Our Stack</Link></li> */ }
                         { /* <li><a href="javascript:;" onClick={ () => this.goto('technology') } >Technology</a></li> */ }
                         { /* <li><Link to={AppRouter.careersPath} >Careers</Link></li> */ }
