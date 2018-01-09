@@ -37,7 +37,8 @@ class OurWork extends React.Component {
                      image: serroImg }
     let nexenta  = { title: 'Nexenta - The Horizon Dashboard (2014)',
                      description: [ 'Among other projects, Nexenta required building a front-end component to one of its storage adapters. Nexenta plugs into Swift, a component of OpenStack, to provide object storage to the OpenStack cluster. The Nexenta Horizon Dashboard is the User Interface component that allows admins to install and monitor it. We implemented the dashboard in agile, iterative manner over the course of one month.' ],
-                     image: nexentaImg }
+                     image: nexentaImg,
+                     imageStyle: { border: '2px solid black' } }
 
     this.state = { samples: [ oe, creek, habitica, sturfee, serro, nexenta, ] }
   }
@@ -45,13 +46,19 @@ class OurWork extends React.Component {
   render () {
     let ourWork = []
     this.state.samples.map((sample, idx) => {
+      let ps = []
+      sample.description.map((p, idx) => {
+        ps.push(<p key={idx}>{p}</p>)
+      })
+
       ourWork.push(
         <Col key={idx} xs={12} md={6}>
           <div className="drop-shadow">
             <Panel>
-              <h3>{sample.title}</h3>
-              <img src={sample.image} alt={sample.title} />
-              sample.description.map((p, idx2) => {<p key={idx2}>{p}</p>})
+              <h3 style={{ textAlign: 'center' }} >{sample.title}</h3>
+              <img style={sample.imageStyle} src={sample.image} alt={sample.title} />
+              <br /><br />
+              { ps }
             </Panel>
           </div>
         </Col>)
