@@ -20,3 +20,4 @@ master - gets deployed (hm...)
         and increased team size to 6
         our-process is in
         lets wire in our-clients
+2.0.10 - lets wire in foundation email inky
