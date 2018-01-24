@@ -25,7 +25,6 @@ class Service extends React.Component {
 
   handleScroll (e) {
     if (window.scrollY > this.state.posY - window.innerHeight/2) {
-      console.log('set state!')
       this.setState({ fadeAnim: 'fade-anim', })
     }
   }
