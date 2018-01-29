@@ -30,7 +30,7 @@ class ContactUs2 extends React.Component {
         
         <div className="content-area">
           <div className="container">
-            <p>Schedule a call at <a className="a-border" href="https://calendly.com/victorp">https://calendly.com/victorp</a> or fill out the form below.</p>
+            <p>Schedule a call at <a className="a-border" href="https://calendly.com/victorp/30min">https://calendly.com/victorp/30min</a> or fill out the form below.</p>
             <div className="row">
               <div className="col-lg-9 col-md-8 col-sm-7 col-xs-12">
                 <h4>Contact form</h4>
@@ -99,8 +99,8 @@ class ContactUs2 extends React.Component {
                     <li className="icon-bx-wraper left m-b30">
                       <div className="icon-bx-xs bg-primary"> <a href="#" className="icon-cell"><i className="fa fa-phone"></i></a> </div>
                       <div className="icon-content">
-                        <h6 className="text-uppercase m-b0 dez-tilte"><a className="a-border" href="https://calendly.com/victorp">SCHEDULE A CALL</a></h6>
-                        <p>&nbsp;</p>{ /* <p><a href="https://calendly.com/victorp">SCHEDULE A CALL</a></p> */ }
+                        <h6 className="text-uppercase m-b0 dez-tilte"><a className="a-border" href="https://calendly.com/victorp/30min">SCHEDULE A CALL</a></h6>
+                        <p>&nbsp;</p>{ /* <p><a href="https://calendly.com/victorp/30min">SCHEDULE A CALL</a></p> */ }
                       </div>
                     </li>
                     <li className="icon-bx-wraper left m-b30">
