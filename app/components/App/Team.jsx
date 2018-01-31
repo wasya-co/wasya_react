@@ -59,7 +59,7 @@ class Team extends React.Component {
                   "A full-stack engineer focusing on Ruby on Rails, Javascript, devops, and web application development for startups and agile teams."
                 ],
                 links: [
-                  { icon: 'fa-file-pdf-o', title: 'Resume',   link: 'https://s3.amazonaws.com/ish-archive/2017/hunter/201712-VictorPudeyev-Resume.pdf' },
+                  { icon: 'fa-file-pdf-o', title: 'Resume',   link: 'https://s3.amazonaws.com/ish-archive/2018/hunter/201801-VictorPudeyev-Resume.pdf' },
                   { icon: 'fa-github',     title: 'Github',   link: 'https://github.com/piousbox' },
                   { icon: 'fa-linkedin',   title: 'LinkedIn', link: 'https://www.linkedin.com/in/victor-pudeyev-ba9008107/' },
                 ],
