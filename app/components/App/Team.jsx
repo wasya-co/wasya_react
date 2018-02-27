@@ -8,12 +8,12 @@ import { Grid, Row, Col,
 import Center from '../Center'
 import SectionHeader from './SectionHeader'
 
-import victor  from './images/team/victor_500x600.jpg'
-import oleg    from './images/team/oleg_500x600.jpg'
-import kim     from './images/team/kim_500x600.jpg'
-import brad    from './images/team/brad_500x600.jpg'
-import steve   from './images/team/steve_500x600.jpg'
-import bondar  from './images/team/bondar_500x600.jpg'
+import victor  from './images/team/victor_500x500.jpg'
+import oleg    from './images/team/oleg_500x500.jpg'
+import kim     from './images/team/kim_500x500.jpg'
+import brad    from './images/team/brad_500x500.jpg'
+import steve   from './images/team/steve_500x500.jpg'
+import bondar  from './images/team/bondar_500x500.jpg'
 
 class TeamMember extends React.Component {
   render () {
@@ -26,14 +26,18 @@ class TeamMember extends React.Component {
     let links = []
     if (this.props.member.links) {
       this.props.member.links.map((icon, idx) => {
-        icons.push(<li key={idx} ><a href={icon.link} className={`fa ${icon.icon}`}></a></li>)
-        links.push(<li key={idx} ><a href={icon.link} className="btn btn-default" >{icon.title}</a></li>)
+        icons.push(<li key={idx} ><a style={{ marginBottom: 10 }} href={icon.link} className={`fa ${icon.icon}`}></a></li>)
+        links.push(<li key={idx} ><a style={{ marginBottom: 10 }} href={icon.link} className="btn btn-default" >{icon.title}</a></li>)
       })
     }
 
     return (
       <div className="dez-box team-member drop-shadow" >
-        <div className="dez-media"> <a href="#"><img alt="" src={this.props.member.image} /></a> </div>
+        <div className="dez-media" >
+          <div style={{ position: 'relative', width: '80%', paddingTop: '80%', margin: '10%' }} >
+            <img style={{ position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, borderRadius: '100%' }} src={this.props.member.image}  alt='' />
+          </div>
+        </div>
         <div className="dez-info p-a20 p-t40 border-1">
           <h4 className="dez-title m-tb0"><a href="#">{this.props.member.name}</a></h4>
           { icons.length > 0 ? <div className="bg-primary skew-content-box"><ul className="dez-social-icon">{ icons }</ul></div> : null }
@@ -113,26 +117,87 @@ class Team extends React.Component {
           { icon: 'fa-file-pdf-o', title: 'Resume', link: 'https://s3.amazonaws.com/ish-archive/2017/hunter/20171231_bondar_resume.pdf' },
         ],
       },
+      zach: {
+        name: 'Zach Mulholland',
+        title: 'CEO',
+        description: [],
+      },
+      jane: {
+        description: [],
+      },
+      jonathan: {
+        name: 'Jonathan Castellano',
+        title: 'Human Resources Specialist',
+        description: [],
+      },
+      burga: {
+        name: 'Burga',
+        title: 'Software Developer',
+        description: [],
+      },
+      natalie: {
+        name: 'Natalie', 
+        title: 'Graphic Designer',
+        description: [],
+      },
     } }
   }
 
   render () {    
     return (
       <Grid id="teamContent" >
+
         <Row>
           <Col xs={12}>
             <SectionHeader>Our Team</SectionHeader>
           </Col>
         </Row>
         <Row>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={4} mdOffset={0} ><TeamMember member={this.state.team.victor} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={4} mdOffset={0} ><TeamMember member={this.state.team.oleg} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={4} mdOffset={0} ><TeamMember member={this.state.team.kim} /></Col>
+          <Col xs={12}>
+            <div className="section-head text-left">
+              <h2 className="text-uppercase">Our Leadership</h2>
+              <div className="dez-separator-outer ">
+                <div className="dez-separator bg-primary style-skew"></div>
+              </div>
+            </div>
+          </Col>
         </Row>
         <Row>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={4} mdOffset={0} ><TeamMember member={this.state.team.brad} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={4} mdOffset={0} ><TeamMember member={this.state.team.steve} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={4} mdOffset={0} ><TeamMember member={this.state.team.bondar} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.zach} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.steve} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.jane} /></Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <div className="section-head text-left">
+              <h2 className="text-uppercase">Development Team</h2>
+              <div className="dez-separator-outer ">
+                <div className="dez-separator bg-primary style-skew"></div>
+              </div>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.victor} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.oleg} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.kim} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.jonathan} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.burga} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.natalie} /></Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <div className="section-head text-left">
+              <h2 className="text-uppercase">Advisors</h2>
+              <div className="dez-separator-outer ">
+                <div className="dez-separator bg-primary style-skew"></div>
+              </div>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.brad} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.bondar} /></Col>
         </Row>
       </Grid>
     )
