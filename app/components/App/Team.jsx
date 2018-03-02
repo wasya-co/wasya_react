@@ -14,6 +14,8 @@ import kim     from './images/team/kim_500x500.jpg'
 import brad    from './images/team/brad_500x500.jpg'
 import steve   from './images/team/steve_500x500.jpg'
 import bondar  from './images/team/bondar_500x500.jpg'
+import zach    from './images/team/zach_500x500.jpg'
+import d       from './images/team/default_500x500.jpg'
 
 class TeamMember extends React.Component {
   render () {
@@ -55,22 +57,65 @@ class Team extends React.Component {
   constructor(props) {
     super(props)
     this.state = { team: {
+      zach: {
+        image: zach,
+        name: 'Zach Mulholland',
+        title: 'CEO',
+        description: [],
+      },
+      steve: {
+        image: steve,
+        name: 'Stephen Kim',
+        title: 'CFO',    // Legal Advisor
+        description: [], // 'Stephen is the legal advisor to the team.' ],
+        links: [],       // { icon: 'fa-globe', title: 'Website', link: 'https://skim.law' }, ],
+      },
+      oleg: { image: oleg,
+              name: 'Oleg Pudeyev',
+              title: 'CTO', // 'Principal Software Developer',
+              description: [],
+              desciption_trash: [
+                "Full stack engineer and tech lead with 12 years of Web development experience with a focus on Ruby on Rails applications. Experienced in hands-on development, design and architecture, technical leadership, mentoring, project management and planning.",
+                "His objective is to write code that is beautiful, maintainable and delights customers when it is deployed."
+              ],
+              links: [],
+              links_trash: [
+                { icon: 'fa-file-pdf-o', title: 'Resume',   link: 'http://olegp.com/resume/oleg-pudeyev-resume.pdf' },
+                { icon: 'fa-github',     title: 'Github',   link: 'https://github.com/p' },
+                { icon: 'fa-linkedin',   title: 'LinkedIn', link: 'https://www.linkedin.com/in/olegpudeyev/' },
+              ],
+      },
+      bondar: {
+        image: bondar,
+        name: 'Julia Bondar',
+        title: 'CMO', // Cultural Advisor',
+        description: [],
+        links: [],
+        links_trash: [
+          { icon: 'fa-file-pdf-o', title: 'Resume', link: 'https://s3.amazonaws.com/ish-archive/2017/hunter/20171231_bondar_resume.pdf' },
+        ],
+      },
+
+      // principals and engineers
       victor: { image: victor,
                 name: 'Victor Pudeyev',
                 title: 'Principal Software Developer',
                 description: [
-                  "Victor Piousbox, the great russian bear rider, owner of wooden rubles, conqueror of rivers and dataflows, fearless thinker and tinker, has been with Operaevent since the beginning. He has been honestly producing the technical foundation on which the platform relies for a while now. Before then, he has rotated many software engineering roles in a variety of companies in the Bay Area and elsewhere. In his spare time, he likes to run around in the forest shooting guns in the manner of a sport exercise, ride his motorcycle into the sunset, and read technical documentation to better his skill in technology bending.",
                   "A full-stack engineer focusing on Ruby on Rails, Javascript, devops, and web application development for startups and agile teams."
+                ],
+                description_trash: [
+                  "Victor Piousbox, the great russian bear rider, owner of wooden rubles, conqueror of rivers and dataflows, fearless thinker and tinker, has been with Operaevent since the beginning. He has been honestly producing the technical foundation on which the platform relies for a while now. Before then, he has rotated many software engineering roles in a variety of companies in the Bay Area and elsewhere. In his spare time, he likes to run around in the forest shooting guns in the manner of a sport exercise, ride his motorcycle into the sunset, and read technical documentation to better his skill in technology bending.",
                 ],
                 links: [
                   { icon: 'fa-file-pdf-o', title: 'Resume',   link: 'https://s3.amazonaws.com/ish-archive/2018/hunter/201801-VictorPudeyev-Resume.pdf' },
                   { icon: 'fa-github',     title: 'Github',   link: 'https://github.com/piousbox' },
-                  { icon: 'fa-linkedin',   title: 'LinkedIn', link: 'https://www.linkedin.com/in/victor-pudeyev-ba9008107/' },
+                  // { icon: 'fa-linkedin',   title: 'LinkedIn', link: 'https://www.linkedin.com/in/victor-pudeyev-ba9008107/' },
                 ],
       },
+
       kim: { image: kim,
              name: 'Kim Sinton',
-             title: 'Software Developer',
+             title: 'Principal Software Developer',
              description: [
                "Kim is a front-end engineer with a vast professional experience. He finds innovative strategic solutions to the growing pains of the team and contributes invaluably to our overall vision."
              ],
@@ -78,68 +123,40 @@ class Team extends React.Component {
                { icon: 'fa-linkedin', title: 'LinkedIn', link: 'https://www.linkedin.com/in/kim-sinton-3a8848/', },
              ],
       },
-      oleg: { image: oleg,
-              name: 'Oleg Pudeyev',
-              title: 'Principal Software Developer',
-              description: [
-                "Full stack engineer and tech lead with 12 years of Web development experience with a focus on Ruby on Rails applications. Experienced in hands-on development, design and architecture, technical leadership, mentoring, project management and planning.",
-                "His objective is to write code that is beautiful, maintainable and delights customers when it is deployed."
-              ],
-              links: [
-                { icon: 'fa-file-pdf-o', title: 'Resume',   link: 'http://olegp.com/resume/oleg-pudeyev-resume.pdf' },
-                { icon: 'fa-github',     title: 'Github',   link: 'https://github.com/p' },
-                { icon: 'fa-linkedin',   title: 'LinkedIn', link: 'https://www.linkedin.com/in/olegpudeyev/' },
-              ],
-      },
       brad: { image: brad,
               name: 'Bradford Prothman-Roberts',
-              title: 'Economic Advisor',
-              description: [ 'Brad is a University of South Carolina graduate. He participates in studies of product feasibility, as well as import/export to Latin America.' ],
+              title: 'Business Developer', // economic advisor
+              description: [],
+              description_trash: [ 
+                'Brad is a University of South Carolina graduate. He participates in studies of product feasibility, as well as import/export to Latin America.' ],
               links: [
                 { icon: 'fa-linkedin', title: 'LinkedIn', link: 'https://www.linkedin.com/in/broadfjord/' },
               ],
       },
-      steve: {
-        image: steve,
-        name: 'Stephen Kim',
-        title: 'Legal Advisor',
-        description: [ 'Stephen is the legal advisor to the team.' ],
-        links: [
-          { icon: 'fa-globe', title: 'Website', link: 'https://skim.law' },
-        ],
-      },
-      bondar: {
-        image: bondar,
-        name: 'Julia Bondar',
-        title: 'Cultural Advisor',
-        description: [ 'Julia is a cultural advisor to the team. Occasionally, she acts in the role of HR.' ],
-        links: [
-          { icon: 'fa-file-pdf-o', title: 'Resume', link: 'https://s3.amazonaws.com/ish-archive/2017/hunter/20171231_bondar_resume.pdf' },
-        ],
-      },
-      zach: {
-        name: 'Zach Mulholland',
-        title: 'CEO',
-        description: [],
-      },
-      jane: {
-        description: [],
-      },
       jonathan: {
+        image: d,
         name: 'Jonathan Castellano',
-        title: 'Human Resources Specialist',
+        title: 'Business Developer', // public relations specialist
         description: [],
       },
-      burga: {
-        name: 'Burga',
+      bugra: {
+        image: d,
+        name: 'Bugra Akturk',
         title: 'Software Developer',
         description: [],
       },
-      natalie: {
-        name: 'Natalie', 
+      theresa: {
+        image: d,
+        name: 'Theresa Campbel', 
         title: 'Graphic Designer',
         description: [],
       },
+      bibas: {
+        image: d,
+        name: 'Bibaswan Bhawal',
+        title: 'Software Developer',
+        description: [],
+      }
     } }
   }
 
@@ -165,7 +182,8 @@ class Team extends React.Component {
         <Row>
           <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.zach} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.steve} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.jane} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.oleg} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.bondar} /></Col>
         </Row>
         <Row>
           <Col xs={12}>
@@ -179,13 +197,16 @@ class Team extends React.Component {
         </Row>
         <Row>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.victor} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.oleg} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.kim} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.jonathan} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.burga} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.natalie} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.brad} /></Col>
         </Row>
         <Row>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.jonathan} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.bugra} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.theresa} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.bibas} /></Col>
+        </Row>
+        { /* <Row>
           <Col xs={12}>
             <div className="section-head text-left">
               <h2 className="text-uppercase">Advisors</h2>
@@ -196,9 +217,8 @@ class Team extends React.Component {
           </Col>
         </Row>
         <Row>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.brad} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.bondar} /></Col>
-        </Row>
+        </Row> */ }
       </Grid>
     )
   }
