@@ -9,13 +9,14 @@ import Center from '../Center'
 import SectionHeader from './SectionHeader'
 
 import victor  from './images/team/victor_500x500.jpg'
-import oleg    from './images/team/oleg_500x500.jpg'
+import oleg    from './images/team/oleg2.jpg'
 import kim     from './images/team/kim_500x500.jpg'
 import brad    from './images/team/brad_500x500.jpg'
 import steve   from './images/team/steve_500x500.jpg'
 import bondar  from './images/team/bondar_500x500.jpg'
 import zach    from './images/team/zach_500x500.jpg'
 import d       from './images/team/default_500x500.jpg'
+import bugra   from './images/team/bugra_500x500.jpg'
 
 class TeamMember extends React.Component {
   render () {
@@ -140,10 +141,16 @@ class Team extends React.Component {
         description: [],
       },
       bugra: {
-        image: d,
+        image: bugra,
         name: 'Bugra Akturk',
         title: 'Software Developer',
-        description: [],
+        description: [ 'A dedicated and results-driven Business Development Executive and E-Commerce Consultant with a highly successful background in the achievement of profitable business development through the creation and execution of outstanding e-commerce, travel, fin-tech projects and strategies.',
+                       // 'Experienced in working with leading domestic and international brands in the airline and travel industries with the primary focus on exceeding expectations for internet sales and business objectives. Also applied a Square App business model to Turkey fin-tech market successfully.', 
+                       // 'Possesses excellent interpersonal communication and leadership skills and the ability to develop and maintain mutually beneficial internal and external relationships. Enjoys being part of, as well as managing, motivating and training, a successful and productive team, and thrives in highly pressurized and challenging working environments.' 
+        ],
+        links: [
+          { icon: 'fa-file-pdf-o', title: 'Resume', link: 'https://s3.amazonaws.com/ish-archive/2018/hunter/20180406_bugra.pdf' }
+        ]
       },
       theresa: {
         image: d,
@@ -199,10 +206,10 @@ class Team extends React.Component {
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.victor} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.kim} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.brad} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.bugra} /></Col>
         </Row>
         <Row>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.jonathan} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.bugra} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.theresa} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.bibas} /></Col>
         </Row>
