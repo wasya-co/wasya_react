@@ -108,7 +108,7 @@ class Team extends React.Component {
                   "Victor Piousbox, the great russian bear rider, owner of wooden rubles, conqueror of rivers and dataflows, fearless thinker and tinker, has been with Operaevent since the beginning. He has been honestly producing the technical foundation on which the platform relies for a while now. Before then, he has rotated many software engineering roles in a variety of companies in the Bay Area and elsewhere. In his spare time, he likes to run around in the forest shooting guns in the manner of a sport exercise, ride his motorcycle into the sunset, and read technical documentation to better his skill in technology bending.",
                 ],
                 links: [
-                  { icon: 'fa-file-pdf-o', title: 'Resume',   link: 'https://s3.amazonaws.com/ish-archive/2018/hunter/201803-VictorPudeyev-Resume.pdf' },
+                  { icon: 'fa-file-pdf-o', title: 'Resume',   link: 'https://s3.amazonaws.com/ish-archive/2018/hunter/201804-VictorPudeyev-Resume.pdf' },
                   { icon: 'fa-github',     title: 'Github',   link: 'https://github.com/piousbox' },
                   // { icon: 'fa-linkedin',   title: 'LinkedIn', link: 'https://www.linkedin.com/in/victor-pudeyev-ba9008107/' },
                 ],
