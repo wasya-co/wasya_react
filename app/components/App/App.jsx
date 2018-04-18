@@ -5,7 +5,7 @@ import {
 import { connect } from 'react-redux'
 
 import Account    from './Account'
-import { BlogIndex } from '../Blog'
+import { BlogIndex, BlogItem } from '../Blog'
 import Home       from './Home'
 import { FixedNav, UnfixedNav, Navigation } from '../Navigation'
 import Products   from './Products'
@@ -61,8 +61,9 @@ const routes = [
       { path: AppRouter.termsPath, component: TermsPage },
       { path: '/our-work',     component: OurWork },
       { path: '/blog',         component: BlogIndex },
+      { path: AppRouter.blogItemPath, component: BlogItem },
     ],
-  },
+  },    
 ]
 
 class App extends React.Component {
