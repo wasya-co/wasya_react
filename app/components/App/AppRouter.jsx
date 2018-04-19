@@ -4,6 +4,8 @@ let AppRouter = {
 
   bizServicesPath:  '/services/business',
   blogLink: () => { return '/blog' },
+  blogItemPath: '/blog/show/:reportname',
+  blogItemLink: (item) => { return `/blog/show/${item.reportname}` },
 
   careersPath: '/careers',
 
