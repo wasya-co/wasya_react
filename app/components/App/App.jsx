@@ -5,7 +5,7 @@ import {
 import { connect } from 'react-redux'
 
 import Account    from './Account'
-import { BlogIndex, BlogItem } from '../Blog'
+import { BlogIndex, BlogItem, CaseStudies } from '../Blog'
 import Home       from './Home'
 import { FixedNav, UnfixedNav, Navigation } from '../Navigation'
 import Products   from './Products'
@@ -22,7 +22,6 @@ const routes = [
     component: Navigation,
     indexRoute: { component: Home },
     childRoutes: [
-      // { path: AppRouter.ourProcessPath,  component: OurProcess },
       { path: '/products',     component: Products },
       { path: AppRouter.ourStackPath,    component: OurStack },
     ],
@@ -58,10 +57,11 @@ const routes = [
     fixed: 'unfixed',
     indexRoute: { component: AbstractPage },
     childRoutes: [
-      { path: AppRouter.termsPath, component: TermsPage },
-      { path: '/our-work',     component: OurWork },
-      { path: '/blog',         component: BlogIndex },
-      { path: AppRouter.blogItemPath, component: BlogItem },
+      { path: AppRouter.termsPath,       component: TermsPage },
+      { path: AppRouter.ourWorkPath,     component: OurWork },      
+      { path: AppRouter.caseStudiesPath, component: CaseStudies },
+      { path: AppRouter.blogPath,        component: BlogIndex },
+      { path: AppRouter.blogItemPath,    component: BlogItem },
     ],
   },    
 ]

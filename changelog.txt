@@ -25,3 +25,4 @@ master - gets deployed (hm...)
 2.0.11 - lock to bootstrap 3.3.7
          20180226 changing team
          blog is only index, each blog item is one page.
+2.0.12 - case studies and articles; different banner.

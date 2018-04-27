@@ -1,14 +1,18 @@
 import React from 'react'
-
 import { Row, Col, Grid } from 'react-bootstrap'
+import GoogleMapReact from 'google-map-react'
 
 import Center from '../Center'
 
 import handshake from './images/handshake.jpg'
-// import world     from './images/background/world.jpg'
-// import world2 from './images/background/world2.png'
-import world3 from './images/background/world3.jpg'
-const world = world3
+import world     from './images/background/world3.jpg'
+import wImg      from './images/w_30x30.png'
+
+class MyMapPoint extends React.Component {
+  render () {
+    return (<div style={this.props.style} ></div>)
+  }
+}
 
 class ContactUs2 extends React.Component {
   constructor(props) {
@@ -122,11 +126,16 @@ class ContactUs2 extends React.Component {
                   </ul>
                 </div>
               </div>
+
               <div className="col-sm-12">
                 <h4>Our Location</h4>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10671.067348341838!2d-121.89124455979633!3d37.33002320510599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1505428038490" width="100%" height="450" frameBorder="0" style={{ border: '0' }} allowFullScreen></iframe>
-                <div className="clearfix" /><br />
+                <div style={{ height: 450, width: '100%' }}>
+                  <GoogleMapReact defaultCenter={{ lat: 37.3195624, lng: -121.9141499 }} defaultZoom={14}>
+                    <MyMapPoint style={{ background: `url(${wImg})`, width: 30, height: 30 }} lat={37.3195624} lng={-121.9141499} />
+                  </GoogleMapReact>
+                </div>
               </div>
+
             </div>
           </div>
         </div>

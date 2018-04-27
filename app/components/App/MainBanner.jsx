@@ -1,14 +1,14 @@
 import React from 'react'
 
-import bg8 from './images/circuit-boards/4.jpg'
-import bg9 from './images/background/fire_2-short.jpg'
+import bg2 from './images/circuit-boards/2-narrow.jpg'
+import bg4 from './images/background/bg4.jpg'
 
 class MainBanner extends React.Component {
   render () {
     return (
       <div>
         <div className="dez-bnr-inr dez-bnr-inr-lg overlay-black-middle" style={{ 
-          backgroundImage: `url(${bg8})`,
+          backgroundImage: `url(${bg4})`,
           maxHeight: '500px',
         }}>
           <div className="container">
@@ -18,7 +18,7 @@ class MainBanner extends React.Component {
             </div>
           </div>
         </div>
-        <div style={{ backgroundImage: `url(${bg9})`, height: '20px', width: '100%', backgroundSize: "100%, 100%" }} className="bg-img-fix" />
+        <div style={{ backgroundImage: `url(${bg2})`, height: '20px', width: '100%', backgroundSize: "100%, 100%" }} className="bg-img-fix" />
       </div>
     )
   }

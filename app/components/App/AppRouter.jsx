@@ -3,11 +3,15 @@ let AppRouter = {
   rootPath: '/',
 
   bizServicesPath:  '/services/business',
+
+  blogPath: '/blog',
   blogLink: () => { return '/blog' },
   blogItemPath: '/blog/show/:reportname',
   blogItemLink: (item) => { return `/blog/show/${item.reportname}` },
 
   careersPath: '/careers',
+  caseStudiesPath: '/case-studies',
+  caseStudiesLink: () => { return '/case-studies' },
 
   findInvoice: '/api/invoices/search',
 
