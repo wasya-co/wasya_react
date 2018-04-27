@@ -99,7 +99,7 @@ class IndustrialHeader extends React.Component {
 
                   <li><a href="javascript:;">Knowledge Base <i className="fa fa-chevron-down" style={{ display: 'inline' }} ></i></a>
                     <ul className="sub-menu">
-                      <li><Link to={AppRouter.caseStudiesLink()}>Case Studies</Link></li>
+                      { /* <li><Link to={AppRouter.caseStudiesLink()}>Case Studies</Link></li> */ }
                       <li><Link to={AppRouter.blogLink()} >Articles</Link></li>
                     </ul>
                   </li>
