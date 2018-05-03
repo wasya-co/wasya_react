@@ -108,7 +108,7 @@ class Team extends React.Component {
                   "Victor Piousbox, the great russian bear rider, owner of wooden rubles, conqueror of rivers and dataflows, fearless thinker and tinker, has been with Operaevent since the beginning. He has been honestly producing the technical foundation on which the platform relies for a while now. Before then, he has rotated many software engineering roles in a variety of companies in the Bay Area and elsewhere. In his spare time, he likes to run around in the forest shooting guns in the manner of a sport exercise, ride his motorcycle into the sunset, and read technical documentation to better his skill in technology bending.",
                 ],
                 links: [
-                  { icon: 'fa-file-pdf-o', title: 'Resume',   link: 'https://s3.amazonaws.com/ish-archive/2018/hunter/201804-VictorPudeyev-Resume.pdf' },
+                  { icon: 'fa-file-pdf-o', title: 'Resume',   link: 'https://s3.amazonaws.com/ish-archive/2018/hunter/201805-VictorPudeyev-Resume.pdf' },
                   { icon: 'fa-github',     title: 'Github',   link: 'https://github.com/piousbox' },
                   // { icon: 'fa-linkedin',   title: 'LinkedIn', link: 'https://www.linkedin.com/in/victor-pudeyev-ba9008107/' },
                 ],
@@ -128,7 +128,7 @@ class Team extends React.Component {
               name: 'Bradford Prothman-Roberts',
               title: 'Business Developer', // economic advisor
               description: [],
-              description_trash: [ 
+              description_trash: [
                 'Brad is a University of South Carolina graduate. He participates in studies of product feasibility, as well as import/export to Latin America.' ],
               links: [
                 { icon: 'fa-linkedin', title: 'LinkedIn', link: 'https://www.linkedin.com/in/broadfjord/' },
@@ -145,8 +145,8 @@ class Team extends React.Component {
         name: 'Bugra Akturk',
         title: 'Software Developer',
         description: [ 'A dedicated and results-driven Business Development Executive and E-Commerce Consultant with a highly successful background in the achievement of profitable business development through the creation and execution of outstanding e-commerce, travel, fin-tech projects and strategies.',
-                       // 'Experienced in working with leading domestic and international brands in the airline and travel industries with the primary focus on exceeding expectations for internet sales and business objectives. Also applied a Square App business model to Turkey fin-tech market successfully.', 
-                       // 'Possesses excellent interpersonal communication and leadership skills and the ability to develop and maintain mutually beneficial internal and external relationships. Enjoys being part of, as well as managing, motivating and training, a successful and productive team, and thrives in highly pressurized and challenging working environments.' 
+                       // 'Experienced in working with leading domestic and international brands in the airline and travel industries with the primary focus on exceeding expectations for internet sales and business objectives. Also applied a Square App business model to Turkey fin-tech market successfully.',
+                       // 'Possesses excellent interpersonal communication and leadership skills and the ability to develop and maintain mutually beneficial internal and external relationships. Enjoys being part of, as well as managing, motivating and training, a successful and productive team, and thrives in highly pressurized and challenging working environments.'
         ],
         links: [
           { icon: 'fa-file-pdf-o', title: 'Resume', link: 'https://s3.amazonaws.com/ish-archive/2018/hunter/20180406_bugra.pdf' }
@@ -154,7 +154,7 @@ class Team extends React.Component {
       },
       theresa: {
         image: d,
-        name: 'Theresa Campbel', 
+        name: 'Theresa Campbel',
         title: 'Graphic Designer',
         description: [],
       },
@@ -163,11 +163,17 @@ class Team extends React.Component {
         name: 'Bibaswan Bhawal',
         title: 'Software Developer',
         description: [],
-      }
+      },
+      casio: {
+        image: d,
+        name: 'Casio Batista',
+        title: 'International Relations',
+        description: [],
+      },
     } }
   }
 
-  render () {    
+  render () {
     return (
       <Grid id="teamContent" >
 
@@ -232,4 +238,3 @@ class Team extends React.Component {
 }
 
 export default Team
-
