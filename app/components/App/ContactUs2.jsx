@@ -22,16 +22,16 @@ class ContactUs2 extends React.Component {
   render () {
     return (
       <div className="page-content" id="contactUsContent">
-        
+
         <div className="dez-bnr-inr overlay-black-middle bg-img-fix" style={{ backgroundImage: `url(${handshake})` }}>
           <div className="container">
             <div className="dez-bnr-inr-entry">
               <h1 className="text-white">Contact Us</h1>
-              <p className="text-white">We are commited to replying to your request within 90 minutes</p>  
+              <p className="text-white">We are commited to replying to your request within 90 minutes</p>
             </div>
           </div>
         </div>
-        
+
         <div className="content-area">
           <div className="container">
             <p>Schedule a call at <a className="a-border" href="https://calendly.com/victorp/30min">https://calendly.com/victorp/30min</a> or fill out the form below.</p>
@@ -88,7 +88,7 @@ class ContactUs2 extends React.Component {
                   </form>
                 </div>
               </div>
-              
+
               <div className="col-lg-3 col-md-4 col-sm-5 col-xs-12" >
                 <h4>Contact Info</h4>
                 <div className="p-a30 bg-white m-b30">
@@ -130,7 +130,8 @@ class ContactUs2 extends React.Component {
               <div className="col-sm-12">
                 <h4>Our Location</h4>
                 <div style={{ height: 450, width: '100%' }}>
-                  <GoogleMapReact defaultCenter={{ lat: 37.3195624, lng: -121.9141499 }} defaultZoom={14}>
+                  <GoogleMapReact defaultCenter={{ lat: 37.3195624, lng: -121.9141499 }} defaultZoom={14}
+                                  key={"AIzaSyDq4uuB3LCutinm_3OvMoPeb6vzBdhOpyc"} >
                     <MyMapPoint style={{ background: `url(${wImg})`, width: 30, height: 30 }} lat={37.3195624} lng={-121.9141499} />
                   </GoogleMapReact>
                 </div>
