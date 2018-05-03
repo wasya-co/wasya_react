@@ -28,7 +28,7 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: content-type, cache-control, x-http-method-override');
 
-if ($verification != '14') {
+if ($verification != '12') {
   $output = "Verification failed. Please provide the correct verification answer.";
 } else {
 
