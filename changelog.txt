@@ -26,3 +26,5 @@ master - gets deployed (hm...)
          20180226 changing team
          blog is only index, each blog item is one page.
 2.0.12 - case studies and articles; different banner.
+         casio batista is in; victor resume is 201805 version.
+	 
