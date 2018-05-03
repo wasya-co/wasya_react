@@ -218,6 +218,7 @@ class Team extends React.Component {
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.jonathan} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.theresa} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.bibas} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.casio} /></Col>
         </Row>
         { /* <Row>
           <Col xs={12}>
