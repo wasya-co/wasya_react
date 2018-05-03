@@ -17,7 +17,7 @@ class MyMapPoint extends React.Component {
 class ContactUs2 extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = { mapKey: "AIzaSyDq4uuB3LCutinm_3OvMoPeb6vzBdhOpyc" }
   }
   render () {
     return (
@@ -131,7 +131,7 @@ class ContactUs2 extends React.Component {
                 <h4>Our Location</h4>
                 <div style={{ height: 450, width: '100%' }}>
                   <GoogleMapReact defaultCenter={{ lat: 37.3195624, lng: -121.9141499 }} defaultZoom={14}
-                                  key={"AIzaSyDq4uuB3LCutinm_3OvMoPeb6vzBdhOpyc"} >
+                                  key={this.state.mapKey} bootstrapURLKeys={{ key: this.state.mapKey}} >
                     <MyMapPoint style={{ background: `url(${wImg})`, width: 30, height: 30 }} lat={37.3195624} lng={-121.9141499} />
                   </GoogleMapReact>
                 </div>
