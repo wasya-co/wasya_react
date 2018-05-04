@@ -95,6 +95,7 @@ class Footer3 extends React.Component {
                   { /* <img style={{ height: '30px' }} src={wasya_co} alt='wasya co' /> */ }
                   Wasya co
                 </span> | <Link to={AppRouter.termsPath} >Terms of Service</Link>
+                &nbsp;&nbsp;&nbsp; v2.0.13
               </div>
             </div>
           </div>
