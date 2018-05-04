@@ -1,6 +1,8 @@
 import React           from 'react'
 import PropTypes       from 'prop-types'
 import scrollToElement from 'scroll-to-element'
+import { connect }     from 'react-redux'
+import { browserHistory } from 'react-router'
 
 import IndustrialHeader from './IndustrialHeader'
 import Footer           from '../Footer'
@@ -14,8 +16,6 @@ class Navigation extends React.Component {
   }
 
   scrollTop () {
-    // console.log('+++ scollTop here')
-
     scrollToElement('body')
   }
 
@@ -43,12 +43,9 @@ class Navigation extends React.Component {
     setTimeout(() => {
       if (p.location.query && p.location.query.scrollTo) {
         scrollToElement(`#${p.location.query.scrollTo}Content`, { offset: -60 })
+        browserHistory.push({ search: '' })
       }
     }, 0)
-  }
-
-  componentWillUpdate () {
-    // happens too often
   }
 
   render () {
@@ -71,4 +68,11 @@ Navigation.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Navigation
+const mapS = (state, ownProps) => {
+  return {
+    navCollapse: state.navCollapse,
+  }
+}
+
+export default connect(mapS)(Navigation)
+

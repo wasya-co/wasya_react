@@ -4,6 +4,8 @@ import {
 } from 'react-router'
 import { connect } from 'react-redux'
 
+import { CONST } from '../../constants'
+
 import Account    from './Account'
 import { BlogIndex, BlogItem, CaseStudies } from '../Blog'
 import Home       from './Home'
@@ -70,11 +72,16 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
+    this.collapseNav = this.collapseNav.bind(this)
+  }
+
+  collapseNav () {
+    this.props.dispatch({ type: CONST.navCollapse, val: true })
   }
 
   render() {
     return (
-      <Router history={browserHistory} routes={routes} onUpdate={() => window.scrollTo(0, 0) } />
+      <Router history={browserHistory} routes={routes} onUpdate={() => { window.scrollTo(0, 0); this.collapseNav(); }} />
     );
   }
 }
