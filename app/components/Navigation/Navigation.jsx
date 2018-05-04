@@ -48,10 +48,6 @@ class Navigation extends React.Component {
     }, 0)
   }
 
-  componentWillUpdate () {
-    // happens too often
-  }
-
   render () {
     // console.log('+++ Navigation:', this.props, this.state)
 

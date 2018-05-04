@@ -6,7 +6,7 @@ const apiLocation = () => {
   return 'default-api-location'
 }
 
-const navCollapse = (state=false, action) => {
+const navCollapse = (state = true, action) => {
   if (action.type === CONST.navCollapse) {
     return action.val
   }
@@ -15,4 +15,5 @@ const navCollapse = (state=false, action) => {
 
 export default combineReducers({
   apiLocation,
+  navCollapse,
 })

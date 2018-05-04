@@ -5,6 +5,9 @@ import {
 } from 'react-bootstrap'
 import { Link, browserHistory } from 'react-router'
 import scrollToElement from 'scroll-to-element'
+import { connect } from 'react-redux'
+
+import { CONST } from '../../constants'
 
 import logo3 from './images/logo-4.png' // Wásya Co
 
@@ -13,7 +16,7 @@ import AppRouter from '../App/AppRouter'
 class IndustrialHeader extends React.Component {
   constructor(props) {
     super(props)
-
+    
     let headerFixed
     if (props.fixed === 'unfixed') {
       headerFixed = ''
@@ -22,8 +25,7 @@ class IndustrialHeader extends React.Component {
       headerFixed = 'is-fixed'
     }
 
-    this.state = { headerFixed,
-                   navCollapse: 'collapse' }
+    this.state = { headerFixed } 
 
     this.componentDidMOunt    = this.componentDidMount.bind(this)
     this.componentWillUnmount = this.componentWillUnmount.bind(this)
@@ -56,16 +58,12 @@ class IndustrialHeader extends React.Component {
   }
 
   toggleNav () {
-    if (this.state.navCollapse === 'collapse') {
-      this.setState({ navCollapse: '' })
-    } else {
-      this.setState({ navCollapse: 'collapse' })
-    }
+    this.props.dispatch({ type: CONST.navCollapse, val: !this.props.navCollapse })
   }
 
   goto (where) {
-    if (this.state.navCollapse === '') {
-      this.setState({ navCollapse: 'collapse' })
+    if (!this.props.navCollapse) {
+      this.props.dispatch({ type: CONST.navCollapse, val: true })
     }
     if (this.props.fixed) {
       browserHistory.push(`${AppRouter.rootPath}?scrollTo=${where}`)
@@ -89,7 +87,7 @@ class IndustrialHeader extends React.Component {
                 <span className="icon-bar"></span> 
                 <span className="icon-bar"></span> 
               </button>
-              <div className={`header-nav navbar-collapse ${this.state.navCollapse}`} >
+              <div className={`header-nav navbar-collapse ${this.props.navCollapse ? 'collapse' : ''}`} >
                 <ul className="nav navbar-nav">
                   <li><Link href="javascript:;" onClick={ () => { this.goto('about') } } >About</Link></li>
                   <li><Link href="javascript:;" onClick={() => this.goto('team')}>Team</Link></li>
@@ -119,4 +117,10 @@ IndustrialHeader.propTypes = {
   location: PropTypes.object,
 }
 
-export default IndustrialHeader
+const mapS = (state, ownProps) => {
+  return {
+    navCollapse: state.navCollapse,
+  }
+}
+
+export default connect(mapS)(IndustrialHeader)
