@@ -3,8 +3,8 @@ import WebAPI from '../util/WebAPI';
 
 import {
   ITEMS_GET_SUCCESS,
-  ITEMS_GET_ERROR
-} from '../constants/AppConstants';
+  ITEMS_GET_ERROR,
+} from '../constants'
 
 export default {
   getItems() {

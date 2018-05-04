@@ -3,8 +3,8 @@ import AppDispatcher from '../dispatcher/AppDispatcher';
 
 import {
   ITEMS_UPDATED,
-  ITEMS_GET_SUCCESS
-} from '../constants/AppConstants';
+  ITEMS_GET_SUCCESS,
+} from '../constants'
 
 class ItemsStore extends BaseStore {
 

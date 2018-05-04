@@ -1,6 +1,7 @@
 import React           from 'react'
 import PropTypes       from 'prop-types'
 import scrollToElement from 'scroll-to-element'
+import { connect }     from 'react-redux'
 
 import IndustrialHeader from './IndustrialHeader'
 import Footer           from '../Footer'
@@ -71,4 +72,11 @@ Navigation.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Navigation
+const mapS = (state, ownProps) => {
+  return {
+    navCollapse: state.navCollapse,
+  }
+}
+
+export default connect(mapS)(Navigation)
+
