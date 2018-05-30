@@ -9,10 +9,20 @@ let AppRouter = {
   blogItemPath: '/blog/show/:reportname',
   blogItemLink: (item) => { return `/blog/show/${item.reportname}` },
 
+  /**
+   * C
+   */
   careersPath: '/careers',
+
   caseStudiesPath: '/case-studies',
   caseStudiesLink: () => { return '/case-studies' },
 
+  contactPath: '/contact',
+  contactLink: () => { return '/contact' },
+  
+  /**
+   * F
+   */
   findInvoice: '/api/invoices/search',
 
   makePayment: '/api/payments',

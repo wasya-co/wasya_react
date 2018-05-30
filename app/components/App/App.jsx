@@ -8,6 +8,7 @@ import { CONST } from '../../constants'
 
 import Account    from './Account'
 import { BlogIndex, BlogItem, CaseStudies } from '../Blog'
+import Contact from './ContactUs2'
 import Home       from './Home'
 import { FixedNav, UnfixedNav, Navigation } from '../Navigation'
 import Products   from './Products'
@@ -27,6 +28,11 @@ const routes = [
       { path: '/products',     component: Products },
       { path: AppRouter.ourStackPath,    component: OurStack },
     ],
+  },
+  { path: AppRouter.contactPath,
+    component: Navigation,
+    indexRoute: { component: Contact },
+    fixed: 'unfixed',
   },
   { path: AppRouter.servicesPath,
     component: FixedNav,
