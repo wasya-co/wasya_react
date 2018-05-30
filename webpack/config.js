@@ -56,7 +56,8 @@ var config = {
     hot: true,
     noInfo: false,
     inline: true,
-    stats: { colors: true }
+    stats: { colors: true },
+    disableHostCheck: true
   }
 };
 
