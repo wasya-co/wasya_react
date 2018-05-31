@@ -11,8 +11,9 @@ import { BlogIndex, BlogItem, CaseStudies } from '../Blog'
 import Contact from './ContactUs2'
 import Home       from './Home'
 import { FixedNav, UnfixedNav, Navigation } from '../Navigation'
-import Products   from './Products'
 import OurProcess from './OurProcess'
+import Products   from './Products'
+import Promo1     from './Promo1'
 import OurStack   from '../Stack/Stack'
 import OurWork    from './OurWork'
 import { BizServices, TechServices } from '../Services'
@@ -65,11 +66,12 @@ const routes = [
     fixed: 'unfixed',
     indexRoute: { component: AbstractPage },
     childRoutes: [
-      { path: AppRouter.termsPath,       component: TermsPage },
-      { path: AppRouter.ourWorkPath,     component: OurWork },      
-      { path: AppRouter.caseStudiesPath, component: CaseStudies },
       { path: AppRouter.blogPath,        component: BlogIndex },
       { path: AppRouter.blogItemPath,    component: BlogItem },
+      { path: AppRouter.caseStudiesPath, component: CaseStudies },
+      { path: AppRouter.ourWorkPath,     component: OurWork },
+      { path: AppRouter.promo1Path,      component: Promo1 },      
+      { path: AppRouter.termsPath,       component: TermsPage },
     ],
   },    
 ]

@@ -10,11 +10,12 @@ import bg7 from './images/circuit-boards/3.jpg'
 // import FA from 'react-fontawesome'
 
 import About          from './About'
-import MainBanner     from './MainBanner'
-import { Services }   from '../Services'
-import OurProcessSimple from './OurProcessSimple'
-import Team           from './Team'
 import ContactUs2     from './ContactUs2'
+import MainBanner     from './MainBanner'
+import { Map }        from './Map'
+import OurProcessSimple from './OurProcessSimple'
+import { Services }   from '../Services'
+import Team           from './Team'
 import Testimonials   from './Testimonials'
 
 class Home extends React.Component {
@@ -30,6 +31,7 @@ class Home extends React.Component {
         <Team />
         <Testimonials />{ /* and Clients */ }
         <ContactUs2 />
+        <Map />
       </div>
     )
   }

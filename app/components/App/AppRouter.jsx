@@ -19,7 +19,7 @@ let AppRouter = {
 
   contactPath: '/contact',
   contactLink: () => { return '/contact' },
-  
+
   /**
    * F
    */
@@ -34,7 +34,11 @@ let AppRouter = {
   ourWorkLink: () => { return '/our-work' },
   ourWorkPath: '/our-work',
 
+  /**
+   * P
+   */
   pagesPath: '/pages',
+  promo1Path: '/pages/promo-1',
 
   servicesPath:     '/services',
 

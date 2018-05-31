@@ -29,4 +29,5 @@ master - gets deployed (hm...)
          casio batista is in; victor resume is 201805 version.
 	       20180503 with vim, scrollTo fixed, navigation collapse fixed. 
 2.0.13 - adding path /contact
+         adding /pages/promo-1, moving Map out of ContactUs.
 

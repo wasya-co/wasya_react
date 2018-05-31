@@ -1,24 +1,16 @@
 import React from 'react'
 import { Row, Col, Grid } from 'react-bootstrap'
-import GoogleMapReact from 'google-map-react'
 
 import Center from '../Center'
 
 import handshake from './images/handshake.jpg'
 import world     from './images/background/world3.jpg'
-import wImg      from './images/w_30x30.png'
-
-class MyMapPoint extends React.Component {
-  render () {
-    return (<div style={this.props.style} ></div>)
-  }
-}
 
 class ContactUs2 extends React.Component {
-  constructor(props) {
+  /* constructor(props) {
     super(props)
     this.state = { mapKey: "AIzaSyDq4uuB3LCutinm_3OvMoPeb6vzBdhOpyc" }
-  }
+  } */
   render () {
     return (
       <div className="page-content" id="contactUsContent">
@@ -128,13 +120,13 @@ class ContactUs2 extends React.Component {
               </div>
 
               <div className="col-sm-12">
-                <h4>Our Location</h4>
+                { /* <h4>Our Location</h4>
                 <div style={{ height: 450, width: '100%' }}>
                   <GoogleMapReact defaultCenter={{ lat: 37.3195624, lng: -121.9141499 }} defaultZoom={14}
                                   key={this.state.mapKey} bootstrapURLKeys={{ key: this.state.mapKey}} >
                     <MyMapPoint style={{ background: `url(${wImg})`, width: 30, height: 30 }} lat={37.3195624} lng={-121.9141499} />
                   </GoogleMapReact>
-                </div>
+                </div> */ }
               </div>
 
             </div>
