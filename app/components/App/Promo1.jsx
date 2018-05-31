@@ -15,9 +15,9 @@ class Promo1 extends React.Component {
             <div className="dez-bnr-inr-entry">
               <div style={{ height: '100px' }} />
               <h1 className="text-white">Mobile Apps & React Web Development</h1>
-              <p className="text-white">No matter what your requirement is, we can help you fill it,<br />
-                or refer you to other specialists in our network who can address the challenges that<br />
-                your business faces.</p>
+              <p className="text-white">No matter what your requirement is, <br />
+                we can help you fill it, or refer you to other specialists <br />
+                in our network who can address the challenges that your business faces.</p>
             </div>
           </div>
         </div>
