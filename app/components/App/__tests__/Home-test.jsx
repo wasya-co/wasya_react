@@ -9,8 +9,8 @@ describe('Home', () => {
   it('Should render the correct element', () => {
     let home = ReactTestUtils.renderIntoDocument(
       <Home />
-    );
-    let elem = ReactDOM.findDOMNode(home);
-    expect(elem.tagName.toLowerCase()).to.equal('div');
-  });
-});
+    )
+    let elem = ReactDOM.findDOMNode(home)
+    expect(elem.tagName.toLowerCase()).to.equal('div')
+  })
+})

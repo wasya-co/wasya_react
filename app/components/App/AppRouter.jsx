@@ -13,6 +13,10 @@ let AppRouter = {
    * C
    */
   careersPath: '/careers',
+  careersLink: () => { return '/careers' },
+
+  careerPath: '/careers/:which',
+  careerLink: (which) => { return `/careers/${which}` },
 
   caseStudiesPath: '/case-studies',
   caseStudiesLink: () => { return '/case-studies' },

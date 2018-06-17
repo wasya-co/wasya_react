@@ -30,4 +30,5 @@ master - gets deployed (hm...)
 	       20180503 with vim, scrollTo fixed, navigation collapse fixed. 
 2.0.13 - adding path /contact
          adding /pages/promo-1, moving Map out of ContactUs.
+2.0.14 - careers page, again.
 

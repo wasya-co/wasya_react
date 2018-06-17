@@ -18,7 +18,7 @@ import OurStack   from '../Stack/Stack'
 import OurWork    from './OurWork'
 import { BizServices, TechServices } from '../Services'
 import AppRouter from './AppRouter'
-import { Careers, DesignerCareer } from '../Careers'
+import { Career, Careers, DesignerCareer } from '../Careers'
 import { AbstractPage, TermsPage } from '../Pages'
 
 const routes = [
@@ -54,13 +54,14 @@ const routes = [
     fixed: 'unfixed',
     indexRoute: { component: OurWork },
   },
-  /* { path: AppRouter.careersPath,
-    component: UnfixedNav,
+  { path: AppRouter.careersPath,
+    component: Navigation,
     indexRoute: { component: Careers },
     childRoutes: [
       { path: AppRouter.designerCareersPath, component: DesignerCareer },
+      { path: AppRouter.careerPath, component: Career },
     ],
-  }, */
+  },
   { path: AppRouter.pagesPath,
     component: Navigation,
     fixed: 'unfixed',

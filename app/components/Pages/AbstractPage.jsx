@@ -4,8 +4,7 @@ import PropTypes from 'prop-types'
 class AbstractPage extends React.Component {
   render () {
     return (
-    <i>abstractpage
-      { this.props.children }</i>
+    <i>abstractpage{ this.props.children }</i>
     )
   }
 }
