@@ -157,7 +157,7 @@
     }
   },
   "scripts": {
-    "build": "NODE_ENV=production npm run webpack && cp -v app/contact_us.php build/contact_us.php && cp -v app/.htaccess build/.htaccess && echo ok",
+    "build": "NODE_ENV=production npm run webpack && cp -v app/contact_us.php build/contact_us.php && cp -v app/.htaccess build/.htaccess && cp -vr archive build && echo ok",
     "clean": "rm -rf $npm_package_config_buildDir && mkdir $npm_package_config_buildDir",
     "env": "env",
     "lint": "eslint --ext .js --ext .jsx ./app ./webpack && echo No linting errors.",
