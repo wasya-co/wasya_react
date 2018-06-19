@@ -32,6 +32,11 @@ class CareersList extends React.Component {
        }} >
         <ul>
           <li><Link to={AppRouter.careerLink('20180617')}>20180617 - Foundation Email Rails Campaign</Link></li>
+          <li><Link to={AppRouter.careerLink('20180619')}>20180619 - BJJC convertion to Wordpress</Link></li>
+
+          { /* <li><Link to={AppRouter.careerLink('20180619a')}>20180619a - GameUI - Freelance UIUX expert needed</Link></li>
+          <li><Link to={AppRouter.careerLink('20180619b')}>20180619b - CoT - Freelance UIUX expert needed</Link></li>
+          <li><Link to={AppRouter.careerLink('20180619c')}>20180619c - TGM - Freelance creative writer needed</Link></li> */ }
         </ul>
       </div>
     )
@@ -76,7 +81,38 @@ class Career extends React.Component {
           </ul>
           <p>If you would like to work on both the mockup and HTML/CSS, then answer all questions above, and provide both mockup sample, and code sample.</p>
           <p>To apply, send an email to victor at wasya dot co, or communicate with me via the channel where the job was originally posted.</p>
-        </div>)
+        </div>),
+      '20180619': (
+        <div>
+          <h3>BJJCollective.com convertion to Wordpress</h3>
+          <p>We are converting this website to wordpress: http://bjjcollective.com A copy of the database, assets, and code will be provided. The database and assets (images) are useful. We discourage recycling old code; this should be a clean rewrite.</p>
+          <p>BJJC is a video aggregator for youtube, specifically for martial arts technique videos.</p>
+          <p>There are two interesting parts to the task. First, the javascript-heavy categorization system. Every video belongs to a category, and categories are hierarchical. A category has an image asset, and the UI allows for drilling down to a category in a convenient manner. The new Wordpress-based categorization tree should mimic what is already there.</p>
+          <p>The second interesting part is the video pages: index, and show. A video can be commented on. Every category is a videos-index page, where selecting one video displays video-show page. This is simple compared to the categorization tree.</p>
+          <p>The new system should allow an admin to easily add/remove/manager categories, and add/remove/manage videos.</p>
+          <p>We expect data models to change; data migration should be scripted, and is an expected step in this rewrite.</p>
+          <p>We expect to use jQuery. Each category should be its own page for SEO purposes. </p>
+          <p>We are looking for: (1) mockup of a design, and (2) implementation. The mockup should have the following pages:
+            <ul>
+              <li>list of categories, which should closely resemble what is there now.</li>
+              <li>view of a category (same as a list of videos). Videos should be paginated.</li>
+              <li>view of a single video. The videos list, and the categorization tree, should be easily accessible from this page.</li>
+            </ul>
+          </p>
+          <p>In your application, please estimate time and cost of creating the mockup, and time and cost of implementing it in wordpress & jQuery. The successful candidate will be asked to work on this project iteratively and incrementally. Please submit the application to victor at wasya dot co, along with a link to this page.</p>
+        </div>),
+      '20180619a': (
+        <div>
+          <h3>GameUI - Freelance UIUX expert needed</h3>
+        </div>),
+      '20180619b': (
+        <div>
+          <h3>CoT - Freelance UIUX expert needed</h3>
+        </div>),
+      '20180619c': (
+        <div>
+          <h3>TGM - Freelance creative writer needed</h3>
+        </div>),
     }
 
     return (
