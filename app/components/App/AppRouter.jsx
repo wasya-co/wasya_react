@@ -7,7 +7,10 @@ let AppRouter = {
   blogPath: '/blog',
   blogLink: () => { return '/blog' },
   blogItemPath: '/blog/show/:reportname',
-  blogItemLink: (item) => { return `/blog/show/${item.reportname}` },
+  blogItemLink: (item) => { 
+    if (item.reportname) { return `/blog/show/${item.reportname}` }
+    if (item.slug) { return `/blog/show/${item.slug}` }
+  },
 
   /**
    * C

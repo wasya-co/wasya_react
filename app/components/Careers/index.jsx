@@ -34,9 +34,12 @@ class CareersList extends React.Component {
           <li><Link to={AppRouter.careerLink('20180617')}>20180617 - Foundation Email Rails Campaign</Link></li>
           <li><Link to={AppRouter.careerLink('20180619')}>20180619 - BJJC convertion to Wordpress</Link></li>
 
-          { /* <li><Link to={AppRouter.careerLink('20180619a')}>20180619a - GameUI - Freelance UIUX expert needed</Link></li>
+          { /* 
+          <li><Link to={AppRouter.careerLink('20180619a')}>20180619a - GameUI - Freelance UIUX expert needed</Link></li>
           <li><Link to={AppRouter.careerLink('20180619b')}>20180619b - CoT - Freelance UIUX expert needed</Link></li>
-          <li><Link to={AppRouter.careerLink('20180619c')}>20180619c - TGM - Freelance creative writer needed</Link></li> */ }
+          <li><Link to={AppRouter.careerLink('20180619c')}>20180619c - TGM - Freelance creative writer needed</Link></li> 
+          <li><Link to={AppRouter.careerLink('20180619d')}>20180619d - CoT - Spanish-speaking operations manager needed</Link></li> 
+          */ }
         </ul>
       </div>
     )
