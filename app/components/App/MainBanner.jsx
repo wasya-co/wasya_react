@@ -13,7 +13,7 @@ class MainBanner extends React.Component {
         }}>
           <div className="container">
             <div className="dez-bnr-inr-entry">
-              <h1 className="text-white">Software Development & Consulting</h1>
+              <h1 className="text-white">Impactful Software Development</h1>
               <h5 className="text-white">Implementing performant, efficient processes & tools</h5>
             </div>
           </div>
