@@ -143,9 +143,9 @@
   "config": {
     "buildDir": "./build",
     "buildDirTests": "./build_tests",
-    "devHost": "10.0.0.47",
+    "devHost": "127.0.0.1",
     "devPort": 8000,
-    "title": "Wasya Co - software consultancy in the Bay Area",
+    "title": "Wasya Co - Rapid Software Development in the Silicon Valley",
     "static_domain": {
       "development": "static.local",
       "production": "static.piousbox.com"
