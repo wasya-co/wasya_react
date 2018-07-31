@@ -11,12 +11,14 @@ import bg7 from './images/circuit-boards/3.jpg'
 
 import About          from './About'
 import ContactUs2     from './ContactUs2'
+import Industries     from './Industries'
 import MainBanner     from './MainBanner'
 import { Map }        from './Map'
 import OurProcessSimple from './OurProcessSimple'
 import { Services }   from '../Services'
 import Team           from './Team'
 import Testimonials   from './Testimonials'
+
 
 class Home extends React.Component {
   render () {
@@ -30,6 +32,7 @@ class Home extends React.Component {
         <OurProcessSimple />
         <Team />
         <Testimonials />{ /* and Clients */ }
+        <Industries />
         <ContactUs2 />
         <Map />
       </div>
