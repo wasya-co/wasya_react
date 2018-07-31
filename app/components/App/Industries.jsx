@@ -16,9 +16,11 @@ class Industries extends React.Component {
       <div>
         <SectionHeader>Industries</SectionHeader>
         <Grid>
-          <Row xs={12}>
-            <p>While primarily we help high-tech startups grow from zero to one, find product-market fit, release the first product or service, establish a viable project management pattern, or embrace a tried and true development methodology -- our technical development services are uniformly applicable across the board.</p>
-            <p>We develop applications for the cunstruction indistry just as rapidly and effectively as for any other. We enjoy and strive in the challenges of security and privacy necessitated for achieving HIPAA compliance. Addressing the goal of cotinuous innovation in SaaS is our bread and butter.</p>
+          <Row>
+            <Col xs={12}>
+              <p>While primarily we help high-tech startups grow from zero to one, find product-market fit, release the first product or service, establish a viable project management pattern, or embrace a tried and true development methodology -- our technical development services are uniformly applicable across the board.</p>
+              <p>We develop applications for the cunstruction indistry just as rapidly and effectively as for any other. We enjoy and strive in the challenges of security and privacy necessitated for achieving HIPAA compliance. Addressing the goal of cotinuous innovation in SaaS is our bread and butter.</p>
+            </Col>
           </Row>
           <Row>
             <Col xs={6} md={4} >

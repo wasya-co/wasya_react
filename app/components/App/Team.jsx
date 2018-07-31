@@ -17,6 +17,7 @@ import bondar  from './images/team/bondar_500x500.jpg'
 import zach    from './images/team/zach_500x500.jpg'
 import d       from './images/team/default_500x500.jpg'
 import bugra   from './images/team/bugra_500x500.jpg'
+import kay     from './images/team/kay_500x500.jpg'
 
 class TeamMember extends React.Component {
   render () {
@@ -164,10 +165,10 @@ class Team extends React.Component {
         title: 'Software Developer',
         description: [],
       },
-      casio: {
-        image: d,
-        name: 'Casio Batista',
-        title: 'International Relations',
+      kay: {
+        image: kay,
+        name: 'Kay Brown',
+        title: 'Graphic Designer',
         description: [],
       },
     } }
@@ -218,7 +219,7 @@ class Team extends React.Component {
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.jonathan} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.theresa} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.bibas} /></Col>
-          { /* <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.casio} /></Col> */ }
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.kay} /></Col>
         </Row>
         { /* <Row>
           <Col xs={12}>
