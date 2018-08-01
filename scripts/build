@@ -7,7 +7,6 @@ if ! (( ssh-add -L | grep mac_id_rsa )) ; then
 fi
 
 tagNumber=`git branch | grep -e "^*" | cut -d' ' -f 2`
-echo "tag number:"
 echo "$tagNumber"
 
 npm run test-travis &&

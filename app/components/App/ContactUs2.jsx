@@ -26,7 +26,7 @@ class ContactUs2 extends React.Component {
 
         <div className="content-area">
           <div className="container">
-            <p>Schedule a call at <a className="a-border" href="https://calendly.com/victorp/30min">https://calendly.com/victorp/30min</a> or fill out the form below.</p>
+            { /* <p>Schedule a call at <a className="a-border" href="https://calendly.com/victorp/30min">https://calendly.com/victorp/30min</a> or fill out the form below.</p> */ }
             <div className="row">
               <div className="col-lg-9 col-md-8 col-sm-7 col-xs-12">
                 <h4>Contact form</h4>
