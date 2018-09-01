@@ -13,7 +13,7 @@ class MyMapPoint extends React.Component {
 class MapInner extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { mapKey: "AIzaSyDq4uuB3LCutinm_3OvMoPeb6vzBdhOpyc" }
+    this.state = { mapKey: "AIzaSyAGKhZdFZOaoY-BX3N61M_k7o4NeHQbAFc" }
   }
   render () {
     return (
