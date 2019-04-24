@@ -90,8 +90,8 @@ class IndustrialHeader extends React.Component {
               <div className={`header-nav navbar-collapse ${this.props.navCollapse ? 'collapse' : ''}`} >
                 <ul className="nav navbar-nav">
                   <li><Link href="javascript:;" onClick={ () => { this.goto('about') } } >About</Link></li>
-                  <li><Link href="javascript:;" onClick={() => this.goto('team')}>Team</Link></li>
-                  <li><Link href="javascript:;" onClick={() => this.goto('services')} >Services</Link></li>
+                  { /* <li><Link href="javascript:;" onClick={() => this.goto('team')}>Team</Link></li> */ }
+                  { /* <li><Link href="javascript:;" onClick={() => this.goto('services')} >Services</Link></li> */ }
                   <li><Link to={AppRouter.ourProcessLink()} >Our Process</Link></li>
                   <li><Link to={AppRouter.ourWorkLink()} >Our Work</Link></li>
 
