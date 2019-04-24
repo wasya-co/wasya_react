@@ -3,54 +3,38 @@ import GoogleMapReact from 'google-map-react'
 import { Grid, Row, Col } from 'react-bootstrap'
 
 import wImg      from './images/w_30x30.png'
+import chicagoImg from './images/map/chicago.fin.jpg'
 
-class MyMapPoint extends React.Component {
-  render () {
-    return (<div style={this.props.style} ></div>)
-  }
-}
-
-class MapInner extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { mapKey: "AIzaSyDq4uuB3LCutinm_3OvMoPeb6vzBdhOpyc" }
-  }
-  render () {
-    return (
-      <div>
-        <h4>Our Location</h4>
-        <div style={{ height: 450, width: '100%' }}>
-          <GoogleMapReact defaultCenter={{ lat: 37.3195624, lng: -121.9141499 }} defaultZoom={14}
-                          key={this.state.mapKey} bootstrapURLKeys={{ key: this.state.mapKey}} >
-            <MyMapPoint 
-              style={{ background: `url(${wImg})`, width: 30, height: 30 }} 
-              lat={37.3195624} lng={-121.9141499} />
-          </GoogleMapReact>
-        </div>
-      </div>
-    )
-  }
-}
+import SectionHeader from './SectionHeader'
 
 class Map extends React.Component {
   render () {
     // console.log('+++ rendering map')
 
     return (
-      <Grid>
+      <div>
+        <SectionHeader>Our Location</SectionHeader>
         <Row>
-          <Col xs={12}>
-            <MapInner />
+          <Col xs={12} md={6}>
+            <br /><br /><br />
+            <h3 style={{ padding: '60px', textAlign: 'right' }} >
+              We are located in Chicago, IL <br /><br />
+              Our list of clients includes <br />
+              companies on East and West coast, <br />
+              as well as the Midwest.
+            </h3>
+          </Col>
+          <Col xs={12} md={6}>
+            <img src={chicagoImg} alt='' />
           </Col>
         </Row>
-      </Grid>
+      </div>
     )
   }
 }
 
 export default Map
 export {
-  MapInner,
   Map,
 }
 
