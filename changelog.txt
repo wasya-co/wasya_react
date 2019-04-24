@@ -33,3 +33,5 @@ master - gets deployed (hm...)
 2.0.14 - careers page, again.
          added one case study, reworked the navigation to not have
 				 "loading..." pages
+2.1.0 - 20190423 It's been a while and I'm happy that it just works.
+

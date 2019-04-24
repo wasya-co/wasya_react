@@ -18,7 +18,7 @@ import OurProcessSimple from './OurProcessSimple'
 import { Services }   from '../Services'
 import Team           from './Team'
 import Testimonials   from './Testimonials'
-
+import Pricing        from './Pricing'
 
 class Home extends React.Component {
   render () {
@@ -33,6 +33,7 @@ class Home extends React.Component {
         <Team />
         <Testimonials />{ /* and Clients */ }
         <Industries />
+        <Pricing />
         <ContactUs2 />
         <Map />
       </div>

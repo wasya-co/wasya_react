@@ -19,7 +19,7 @@ class ContactUs2 extends React.Component {
           <div className="container">
             <div className="dez-bnr-inr-entry">
               <h1 className="text-white">Contact Us</h1>
-              <p className="text-white">We are commited to replying to your request within 90 minutes</p>
+              <p className="text-white">We are commited to replying to your request on the same day</p>
             </div>
           </div>
         </div>
