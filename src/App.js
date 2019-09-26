@@ -8,7 +8,7 @@ import { StylesProvider } from "@material-ui/styles";
 import { ThemeProvider } from "styled-components";
 
 import maTheme from "./theme";
-import Routes from "./routes/Routes";
+import Routes from "./Routes";
 
 function App({ theme }) {
   return (
