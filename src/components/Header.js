@@ -239,21 +239,6 @@ const Header = ({ onDrawerToggle }) => (
               <Input placeholder="Search projects…" />
             </Search>
           </Grid>
-          <Grid item xs />
-          <Grid item>
-            <IconButton color="inherit">
-              <Indicator badgeContent={3}>
-                <MessageSquare />
-              </Indicator>
-            </IconButton>
-            <IconButton color="inherit">
-              <Indicator badgeContent={7}>
-                <Bell />
-              </Indicator>
-            </IconButton>
-            <LanguageMenu />
-            <UserMenu />
-          </Grid>
         </Grid>
       </Toolbar>
     </AppBar>

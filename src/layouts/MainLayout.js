@@ -12,6 +12,9 @@ import { isWidthUp } from "@material-ui/core/withWidth"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import Sidebar from "../components/Sidebar"
+
+const drawerWidth = 260
 
 const Paper = styled(MuiPaper)(spacing)
 
@@ -19,6 +22,13 @@ const AppContent = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+`;
+
+const Drawer = styled.div`
+  ${props => props.theme.breakpoints.up("md")} {
+    width: ${drawerWidth}px;
+    flex-shrink: 0;
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -55,17 +65,46 @@ const Root = styled.div`
   display: flex;
   min-height: 100%;
 `;
-const Root2 = styled.div``;
+
+const Root2 = styled.div`
+  display: flex;
+  min-height: 100vh;
+`;
+
+const Drawer2 = styled.div``;
 
 class MainLayout extends React.Component {
+  state = {
+    mobileOpen: false
+  }
+
+  handleDrawerToggle = () => {
+    this.setState(state => ({ mobileOpen: !state.mobileOpen }));
+  }
+
   render () {
     const { children, width } = this.props
     return (
       <Root2>
         <CssBaseline />
         <GlobalStyle />
+        <Drawer2>
+          <Hidden mdUp implementation="js">
+            <Sidebar
+              PaperProps={{ style: { width: drawerWidth } }}
+              variant="temporary"
+              open={this.state.mobileOpen}
+              onClose={this.handleDrawerToggle}
+            />
+          </Hidden>
+          { /* <Hidden smDown implementation="css">
+            <Sidebar
+              PaperProps={{ style: { width: drawerWidth } }}
+            />
+          </Hidden> */ }
+        </Drawer2>
         <AppContent>
-          <Header />
+          <Header onDrawerToggle={this.handleDrawerToggle} />
           <MainContent p={isWidthUp("lg", width) ? 10 : 8}>
             {children}
           </MainContent>
