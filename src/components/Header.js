@@ -8,11 +8,12 @@ import {
   Grid,
   Hidden,
   InputBase,
+  Link,
   Menu,
   MenuItem,
   AppBar as MuiAppBar,
   IconButton as MuiIconButton,
-  Toolbar
+  Toolbar, Typography
 } from "@material-ui/core";
 
 import { Menu as MenuIcon } from "@material-ui/icons";
@@ -93,6 +94,11 @@ const Flag = styled.img`
   border-radius: 50%;
   width: 22px;
   height: 22px;
+`;
+
+const MainBar = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
 class LanguageMenu extends Component {
@@ -215,6 +221,20 @@ class UserMenu extends Component {
   }
 }
 
+class Logo extends React.Component {
+  render () {
+    return (
+      <Typography>Logo!</Typography>)
+  }
+}
+
+class MainMenu extends React.Component {
+  render () {
+    return (
+      <Typography>Main Menu!</Typography>)
+  }
+}
+
 const Header = ({ onDrawerToggle }) => (
   <React.Fragment>
     <AppBar position="sticky" elevation={0}>
@@ -222,27 +242,21 @@ const Header = ({ onDrawerToggle }) => (
         <Grid container alignItems="center">
           <Hidden mdUp>
             <Grid item>
-              <IconButton
-                color="inherit"
-                aria-label="Open drawer"
-                onClick={onDrawerToggle}
-              >
-                <MenuIcon />
-              </IconButton>
+              <IconButton color="inherit" aria-label="Open drawer" onClick={onDrawerToggle} ><MenuIcon /></IconButton>
             </Grid>
           </Hidden>
           <Grid item>
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <Input placeholder="Search projects…" />
-            </Search>
+            <MainBar>
+              <Logo />
+              <MainMenu>
+                <Link to="/">Home</Link>
+              </MainMenu>
+            </MainBar>
           </Grid>
         </Grid>
       </Toolbar>
     </AppBar>
   </React.Fragment>
-);
+)
 
 export default connect()(withTheme(Header));

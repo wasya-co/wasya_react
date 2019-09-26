@@ -32,29 +32,12 @@ const ListItem = styled(MuiListItem)`
 function Footer() {
   return (
     <Wrapper>
-      <Grid container spacing={0}>
-        <Hidden smDown>
-          <Grid container item xs={12} md={6}>
-            <List>
-              <ListItem component="a" href="#">
-                <ListItemText primary="Support" />
-              </ListItem>
-              <ListItem component="a" href="#">
-                <ListItemText primary="Help Center" />
-              </ListItem>
-              <ListItem component="a" href="#">
-                <ListItemText primary="Privacy" />
-              </ListItem>
-              <ListItem component="a" href="#">
-                <ListItemText primary="Terms of Service" />
-              </ListItem>
-            </List>
-          </Grid>
-        </Hidden>
-        <Grid container item xs={12} md={6} justify="flex-end">
+      <Grid container justify="flex-end">
+        <Grid item ></Grid>
+        <Grid item xs={12} md={6}>
           <List>
             <ListItem>
-              <ListItemText primary="© 2019 - Material App" />
+              <ListItemText primary="© 2019 - Wasya Co" />
             </ListItem>
           </List>
         </Grid>
