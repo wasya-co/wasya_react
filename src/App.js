@@ -1,14 +1,22 @@
-import React from "react";
-import { connect } from "react-redux";
+import React from "react"
+import { connect } from "react-redux"
 
-import DateFnsUtils from "@date-io/date-fns";
-import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
-import { MuiPickersUtilsProvider } from "@material-ui/pickers";
-import { StylesProvider } from "@material-ui/styles";
-import { ThemeProvider } from "styled-components";
+import DateFnsUtils from "@date-io/date-fns"
+import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider"
+import { MuiPickersUtilsProvider } from "@material-ui/pickers"
+import { StylesProvider } from "@material-ui/styles"
+import { ThemeProvider } from "styled-components"
 
-import maTheme from "./theme";
-import Routes from "./Routes";
+import maTheme from "./theme"
+import Routes from "./Routes"
+
+import WebFont from 'webfontloader'
+
+WebFont.load({
+  google: {
+    families: ['Titillium Web:300,400,700', 'sans-serif']
+  }
+});
 
 function App({ theme }) {
   return (

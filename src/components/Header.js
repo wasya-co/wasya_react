@@ -1,10 +1,11 @@
-import React, { Component } from "react";
-import styled, { withTheme } from "styled-components";
-import { connect } from "react-redux";
-import { darken } from "polished";
+import React, { Component } from "react"
+import styled, { withTheme } from "styled-components"
+import { connect } from "react-redux"
+import { darken } from "polished"
 
 import {
-  Badge,
+  Badge, 
+  Container,
   Grid,
   Hidden,
   InputBase,
@@ -12,11 +13,14 @@ import {
   Menu,
   MenuItem,
   AppBar as MuiAppBar,
+  Button as MuiButton,
   IconButton as MuiIconButton,
   Toolbar, Typography
 } from "@material-ui/core";
 
 import { Menu as MenuIcon } from "@material-ui/icons";
+
+import { spacing } from "@material-ui/system"
 
 import {
   Bell,
@@ -29,7 +33,12 @@ const AppBar = styled(MuiAppBar)`
   background: ${props => props.theme.header.background};
   color: ${props => props.theme.header.color};
   box-shadow: ${props => props.theme.shadows[1]};
+
+  @media screen and (min-width: 960px) {}
+
 `;
+
+const Button = styled(MuiButton)(spacing);
 
 const IconButton = styled(MuiIconButton)`
   svg {
@@ -224,19 +233,31 @@ class UserMenu extends Component {
 class Logo extends React.Component {
   render () {
     return (
-      <Typography>Logo!</Typography>)
+      <Typography variant="h1" style={{ lineHeight: '100px', height: '100px' }} >Piousbox</Typography>)
   }
 }
 
+const MainMenuStyle = styled.div`
+  margin-left: 100px;
+  line-height: 100px;
+  height: 100px;
+  > a {
+    padding-left: 25px;
+  }
+`;
 class MainMenu extends React.Component {
   render () {
-    return (
-      <Typography>Main Menu!</Typography>)
+    return (<React.Fragment>
+      <MainMenuStyle>
+        { this.props.children }
+      </MainMenuStyle>
+    </React.Fragment>)
   }
 }
 
 const Header = ({ onDrawerToggle }) => (
   <React.Fragment>
+    <Container fixed>
     <AppBar position="sticky" elevation={0}>
       <Toolbar>
         <Grid container alignItems="center">
@@ -245,17 +266,23 @@ const Header = ({ onDrawerToggle }) => (
               <IconButton color="inherit" aria-label="Open drawer" onClick={onDrawerToggle} ><MenuIcon /></IconButton>
             </Grid>
           </Hidden>
-          <Grid item>
-            <MainBar>
-              <Logo />
-              <MainMenu>
-                <Link to="/">Home</Link>
-              </MainMenu>
-            </MainBar>
-          </Grid>
+          <Hidden smDown>
+            <Grid item spacing={6} >
+              
+                <MainBar >
+                  <Logo />
+                  <MainMenu>
+                    <Button mr={2} color='secondary' variant='outlined' to="/">Articles</Button>
+                    <Button mr={2} color='secondary' variant='outlined' to="/pages/contact">Contact</Button>
+                  </MainMenu>
+                </MainBar>
+              
+            </Grid>
+          </Hidden>
         </Grid>
       </Toolbar>
     </AppBar>
+    </Container>
   </React.Fragment>
 )
 

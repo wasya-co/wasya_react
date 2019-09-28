@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
   body,
   #root {
     height: 100%;
+    font-family: Roboto, sans-serif;
   }
 
   body {

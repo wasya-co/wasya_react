@@ -11,7 +11,8 @@ const typography = {
     "sans-serif",
     '"Apple Color Emoji"',
     '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"'
+    '"Segoe UI Symbol"',
+    'Titillium Web'
   ].join(","),
   fontSize: 14,
   fontWeightLight: 300,
