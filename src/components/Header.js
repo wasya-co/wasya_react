@@ -17,7 +17,7 @@ import {
   Button as MuiButton,
   IconButton as MuiIconButton,
   Toolbar, Typography
-} from "@material-ui/core";
+} from "@material-ui/core"
 
 import { Menu as MenuIcon } from "@material-ui/icons";
 

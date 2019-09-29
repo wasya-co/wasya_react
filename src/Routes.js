@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import Home from './pages/Home'
 import TermsAndConditions from './pages/TermsAndConditions'
 import Page404 from "./pages/Page404"
+import Article from './components/Article'
 
 
 /**
@@ -85,6 +86,10 @@ const Routes = () => (
         path="/"
         exact
         render={() => <MainLayout><Home /></MainLayout>} />
+      <Route
+        key="article-view"
+        path="/articles/:slug"
+        render={() => <MainLayout><Article /></MainLayout>} />
       <Route
         key="terms_and_conditions"
         path="/pages/terms-and-conditions"

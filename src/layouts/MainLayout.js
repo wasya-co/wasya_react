@@ -41,16 +41,17 @@ const GlobalStyle = createGlobalStyle`
   #root {
     height: 100%;
     font-family: Roboto, sans-serif;
+    background: white;
   }
 
-  body {
+  /* body {
     background: ${props => props.theme.body.background};
-  }
+  } */
 `;
 
 const MainContent = styled(Paper)`
   flex: 1;
-  background: ${props => props.theme.body.background};
+  /* background: ${props => props.theme.body.background}; */
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     flex: none;
@@ -110,9 +111,9 @@ class MainLayout extends React.Component {
         </Drawer2>
         <AppContent>
           <Header onDrawerToggle={this.handleDrawerToggle} />
-          <MainContent >
+          
             {children}
-          </MainContent>
+          
           <Footer />
         </AppContent>
       </Root2>
