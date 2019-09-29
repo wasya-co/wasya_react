@@ -1,13 +1,16 @@
-import React from "react";
-import styled from "styled-components";
+import React from "react"
+import * as Icon from "react-feather"
+import styled from "styled-components"
 
 import {
+  Container,
   Grid,
   Hidden,
-  List,
-  ListItemText,
-  ListItem as MuiListItem
-} from "@material-ui/core";
+  List, Link, ListItemText,
+  ListItem as ListItem2,
+  ListItem as MuiListItem,
+  Typography,
+} from "@material-ui/core"
 
 const Wrapper = styled.div`
   padding: ${props => props.theme.spacing(1) / 4}px
@@ -29,21 +32,33 @@ const ListItem = styled(MuiListItem)`
   }
 `;
 
-function Footer() {
-  return (
-    <Wrapper>
-      <Grid container justify="flex-end">
-        <Grid item ></Grid>
-        <Grid item xs={12} md={6}>
-          <List>
-            <ListItem>
-              <ListItemText primary="© 2019 - Wasya Co" />
-            </ListItem>
-          </List>
-        </Grid>
-      </Grid>
-    </Wrapper>
-  );
+class Footer extends React.Component {
+  render () {
+    return (
+      <Wrapper>
+        <Container fixed >
+          <Grid container style={{margin: '12px 0 50px 0'}}>
+            <Grid item md={4}>
+              <Typography style={{ padding: '16px' }} >© 2019 - Wasya Co</Typography>
+            </Grid>
+            <Grid item md={4}>
+              <List>
+                <ListItem2><Link href="/pages/terms_and_conditions">Terms and Conditions</Link></ListItem2>
+                <ListItem2><Link href="/pages/sitemap.xml">Sitemap</Link></ListItem2>
+              </List>
+            </Grid>
+            <Grid item md={4}>
+              <List>
+                <ListItem><Icon.Facebook /></ListItem>
+                <ListItem><Icon.Linkedin /></ListItem>
+                <ListItem><Icon.Twitter /></ListItem>
+              </List>
+            </Grid>
+          </Grid>
+        </Container>
+      </Wrapper>
+    )
+  }
 }
 
-export default Footer;
+export default Footer

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import styled, { withTheme } from "styled-components"
 import { connect } from "react-redux"
 import { darken } from "polished"
+import { Redirect } from 'react-router-dom' 
 
 import {
   Badge, 
@@ -255,35 +256,51 @@ class MainMenu extends React.Component {
   }
 }
 
-const Header = ({ onDrawerToggle }) => (
-  <React.Fragment>
-    <Container fixed>
-    <AppBar position="sticky" elevation={0}>
-      <Toolbar>
-        <Grid container alignItems="center">
-          <Hidden mdUp>
-            <Grid item>
-              <IconButton color="inherit" aria-label="Open drawer" onClick={onDrawerToggle} ><MenuIcon /></IconButton>
-            </Grid>
-          </Hidden>
-          <Hidden smDown>
-            <Grid item spacing={6} >
-              
+class Header extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { redirectTo: null }
+  }
+
+  goTo = (which) => {
+    this.setState({ redirectTo: which })
+  }
+
+  render () {
+    const { onDrawerToggle } = this.props
+    if (this.state.redirectTo) {
+      return <Redirect to={this.state.redirectTo} />
+    }
+
+    return (
+      <React.Fragment>
+        <AppBar position="sticky" elevation={0}>
+        <Container fixed >
+        
+          
+            <Grid container alignItems="center">
+              <Hidden mdUp>
+                <Grid item>
+                  <IconButton color="inherit" aria-label="Open drawer" onClick={onDrawerToggle} ><MenuIcon /></IconButton>
+                </Grid>
+              </Hidden>
+              <Hidden smDown>
                 <MainBar >
                   <Logo />
                   <MainMenu>
-                    <Button mr={2} color='secondary' variant='outlined' to="/">Articles</Button>
-                    <Button mr={2} color='secondary' variant='outlined' to="/pages/contact">Contact</Button>
+                    <Button mr={2} color='secondary' variant='outlined' onClick={()=>this.goTo("/")} >Articles</Button>
+                    <Button mr={2} color='secondary' variant='outlined' onClick={()=>this.goTo("/pages/contact")} >Contact</Button>
                   </MainMenu>
                 </MainBar>
-              
+              </Hidden>
             </Grid>
-          </Hidden>
-        </Grid>
-      </Toolbar>
-    </AppBar>
-    </Container>
-  </React.Fragment>
-)
+          
+        
+        </Container>
+        </AppBar>
+      </React.Fragment>)
+  }
+}
+
 
 export default connect()(withTheme(Header));

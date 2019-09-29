@@ -22,6 +22,10 @@ const AppContent = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+
+  * .debug {
+    border: 1px solid yellow;
+  }
 `;
 
 const Drawer = styled.div`
@@ -106,7 +110,7 @@ class MainLayout extends React.Component {
         </Drawer2>
         <AppContent>
           <Header onDrawerToggle={this.handleDrawerToggle} />
-          <MainContent p={isWidthUp("lg", width) ? 10 : 8}>
+          <MainContent >
             {children}
           </MainContent>
           <Footer />

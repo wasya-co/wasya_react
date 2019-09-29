@@ -17,24 +17,16 @@ const style = {
 };
 const HalfHero = styled.div`
   @media screen and (min-width: 960px) {
-    width: 464px;
+    width: 448px;
     float: right;
   }
 `;
-class Home extends React.Component {
+class TermsAndConditions extends React.Component {
   render () {
     return (<React.Fragment>
-      <Grid spacing={0} container >
-        <Grid item md={6}>
-          <HalfHero >
-            <h1>Welcome!</h1>
-          </HalfHero>
-        </Grid>
-        <Grid item md={6} style={style}>
-        </Grid>
-      </Grid>
+      <h1>Terms And Conditions</h1>
     </React.Fragment>)
   }
 }
 
-export default Home
+export default TermsAndConditions

@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 // import { dashboard as dashboardRoutes, auth as authRoutes } from "./index"
 
 import MainLayout from './layouts/MainLayout'
+import Contact from './pages/Contact'
 import Home from './pages/Home'
+import TermsAndConditions from './pages/TermsAndConditions'
 import Page404 from "./pages/Page404"
 
 
@@ -82,7 +84,17 @@ const Routes = () => (
         key="home"
         path="/"
         exact
-        render={() => <MainLayout><Home name='authed' /></MainLayout>} />
+        render={() => <MainLayout><Home /></MainLayout>} />
+      <Route
+        key="terms_and_conditions"
+        path="/pages/terms-and-conditions"
+        exact
+        render={() => <MainLayout><TermsAndConditions /></MainLayout>} />
+      <Route
+        key="contact"
+        path="/pages/contact"
+        exact
+        render={() => <MainLayout><Contact /></MainLayout>} />
       <Route
         render={() => (
           <MainLayout>

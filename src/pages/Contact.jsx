@@ -7,8 +7,6 @@ import {
 
 import styled from "styled-components"
 
-// import DashboardLayout from '../layouts/Dashboard'
-
 import hero_1 from './hero_1.jpg'
 const style = {
   backgroundImage: `url(${hero_1})`,
@@ -17,24 +15,19 @@ const style = {
 };
 const HalfHero = styled.div`
   @media screen and (min-width: 960px) {
-    width: 464px;
+    width: 448px;
     float: right;
   }
 `;
-class Home extends React.Component {
+class Contact extends React.Component {
   render () {
     return (<React.Fragment>
-      <Grid spacing={0} container >
-        <Grid item md={6}>
-          <HalfHero >
-            <h1>Welcome!</h1>
-          </HalfHero>
-        </Grid>
-        <Grid item md={6} style={style}>
-        </Grid>
-      </Grid>
+      <Container fixed >
+        <h1>Contact</h1>
+        <p>Please send me an email to piousbox at gmail dot com.</p>
+      </Container>
     </React.Fragment>)
   }
 }
 
-export default Home
+export default Contact
