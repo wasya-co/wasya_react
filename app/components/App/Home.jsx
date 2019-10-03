@@ -33,7 +33,7 @@ class Home extends React.Component {
         <Team />
         <Testimonials />{ /* and Clients */ }
         <Industries />
-        <Pricing />
+        { /* <Pricing /> */ }
         <ContactUs2 />
         <Map />
       </div>

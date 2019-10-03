@@ -18,7 +18,7 @@ import SectionHeader from './SectionHeader'
 
 let styles = {
   insideImg: { width: '75%', flex: 1 },
-  flexImg: { flexDirection: 'column', textAlign: 'center' },
+  flexImg: { flexDirection: 'column', textAlign: 'center', marginBottom: '30px' },
 }
 
 class Industries extends React.Component {
@@ -47,9 +47,6 @@ class Industries extends React.Component {
               <img style={styles.insideImg} src={publishingImg} alt='' />
               <h5 className="center" >Publishing</h5>
             </Col>
-          </Row>
-          <br /><br />
-          <Row>
             <Col xs={6} md={4} style={styles.flexImg} >
               <img style={styles.insideImg} src={educationImg} alt='' />
               <h5 className="center" >Education</h5>

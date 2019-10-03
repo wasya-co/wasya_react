@@ -194,10 +194,10 @@ class Team extends React.Component {
           </Col>
         </Row>
         <Row>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.zach} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.steve} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.oleg} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.bondar} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.zach} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.steve} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.oleg} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.bondar} /></Col>
         </Row>
         <Row>
           <Col xs={12}>
@@ -212,7 +212,7 @@ class Team extends React.Component {
         <Row>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.victor} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.kim} /></Col>
-          <Col xs={8} xsOffset={2} sm={6} smOffset={3} md={3} mdOffset={0} ><TeamMember member={this.state.team.brad} /></Col>
+          <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.brad} /></Col>
           <Col xs={8} xsOffset={2} sm={6} smOffset={0} md={3} mdOffset={0} ><TeamMember member={this.state.team.bugra} /></Col>
         </Row>
         { /* <Row>
