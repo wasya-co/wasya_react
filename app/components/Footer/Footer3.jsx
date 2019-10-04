@@ -55,6 +55,7 @@ class Footer3 extends React.Component {
                       <ul>
                         <li>
                           <Link to="/account">Account</Link>
+                          <Link to="/sitemap.xml">Sitemap</Link>
                         </li>
                       </ul>
                     </div>
