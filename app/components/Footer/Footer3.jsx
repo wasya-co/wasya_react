@@ -54,7 +54,7 @@ class Footer3 extends React.Component {
                       <div className="dez-separator bg-primary"></div>
                       <ul>
                         <li><Link to="/account">Account</Link></li>
-                        <li><Link to="/sitemap.xml">Sitemap</Link></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
                       </ul>
                     </div>
                   </Col>
