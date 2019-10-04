@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+set -ex
 
 if ! (( ssh-add -L | grep mac_id_rsa )) ; then
   ssh-add ~/.ssh/mac_id_rsa
@@ -9,15 +9,16 @@ fi
 tagNumber=`git branch | grep -e "^*" | cut -d' ' -f 2`
 echo "$tagNumber"
 
-npm run test-travis &&
+npm run test-travis
 
-git checkout master &&
-git merge "$tagNumber" &&
-npm run clean &&
-npm run build &&
-git add . &&
-git commit -m 'auto-build on `date +%Y%m%d`' ;
-git push origin master &&
-git checkout "$tagNumber" &&
+git checkout master
+git merge "$tagNumber"
+npm run clean
+npm run build
+cp sitemap.xml build/
+git add .
+git commit -m 'auto-build on `date +%Y%m%d`'
+git push origin master
+git checkout "$tagNumber"
 
 echo "wasya_react build ok"
