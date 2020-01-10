@@ -10,3 +10,10 @@ export const CONST = {
   navCollapse: 'const-nav-collapse',
 }
 
+
+
+
+////////////////////task////////////////
+export const FETCH_CATEGORY_REQUEST = 'FETCH_CATEGORY_REQUEST';
+export const FETCH_CATEGORY_SUCCESS = 'FETCH_CATEGORY_SUCCESS';
+export const FETCH_CATEGORY_FAILURE = 'FETCH_CATEGORY_FAILURE';
