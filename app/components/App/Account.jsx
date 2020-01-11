@@ -60,8 +60,8 @@ class CheckoutForm extends React.Component {
 
   doPay () {
     let payload = Object.assign({}, { token: this.state.token,
-                                      email: this.state.invoiceEmail, number: this.state.invoiceNumber,
-                                      amount: this.state.invoiceAmount, })
+      email: this.state.invoiceEmail, number: this.state.invoiceNumber,
+      amount: this.state.invoiceAmount, })
     let url = `${config.apiUrl}${AppRouter.makePayment}`
     fetch(url, {
       method: 'POST',

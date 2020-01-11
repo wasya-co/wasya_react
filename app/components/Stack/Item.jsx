@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Grid, Row, Col,
-         Panel,
+  Panel,
 } from 'react-bootstrap'
 
 import Center from '../Center'

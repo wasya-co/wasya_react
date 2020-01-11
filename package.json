@@ -120,10 +120,7 @@
         2,
         "global"
       ],
-      "indent": [
-        2,
-        2
-      ],
+      "indent": 0,
       "quotes": 0,
       "no-alert": 0,
       "no-underscore-dangle": 0,

@@ -25,8 +25,8 @@ const uiReducers = combineReducers({
 
 
 export default combineReducers({
-    apiLocation,
-    navCollapse,
-    entities: entitiesReducers,
-    ui: uiReducers,
-  })
+  apiLocation,
+  navCollapse,
+  entities: entitiesReducers,
+  ui: uiReducers,
+})

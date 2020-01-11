@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './_ContactUs.scss';
 
 import { Alert,
-         Grid, Row, Col,
-         Form, FormGroup, FormControl, 
-         Button } from 'react-bootstrap'
+  Grid, Row, Col,
+  Form, FormGroup, FormControl, 
+  Button } from 'react-bootstrap'
 
 import bg from './images/green_dust_scratch.png'
 

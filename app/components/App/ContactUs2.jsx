@@ -34,49 +34,49 @@ class ContactUs2 extends React.Component {
                 <div className="p-a30 bg-white clearfix m-b30">
                   <form method="post" className="dzForm" id="contactForm" action="/contact_us.php" >
                     <input type="hidden" value="Contact" name="dzToDo" />
-                      <div className="row">
-                        <div className="col-md-6">
-                          <div className="form-group">
-                            <div className="input-group"> <span className="input-group-addon"><i className="fa fa-user"></i></span>
-                              <input name="name" type="text" required="" className="form-control" placeholder="Your Name" />
-                            </div>
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <div className="input-group"> <span className="input-group-addon"><i className="fa fa-user"></i></span>
+                            <input name="name" type="text" required="" className="form-control" placeholder="Your Name" />
                           </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="form-group">
-                            <div className="input-group"> <span className="input-group-addon"><i className="fa fa-envelope"></i></span>
-                              <input name="email" type="email" className="form-control" required="" placeholder="Email" />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="form-group">
-                            <div className="input-group">
-                              <span className="input-group-addon">
-                                What is 7 + 5?
-                              </span>
-                              <input name="verification" type="number" className="form-control" required="" />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="form-group">
-                            <div className="input-group"> <span className="input-group-addon"><i className="fa fa-envelope"></i></span>
-                              <input name="phone" type="text" className="form-control" placeholder="Phone" />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-md-12">
-                          <div className="form-group">
-                            <div className="input-group"> <span className="input-group-addon v-align-t"><i className="fa fa-pencil"></i></span>
-                              <textarea name="descr" rows="4" className="form-control" required="" placeholder="Your Message"></textarea>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-md-12">
-                          <button name="submit" type="submit" value="Submit" className="site-button"> <span>Submit</span> </button>
                         </div>
                       </div>
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <div className="input-group"> <span className="input-group-addon"><i className="fa fa-envelope"></i></span>
+                            <input name="email" type="email" className="form-control" required="" placeholder="Email" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <div className="input-group">
+                            <span className="input-group-addon">
+                              What is 7 + 5?
+                            </span>
+                            <input name="verification" type="number" className="form-control" required="" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="form-group">
+                          <div className="input-group"> <span className="input-group-addon"><i className="fa fa-envelope"></i></span>
+                            <input name="phone" type="text" className="form-control" placeholder="Phone" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-12">
+                        <div className="form-group">
+                          <div className="input-group"> <span className="input-group-addon v-align-t"><i className="fa fa-pencil"></i></span>
+                            <textarea name="descr" rows="4" className="form-control" required="" placeholder="Your Message"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-12">
+                        <button name="submit" type="submit" value="Submit" className="site-button"> <span>Submit</span> </button>
+                      </div>
+                    </div>
                   </form>
                 </div>
               </div>

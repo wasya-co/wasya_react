@@ -2,7 +2,7 @@ import React    from 'react'
 import ReactDOM from 'react-dom'
 import { Link } from 'react-router'
 import { Grid, Row, Col,
-         Button,
+  Button,
 } from 'react-bootstrap'
 import scrollToElement from 'scroll-to-element'
 

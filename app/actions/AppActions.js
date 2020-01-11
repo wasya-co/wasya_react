@@ -8,14 +8,12 @@ import {
 
 export default {
   getItems() {
-    WebAPI.getItems()
-    .then((items) => {
+    WebAPI.getItems().then((items) => {
       AppDispatcher.dispatch({
         actionType: ITEMS_GET_SUCCESS,
         items: items
       });
-    })
-    .catch(() => {
+    }).catch(() => {
       AppDispatcher.dispatch({
         actionType: ITEMS_GET_ERROR
       });
