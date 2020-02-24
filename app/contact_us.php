@@ -31,26 +31,19 @@ if ($verification != '12') {
   $token = getenv('SLACK_TOKEN');
   $app_env = getenv('APP_ENV');
   $slack_url = getenv('SLACK_URL');
-
-  $curl = curl_init($slack_url);
-  curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-
-
   $message = json_encode(array(
     "text" => "@piousbox Contact from wasya.co form. Name: " . $name . " phone: " . $phone . " email: " . $email . " descr: " . $descr
   ));
 
-  var_dump($app_env);
+  $curl = curl_init($slack_url);
+  curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+    'Content-Type: application/json',                                                                                
+    'Content-Length: ' . strlen($message))                                                                       
+  ); 
 
-  $data = http_build_query([
-    // "token" => $token,
-    // "channel" => "general",
-    // "username" => "MySlackBot",
-    "text" => $message, //"Hello, Foo-Bar channel message.",
-  ]);
-
-  curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+  curl_setopt($curl, CURLOPT_POSTFIELDS, $message);
   $output = curl_exec($curl);
   curl_close($curl);
 }
