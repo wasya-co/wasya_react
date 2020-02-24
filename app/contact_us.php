@@ -1,6 +1,6 @@
 <?php
 
-$curl = curl_init("https://hooks.slack.com/services/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");
+$curl = curl_init("https://slack.com/api/chat.postMessage");
 curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
@@ -32,12 +32,25 @@ if ($verification != '12') {
   $output = "Verification failed. Please provide the correct verification answer.";
 } else {
 
-    $data = "payload=" . json_encode(array(
-        "text" => "@piousbox Contact from wasya.co form. Name: " . $name . " phone: " . $phone . " email: " . $email . " descr: " . $descr
-    ));
-    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-    $output = curl_exec($curl);
-    curl_close($curl);
+  $message = json_encode(array(
+    "text" => "@piousbox Contact from wasya.co form. Name: " . $name . " phone: " . $phone . " email: " . $email . " descr: " . $descr
+  ));
+  $token = getenv('SLACK_TOKEN');
+  $app_env = getenv('APP_ENV');
+
+  echo('the var dump:');
+  var_dump($app_env);
+
+  $data = http_build_query([
+    "token" => $token,
+    "channel" => "general",
+    "text" => $message, //"Hello, Foo-Bar channel message.",
+    "username" => "MySlackBot",
+  ]);
+
+  curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+  $output = curl_exec($curl);
+  curl_close($curl);
 }
 
 echo json_encode($output);
