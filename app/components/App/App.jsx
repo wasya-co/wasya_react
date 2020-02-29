@@ -19,7 +19,7 @@ import OurWork    from './OurWork'
 import { BizServices, TechServices } from '../Services'
 import AppRouter from './AppRouter'
 import { Career, Careers, DesignerCareer } from '../Careers'
-import { AbstractPage, TermsPage } from '../Pages'
+import { AbstractPage, TermsPage, WasyaCoPage } from '../Pages'
 
 const routes = [
   { path: AppRouter.rootPath,
@@ -73,8 +73,9 @@ const routes = [
       { path: AppRouter.ourWorkPath,     component: OurWork },
       { path: AppRouter.promo1Path,      component: Promo1 },      
       { path: AppRouter.termsPath,       component: TermsPage },
+      { path: AppRouter.wasyaCoPath,     component: WasyaCoPage },
     ],
-  },    
+  },
 ]
 
 class App extends React.Component {

@@ -147,7 +147,7 @@
     "devPort": 8000,
     "title": "Wasya Co - Rapid Software Development in the Silicon Valley",
     "static_domain": {
-      "development": "https://static.piousbox.com/",
+      "development": "static.piousbox.com",
       "production": "static.piousbox.com"
     },
     "asset_path": {

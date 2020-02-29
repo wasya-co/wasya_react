@@ -51,6 +51,8 @@ let AppRouter = {
 
   techServicesPath: '/services/technology',
   termsPath: '/pages/terms-of-service',
+
+  wasyaCoPath: '/pages/wasyaco',
 }
 
 export default AppRouter
