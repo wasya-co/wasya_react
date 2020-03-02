@@ -11,12 +11,19 @@ import signvoxLogo from './images/clients-logos/signvox2.jpg'
 import zmdigitalLogo from './images/clients-logos/zmdigital2.jpg'
 import redesLogo from './images/clients-logos/redes2.jpg'
 
+import Center from '../Center'
+
 class Testimonials extends React.Component {
   render () {
     return (
       <div className="section-full bg-white bg-img-fix content-inner">
         <div className="container">
-          <SectionHeader>Our Clients</SectionHeader>
+          
+          <Center>
+            <h2 className="text-uppercase">Our Clients</h2>
+            <div className="dez-separator-outer "><div className="dez-separator style-icon"><i className="fa fa-leaf"></i></div></div>
+          </Center>
+
           <Grid>
             <Row>
               <Col xs={12} md={6} >
@@ -49,14 +56,19 @@ class Testimonials extends React.Component {
           </Grid>
           <div style={{ height: '100px' }} />
 
-          <SectionHeader>What People Are Saying</SectionHeader>
+          { /* <SectionHeader>What People Are Saying</SectionHeader> */ }
+          <Center>
+            <h2 className="text-uppercase">What People Are Saying</h2>
+            <div className="dez-separator-outer "><div className="dez-separator style-icon"><i className="fa fa-leaf"></i></div></div>
+          </Center>
+
           <Grid>
             <Row>
               <Col sm={12} md={4}>
                 <div className="testimonial-3">
                   <div className="quote-left"></div>
                   <div className="testimonial-text">
-                    <p>Victor build the application quickly and according to spec. Great communication, great leader.</p>
+                    <p>They built the application quickly for me and according to spec. Great communication, great service.</p>
                   </div>
                   <div className="testimonial-detail"> <strong className="testimonial-name">Stephen Kim</strong> <span className="testimonial-position">Business Owner</span> </div>
                 </div>
@@ -65,7 +77,7 @@ class Testimonials extends React.Component {
                 <div className="testimonial-3">
                   <div className="quote-left"></div>
                   <div className="testimonial-text">
-                    <p>Victor provided the necessary technical guidance for the team to succeed, in tight deadlines. Victor was a pleasure to work with.</p>
+                    <p>Wasya Co provided the necessary technical guidance for the team to succeed, in tight deadlines. Victor was a pleasure to work with.</p>
                   </div>
                   <div className="testimonial-detail"> <strong className="testimonial-name">Operaevent</strong> <span className="testimonial-position">Bay Area Startup</span> </div>
                 </div>
@@ -81,6 +93,7 @@ class Testimonials extends React.Component {
               </Col>
             </Row>
           </Grid>
+
         </div>
       </div>
     )

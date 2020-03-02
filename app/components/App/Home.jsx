@@ -15,8 +15,9 @@ import Industries     from './Industries'
 import MainBanner     from './MainBanner'
 import { Map }        from './Map'
 import OurProcessSimple from './OurProcessSimple'
-import { Services }   from '../Services'
+import Services       from './Services'
 import Team           from './Team'
+import Technology     from './Technology'
 import Testimonials   from './Testimonials'
 import Pricing        from './Pricing'
 
@@ -29,10 +30,10 @@ class Home extends React.Component {
         <MainBanner />
         <About />
         <Services />
+        <Technology />
         <OurProcessSimple />
-        <Team />
+        { /* <Team /> */ }
         <Testimonials />{ /* and Clients */ }
-        <Industries />
         { /* <Pricing /> */ }
         <ContactUs2 />
         <Map />

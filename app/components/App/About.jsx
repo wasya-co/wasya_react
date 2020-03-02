@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Grid, Row, Col } from 'react-bootstrap'
 
 import logo3 from './images/logo-4.png' // Wásya Co
@@ -10,7 +9,6 @@ class About extends React.Component {
     this.state = {
       swipeAnim: 'swipe-anim-pre',
     }
-
     this.componentDidMount    = this.componentDidMount.bind(this)
     this.componentWillUnmount = this.componentWillUnmount.bind(this)
     this.handleScroll         = this.handleScroll.bind(this)
@@ -31,15 +29,19 @@ class About extends React.Component {
   }
 
   render () {
-    // console.log('+++ About render:', this.props, this.state)
-
     return (
       <div id="aboutContent" className="p-a30 bg-white m-b40">
         <div className="section-head text-center">
           <h2 className={`text-uppercase ${this.state.swipeAnim}`} ><img src={ logo3 } alt='wasya co' /></h2>
-          <div className="dez-separator-outer "><div className="dez-separator style-icon"><i className="fa fa-leaf"></i></div></div>
-          <br />
-          <p className="justify">We are a software consulting firm that specializes in full-cycle web application development. We service startups and small local businesses that are focused on technology. We utilize modern best development practices and provide our clients with cost-effective and performant tools.</p>
+          
+          <h3 style={{ maxWidth: '768px', textAlign: 'justify', margin: 'auto' }} >Wasya Co is a software development consultancy for small and medium Enterprises. 
+            We offer innovative technical solutions to complex and domain-specific business needs. See our Case Studies. 
+            We are proponents of agile, iterative development - see Our Process.</h3>
+
+          <br /><div className="dez-separator-outer ">
+            <div className="dez-separator style-icon"><i className="fa fa-leaf"></i></div>
+          </div><h3 className='center'>Est. 2013</h3>
+
         </div>
         <div className="section-content"></div>
       </div>

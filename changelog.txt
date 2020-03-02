@@ -35,4 +35,5 @@ master - gets deployed (hm...)
 				 "loading..." pages
 2.1.0 - 20190423 It's been a while and I'm happy that it just works.
         20200223 re-wire php config for nginx
+2.1.1 - 20200230 - video in hero, simpler homepage
 

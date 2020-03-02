@@ -10,13 +10,14 @@ import Account    from './Account'
 import { BlogIndex, BlogItem, CaseStudies } from '../Blog'
 import Contact from './ContactUs2'
 import Home       from './Home'
+import Industries from './Industries'
 import { FixedNav, UnfixedNav, Navigation } from '../Navigation'
 import OurProcess from './OurProcess'
 import Products   from './Products'
 import Promo1     from './Promo1'
 import OurStack   from '../Stack/Stack'
 import OurWork    from './OurWork'
-import { BizServices, TechServices } from '../Services'
+// import { BizServices, TechServices } from '../Services'
 import AppRouter from './AppRouter'
 import { Career, Careers, DesignerCareer } from '../Careers'
 import { AbstractPage, TermsPage, WasyaCoPage } from '../Pages'
@@ -39,8 +40,8 @@ const routes = [
     component: FixedNav,
     indexRoute: { component: Home },
     childRoutes: [
-      { path: AppRouter.bizServicesPath,  component: BizServices },
-      { path: AppRouter.techServicesPath, component: TechServices },
+      // { path: AppRouter.bizServicesPath,  component: BizServices },
+      // { path: AppRouter.techServicesPath, component: TechServices },
       { path: '/account',               component: Account },
     ],
   },
@@ -74,6 +75,7 @@ const routes = [
       { path: AppRouter.promo1Path,      component: Promo1 },      
       { path: AppRouter.termsPath,       component: TermsPage },
       { path: AppRouter.wasyaCoPath,     component: WasyaCoPage },
+      { path: AppRouter.industriesPath,  component: Industries },
     ],
   },
 ]

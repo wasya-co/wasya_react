@@ -18,16 +18,16 @@ class OurProcess extends React.Component {
       <Grid id="ourProcessContent" >
         <Row style={{ position: 'relative' }} >
           <Col xs={12}>
-            <div style={{height: '200px'}} />
+            <div style={{height: '100px'}} />
             <Center>
               <h2 className="text-uppercase">Our Process</h2>
-              <div className="dez-separator-outer ">
-                <div className="dez-separator bg-primary style-skew"></div>
-              </div>
+              <div className="dez-separator-outer "><div className="dez-separator style-icon"><i className="fa fa-leaf"></i></div></div>
             </Center>
           </Col>
           <Col xs={10} xsOffset={1} md={8} mdOffset={2}>
-            <p >We work in iterative cycles. The methodology we use is sprint and kanban. Our preferred sprint length is the industry-standard 2 weeks. Kanban refers to keeping tracks of small, accomplishable tasks by means of cards, and moving the cards through lanes. Our typical lanes are "todo", "doing" and "done", although this varies as the complexity grows.</p>
+            <h3 >We work in iterative development cycles segmented in 1-week sprints.
+              We do daily standups, and quarterly planning.
+              We use Redmine as the ticketing system, along with a number of productivity tools.</h3>
             <Center><Link to={AppRouter.ourProcessLink()}><Button bsStyle="success" >Read More</Button></Link></Center>
             <div style={{height: '200px'}} />
           </Col>

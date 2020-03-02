@@ -41,6 +41,8 @@ let AppRouter = {
   ourWorkLink: () => { return '/our-work' },
   ourWorkPath: '/our-work',
 
+  industriesPath: '/pages/industries',
+  
   /**
    * P
    */
