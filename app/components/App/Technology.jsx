@@ -38,7 +38,7 @@ class Services extends React.Component {
                 descr: [ "Modern software tools are expected to be highly usable, to the degree of not requiring documentation. The user interface should be self-explanatory,  and the user experience intuitive. " ],
         },
         mobile: { short: 'mobile',
-          title: "Hybrid Mobile & <br />PWA's",
+          title: "Hybrid Mobile & PWA's",
           descr: [ "We use Ionic Cordova for mobile development. ",
             "Ionic allows publishing to all platforms simultaneously: Android, iOS, and the Web." ],
         },
